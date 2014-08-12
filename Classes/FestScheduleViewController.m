@@ -35,7 +35,7 @@
     // Do any additional setup after loading the view from its nib.
 
     self.dayChooser.delegate = self;
-    self.dayChooser.dayNames = @[@"Friday", @"Saturday"];
+    self.dayChooser.dayNames = @[@"Saturday", @"Sunday"];
 
     self.timeLineView.delegate = self;
 
@@ -69,10 +69,10 @@
 
 - (void)dayChooser:(DayChooser *)dayChooser selectedDayWithIndex:(NSUInteger)dayIndex
 {
-    NSString *currentDay = @"Friday";
+    NSString *currentDay = @"Saturday";
     switch (dayIndex) {
-        case 0: currentDay = @"Friday"; break;
-        case 1: currentDay = @"Saturday"; break;
+        case 0: currentDay = @"Saturday"; break;
+        case 1: currentDay = @"Sunday"; break;
     }
 
     self.timeLineView.currentDay = currentDay;

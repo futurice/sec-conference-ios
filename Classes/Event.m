@@ -29,7 +29,7 @@
         
         _day = [NSString cast:json[@"day"]];
 
-        _artists = [NSArray cast:json[@"artists"]];
+        _artist = [NSString cast:json[@"artists"]];
         
         _title = [NSString cast:json[@"title"]];
         _description = [NSString cast:json[@"description"]];

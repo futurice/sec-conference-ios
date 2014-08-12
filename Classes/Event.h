@@ -13,7 +13,7 @@
 @property (nonatomic, strong) NSString *location;
 @property (nonatomic, strong) NSString *day;
 
-@property (nonatomic, strong) NSArray *artists;
+@property (nonatomic, strong) NSString *artist;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *description;
 @property (nonatomic, strong) NSNumber *starredCount;
