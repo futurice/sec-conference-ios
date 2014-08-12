@@ -170,19 +170,20 @@ CGFloat timeWidthFrom(NSDate *from, NSDate *to)
                 [stages addObject:gig.stage];
             }
         }
+        
+        self.stages = stages;
     }
     else if([[gigs firstObject] isKindOfClass:[Event class]]) {
         
-        NSUInteger count = gigs.count;
+        NSMutableArray *stages = [NSMutableArray arrayWithCapacity:[self.gigs count]];
         
-        // Venues
-        NSMutableArray *stages = [NSMutableArray arrayWithCapacity:6];
-        for (NSUInteger idx = 0; idx < count; idx++) {
-            Event *event = gigs[idx];
-            if (![stages containsObject:event.location]) {
+        for(Event *event in self.gigs) {
+            if(![stages containsObject:event.location]) {
                 [stages addObject:event.location];
             }
         }
+        
+        self.stages = stages;
     }
     else {
         // HARDCODE order
@@ -418,8 +419,6 @@ CGFloat timeWidthFrom(NSDate *from, NSDate *to)
             [self.innerView addSubview:favButton];
         }
     }
-    
-    
 
     [self recreateDay];
 }
