@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 #import "Gig.h"
+#import "Event.h"
 
 @interface FestArtistCell : UITableViewCell
 @property (nonatomic, strong) Gig *gig;
+@property (nonatomic, strong) Event *event;
 @end

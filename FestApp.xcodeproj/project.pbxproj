@@ -11,6 +11,7 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
+		3614919E1999FEF100214C52 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 3614919D1999FEF100214C52 /* Event.m */; };
 		48EE8C3F158B719E00C5345E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EE8C3E158B719D00C5345E /* CFNetwork.framework */; };
 		48EE8C41158B721200C5345E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EE8C40158B721100C5345E /* SystemConfiguration.framework */; };
 		48EE8C43158B725000C5345E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EE8C42158B724F00C5345E /* libz.dylib */; };
@@ -192,6 +193,8 @@
 		288765070DF74369002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28A0AB4B0D9B1048005BE974 /* FestApp_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FestApp_Prefix.pch; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3614919C1999FEF100214C52 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		3614919D1999FEF100214C52 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		48EE8C3E158B719D00C5345E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		48EE8C40158B721100C5345E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		48EE8C42158B724F00C5345E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -579,6 +582,8 @@
 				88C00E391988047500AF869A /* InfoItem.m */,
 				88C00E401988047600AF869A /* NewsItem.h */,
 				88C00E411988047600AF869A /* NewsItem.m */,
+				3614919C1999FEF100214C52 /* Event.h */,
+				3614919D1999FEF100214C52 /* Event.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -924,6 +929,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3614919E1999FEF100214C52 /* Event.m in Sources */,
 				88C00E801988047600AF869A /* UIViewController+Additions.m in Sources */,
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				88C00E661988047600AF869A /* FestMainViewController.m in Sources */,

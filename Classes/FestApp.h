@@ -2,11 +2,11 @@
 #import "NSString+Additions.h"
 #import "UIView+XYWidthHeight.h"
 
-#define kResourceBaseURL           @"http://127.0.0.1:3003"
-#define FEST_FESTIVAL_JSON_URL     @"/api/festival"
-#define FEST_NEWS_JSON_URL         @"/api/news"
-#define FEST_GIGS_JSON_URL         @"/api/gigs"
-#define FEST_INFO_JSON_URL         @"/api/info"
+#define kResourceBaseURL           @"http://sec-conference-server.herokuapp.com"
+#define FEST_FESTIVAL_JSON_URL     @"/api/v1/festival"
+#define FEST_NEWS_JSON_URL         @"/api/v1/news"
+#define FEST_GIGS_JSON_URL         @"/api/v1/events"
+#define FEST_INFO_JSON_URL         @"/api/v1/info"
 
 #define kResourceLastUpdatedPrefix @"lastModified"
 

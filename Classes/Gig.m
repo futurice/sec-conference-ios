@@ -28,8 +28,8 @@
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"];
 
-        _begin    = [dateFormatter dateFromString:json[@"start-time"]];
-        _end      = [dateFormatter dateFromString:json[@"end-time"]];
+        _begin    = [dateFormatter dateFromString:json[@"start_time"]];
+        _end      = [dateFormatter dateFromString:json[@"end_time"]];
         _stage    = json[@"stage"];
         _day      = json[@"day"];
 

@@ -5,6 +5,7 @@
 
 #import "TimelineView.h"
 #import "Gig.h"
+#import "Event.h"
 #import "NSDate+Additions.h"
 #import <AudioToolbox/AudioServices.h>
 #import <AVFoundation/AVFoundation.h>
@@ -13,7 +14,9 @@
 
 @interface GigButton : UIButton
 @property (nonatomic, readonly) Gig *gig;
+@property (nonatomic, readonly) Event *event;
 - (id)initWithFrame:(CGRect)frame gig:(Gig *)gig;
+- (id)initWithFrame:(CGRect)frame event:(Event *)event;
 @end
 
 @implementation GigButton
@@ -42,11 +45,40 @@
     }
     return self;
 }
+
+- (id)initWithFrame:(CGRect)frame event:(Event *)event
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        _event = event;
+        
+        self.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+        self.contentEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 5);
+        [self setTitle:event.title.uppercaseString forState:UIControlStateNormal];
+        
+        self.backgroundColor = [UIColor grayColor];
+        [self setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
+        [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        
+        [self setImage:[UIImage imageNamed:@"star.png"] forState:UIControlStateNormal];
+        [self setImage:[UIImage imageNamed:@"star-selected-yellow.png"] forState:UIControlStateSelected];
+        
+        self.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        self.titleLabel.numberOfLines = 3;
+        
+        self.titleLabel.font = [UIFont fontWithName:@"Palatino-Roman" size:15];
+    }
+    return self;
+}
+
+
 @end
 
 @interface FavButton : UIButton
 @property (nonatomic, readonly) Gig *gig;
+@property (nonatomic, readonly) Event *event;
 - (id)initWithFrame:(CGRect)frame gig:(Gig *)gig;
+- (id)initWithFrame:(CGRect)frame event:(Event *)event;
 @end
 
 @implementation FavButton
@@ -58,6 +90,16 @@
     }
     return self;
 }
+
+- (id)initWithFrame:(CGRect)frame event:(Event *)event
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        _event = event;
+    }
+    return self;
+}
+
 @end
 
 #pragma mark - TimeLineView
@@ -116,21 +158,36 @@ CGFloat timeWidthFrom(NSDate *from, NSDate *to)
 {
     _gigs = gigs;
 
-#if 0
-    NSUInteger count = gigs.count;
-
-    // Venues
-    NSMutableArray *stages = [NSMutableArray arrayWithCapacity:6];
-    for (NSUInteger idx = 0; idx < count; idx++) {
-        Gig *gig = gigs[idx];
-        if (![stages containsObject:gig.stage]) {
-            [stages addObject:gig.stage];
+    if ([[gigs firstObject] isKindOfClass:[Gig class]]) {
+        
+        NSUInteger count = gigs.count;
+        
+        // Venues
+        NSMutableArray *stages = [NSMutableArray arrayWithCapacity:6];
+        for (NSUInteger idx = 0; idx < count; idx++) {
+            Gig *gig = gigs[idx];
+            if (![stages containsObject:gig.stage]) {
+                [stages addObject:gig.stage];
+            }
         }
     }
-#endif
-
-    // HARDCODE order
-    self.stages = @[@"Computing", @"Type Theory", @"Logic"];
+    else if([[gigs firstObject] isKindOfClass:[Event class]]) {
+        
+        NSUInteger count = gigs.count;
+        
+        // Venues
+        NSMutableArray *stages = [NSMutableArray arrayWithCapacity:6];
+        for (NSUInteger idx = 0; idx < count; idx++) {
+            Event *event = gigs[idx];
+            if (![stages containsObject:event.location]) {
+                [stages addObject:event.location];
+            }
+        }
+    }
+    else {
+        // HARDCODE order
+        self.stages = @[@"Computing", @"Type Theory", @"Logic"];
+    }
 
     [self recreate];
     [self invalidateIntrinsicContentSize];
@@ -167,17 +224,34 @@ CGFloat timeWidthFrom(NSDate *from, NSDate *to)
     NSDate *begin = [NSDate distantFuture];
     NSDate *end = [NSDate distantPast];
 
-    for (Gig *gig in self.gigs) {
-        if (![gig.day isEqualToString:self.currentDay]) {
-            continue;
+    if([[self.gigs firstObject] isKindOfClass:[Gig class]]) {
+        for (Gig *gig in self.gigs) {
+            if (![gig.day isEqualToString:self.currentDay]) {
+                continue;
+            }
+            
+            if ([gig.begin compare:begin] == NSOrderedAscending ) {
+                begin = gig.begin;
+            }
+            
+            if ([gig.end compare:end] == NSOrderedDescending) {
+                end = gig.end;
+            }
         }
-
-        if ([gig.begin compare:begin] == NSOrderedAscending ) {
-            begin = gig.begin;
-        }
-
-        if ([gig.end compare:end] == NSOrderedDescending) {
-            end = gig.end;
+    }
+    else if([[self.gigs firstObject] isKindOfClass:[Event class]]) {
+        for (Event *event in self.gigs) {
+            if (![event.day isEqualToString:self.currentDay]) {
+                continue;
+            }
+            
+            if ([event.begin compare:begin] == NSOrderedAscending ) {
+                begin = event.begin;
+            }
+            
+            if ([event.end compare:end] == NSOrderedDescending) {
+                end = event.end;
+            }
         }
     }
 
@@ -209,14 +283,28 @@ CGFloat timeWidthFrom(NSDate *from, NSDate *to)
     // timespan
     NSDate *begin = [NSDate distantFuture];
     NSDate *end = [NSDate distantPast];
-
-    for (Gig *gig in self.gigs) {
-        if ([gig.begin compare:begin] == NSOrderedAscending ) {
-            begin = gig.begin;
+    
+    if([[self.gigs firstObject] isKindOfClass:[Gig class]]) {
+        for (Gig *gig in self.gigs) {
+            if ([gig.begin compare:begin] == NSOrderedAscending ) {
+                begin = gig.begin;
+            }
+            
+            if ([gig.end compare:end] == NSOrderedDescending) {
+                end = gig.end;
+            }
         }
-
-        if ([gig.end compare:end] == NSOrderedDescending) {
-            end = gig.end;
+    }
+    else if([[self.gigs firstObject] isKindOfClass:[Event class]]) {
+        
+        for (Event *event in self.gigs) {
+            if ([event.begin compare:begin] == NSOrderedAscending ) {
+                begin = event.begin;
+            }
+            
+            if ([event.end compare:end] == NSOrderedDescending) {
+                end = event.end;
+            }
         }
     }
 
@@ -262,38 +350,76 @@ CGFloat timeWidthFrom(NSDate *from, NSDate *to)
 
     NSUInteger stageCount = self.stages.count;
 
-    // buttons
-    for (Gig *gig in self.gigs) {
-        NSUInteger stageIdx = 0;
-        for (; stageIdx < stageCount; stageIdx++) {
-            if ([gig.stage isEqualToString:self.stages[stageIdx]]) {
-                break;
+    if([[self.gigs firstObject] isKindOfClass:[Gig class]]) {
+        // buttons
+        for (Gig *gig in self.gigs) {
+            NSUInteger stageIdx = 0;
+            for (; stageIdx < stageCount; stageIdx++) {
+                if ([gig.stage isEqualToString:self.stages[stageIdx]]) {
+                    break;
+                }
             }
+            
+            BOOL favourited = [self.favouritedGigs containsObject:gig.gigId];
+            
+            CGFloat x = timeWidthFrom(self.begin, gig.begin);
+            CGFloat y = kTopPadding + kRowPadding + kRowHeight * stageIdx;
+            CGFloat w = timeWidthFrom(gig.begin, gig.end);
+            CGFloat h = kRowHeight - kRowPadding * 2;
+            CGRect frame = CGRectMake(x, y, w, h);
+            
+            GigButton *button = [[GigButton alloc] initWithFrame:frame gig:gig];
+            
+            button.selected = favourited;
+            button.alpha = favourited ? 1.0f : 0.8f;
+            
+            [button addTarget:self action:@selector(gigButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+            
+            CGRect favFrame = CGRectMake(x, y, 40, h);
+            FavButton *favButton = [[FavButton alloc] initWithFrame:favFrame gig:gig];
+            
+            [favButton addTarget:self action:@selector(favButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+            
+            [self.innerView addSubview:button];
+            [self.innerView addSubview:favButton];
         }
-
-        BOOL favourited = [self.favouritedGigs containsObject:gig.gigId];
-
-        CGFloat x = timeWidthFrom(self.begin, gig.begin);
-        CGFloat y = kTopPadding + kRowPadding + kRowHeight * stageIdx;
-        CGFloat w = timeWidthFrom(gig.begin, gig.end);
-        CGFloat h = kRowHeight - kRowPadding * 2;
-        CGRect frame = CGRectMake(x, y, w, h);
-
-        GigButton *button = [[GigButton alloc] initWithFrame:frame gig:gig];
-
-        button.selected = favourited;
-        button.alpha = favourited ? 1.0f : 0.8f;
-
-        [button addTarget:self action:@selector(gigButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-
-        CGRect favFrame = CGRectMake(x, y, 40, h);
-        FavButton *favButton = [[FavButton alloc] initWithFrame:favFrame gig:gig];
-
-        [favButton addTarget:self action:@selector(favButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-
-        [self.innerView addSubview:button];
-        [self.innerView addSubview:favButton];
     }
+    else if([[self.gigs firstObject] isKindOfClass:[Event class]]) {
+        
+        for (Event *event in self.gigs) {
+            NSUInteger stageIdx = 0;
+            for (; stageIdx < stageCount; stageIdx++) {
+                if ([event.location isEqualToString:self.stages[stageIdx]]) {
+                    break;
+                }
+            }
+            
+            BOOL favourited = [self.favouritedGigs containsObject:event.identifier];
+            
+            CGFloat x = timeWidthFrom(self.begin, event.begin);
+            CGFloat y = kTopPadding + kRowPadding + kRowHeight * stageIdx;
+            CGFloat w = timeWidthFrom(event.begin, event.end);
+            CGFloat h = kRowHeight - kRowPadding * 2;
+            CGRect frame = CGRectMake(x, y, w, h);
+            
+            GigButton *button = [[GigButton alloc] initWithFrame:frame event:event];
+            
+            button.selected = favourited;
+            button.alpha = favourited ? 1.0f : 0.8f;
+            
+            [button addTarget:self action:@selector(gigButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+            
+            CGRect favFrame = CGRectMake(x, y, 40, h);
+            FavButton *favButton = [[FavButton alloc] initWithFrame:favFrame event:event];
+            
+            [favButton addTarget:self action:@selector(favButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+            
+            [self.innerView addSubview:button];
+            [self.innerView addSubview:favButton];
+        }
+    }
+    
+    
 
     [self recreateDay];
 }

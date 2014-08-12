@@ -60,4 +60,15 @@
     self.stageLabel.text = gig.stageAndTimeIntervalString;
 }
 
+- (void)setEvent:(Event *)event
+{
+    if (_event == event) {
+        return;
+    }
+    
+    _event = event;
+    self.nameLabel.text = event.title;
+    //self.stageLabel.text = gig.stageAndTimeIntervalString; //TODO: Change time interval
+}
+
 @end

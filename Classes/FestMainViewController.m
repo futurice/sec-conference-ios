@@ -14,6 +14,7 @@
 #import "FestFavouritesManager.h"
 
 #import "NewsItem.h"
+#import "Event.h"
 
 #define kUpdateInterval 10
 #define kTransitionAnimationDuration 1.0f
@@ -41,7 +42,7 @@
 
 @interface FestMainViewController ()
 @property (nonatomic, strong) NewsItem *currentNewsItem;
-@property (nonatomic, strong) Gig *currentGig;
+@property (nonatomic, strong) id currentEvent;
 
 @property (nonatomic, strong) IBOutlet UIImageView *gigImageView;
 @property (nonatomic, strong) IBOutlet UILabel *gigLabel;
@@ -123,30 +124,53 @@
                           return gigs[randomIdx];
                       }] replayLast];
 
-    [currentGigSignal subscribeNext:^(Gig *gig) {
-        self.currentGig = gig;
-
+    [currentGigSignal subscribeNext:^(id eventObject) {
+        
+        self.currentEvent = eventObject;
+        
         [UIView transitionWithView:self.view
                           duration:kTransitionAnimationDuration
                            options:UIViewAnimationOptionTransitionCrossDissolve
                         animations:^{
-                            self.gigLabel.text = gig.gigName;
-                            self.gigSublabel.text = gig.stageAndTimeIntervalString;
+                            
+                            if([eventObject isKindOfClass:[Gig class]]) {
+                                Gig *gig = [Gig cast:eventObject];
+                                self.gigLabel.text = gig.gigName;
+                                self.gigSublabel.text = gig.stageAndTimeIntervalString;
+                            }
+                            else if([eventObject isKindOfClass:[Event class]]) {
+                                
+                                Event *event = [Event cast:eventObject];
+                                self.gigLabel.text = event.title;
+                            }
+                            
                         } completion:NULL];
     }];
 
-    RACSignal *imageSignal = [[currentGigSignal map:^id(Gig *gig) {
-        return [[FestImageManager sharedFestImageManager] imageSignalFor:gig.imagePath];
+    RACSignal *imageSignal = [[currentGigSignal map:^id(id event) {
+        
+        if([event isKindOfClass:[Gig class]]) {
+            Gig *gig = [Gig cast:event];
+            return [[FestImageManager sharedFestImageManager] imageSignalFor:gig.imagePath];
+        }
+        else {
+            Event *currentEvent = [Event cast:event];
+            return currentEvent.imageURL;
+        }
+        
     }] switchToLatest];
 
-    [imageSignal subscribeNext:^(UIImage *image) {
-        if (image) {
+    [imageSignal subscribeNext:^(id image) {
+        if ([image isKindOfClass:[UIImage class]]) {
             [UIView transitionWithView:self.view
                               duration:kTransitionAnimationDuration
                                options:UIViewAnimationOptionTransitionCrossDissolve
                             animations:^{
                                 self.gigImageView.image = image;
                             } completion:NULL];
+        }
+        else if([image isKindOfClass:[NSString class]]) {
+            NSLog(@"TEST");
         }
     }];
 

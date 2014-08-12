@@ -37,6 +37,12 @@
                                 <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cFC-R6-OQf" customClass="TimelineView">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="schedule-stages.png" translatesAutoresizingMaskIntoConstraints="NO" id="zEK-Vt-yOf">
+                                            <rect key="frame" x="0.0" y="0.0" width="43" height="350"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </view>
                             </subviews>
@@ -50,10 +56,6 @@
                                 <outlet property="delegate" destination="-1" id="QV6-ob-fCF"/>
                             </connections>
                         </scrollView>
-                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="schedule-stages.png" translatesAutoresizingMaskIntoConstraints="NO" id="zEK-Vt-yOf">
-                            <rect key="frame" x="0.0" y="0.0" width="43" height="350"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </imageView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>

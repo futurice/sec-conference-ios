@@ -39,12 +39,20 @@
 
     // Subscribe
     RACSignal *gigsSignal = [FestDataManager.sharedFestDataManager gigsSignal];
-    [gigsSignal subscribeNext:^(NSArray *gigs) {
-        NSArray *sortedGigs = [gigs sortedArrayUsingComparator:^NSComparisonResult(Gig* a, Gig *b) {
-            return [a.gigName compare:b.gigName];
-        }];
+    [gigsSignal subscribeNext:^(NSArray *events) {
+        
+        
+        if([[events firstObject] isKindOfClass:[Gig class]]) {
+            NSArray *sortedGigs = [events sortedArrayUsingComparator:^NSComparisonResult(Gig* a, Gig *b) {
+                return [a.gigName compare:b.gigName];
+            }];
+            
+            self.gigs = sortedGigs;
+        }
+        else {
+            self.gigs = events;
+        }
 
-        self.gigs = sortedGigs;
         [self.tableView reloadData];
     }];
 
@@ -92,7 +100,13 @@
     }
 
     cell.backgroundColor = [UIColor clearColor];// (idx % 2 == 0) ? PJ_COLOR_LIGHT : PJ_COLOR_DARK;
-    cell.gig = self.gigs[idx];
+    
+    if([self.gigs[idx] isKindOfClass:[Gig class]]) {
+        cell.gig = self.gigs[idx];
+    }
+    else if([self.gigs[idx] isKindOfClass:[Event class]]) {
+        cell.event = self.gigs[idx];
+    }
 
     return cell;
 }

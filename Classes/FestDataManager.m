@@ -10,6 +10,7 @@
 #import "FestHTTPSessionManager.h"
 
 #import "Gig.h"
+#import "Event.h"
 #import "NewsItem.h"
 #import "InfoItem.h"
 
@@ -153,7 +154,7 @@
 
     for (NSUInteger idx = 0; idx < len; idx++) {
         NSDictionary *obj = gigsArray[idx];
-        Gig *gig = [[Gig alloc] initFromJSON:obj];
+        Event *gig = [[Event alloc] initFromJSON:obj];
         if (gig) {
             [gigs addObject:gig];
         }
