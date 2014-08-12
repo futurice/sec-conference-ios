@@ -117,7 +117,7 @@
 @end
 
 #define kHourWidth 200
-#define kRowHeight 110
+#define kRowHeight 50
 #define kTopPadding 20
 #define kLeftPadding 50
 #define kRightPadding 20
