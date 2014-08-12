@@ -175,15 +175,8 @@ CGFloat timeWidthFrom(NSDate *from, NSDate *to)
     }
     else if([[gigs firstObject] isKindOfClass:[Event class]]) {
         
-        NSMutableArray *stages = [NSMutableArray arrayWithCapacity:[self.gigs count]];
-        
-        for(Event *event in self.gigs) {
-            if(![stages containsObject:event.location]) {
-                [stages addObject:event.location];
-            }
-        }
-        
-        self.stages = stages;
+        //TODO: Fixed order of the locations
+        self.stages = @[@"Galerie", @"Raum 2", @"Raum 3", @"Raum 4", @"Loft", @"Raum 5", @"Atelier"];
     }
     else {
         // HARDCODE order
