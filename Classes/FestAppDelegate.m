@@ -146,7 +146,7 @@ void uncaughtExceptionHandler(NSException *exception)
 
 - (void)showGig:(Gig *)gig
 {
-    UIViewController *controller = [FestArtistViewController newWithGig:gig];
+    UIViewController *controller = [FestArtistViewController newWithEvent:gig];
     [self.navController pushViewController:controller animated:YES];
 }
 

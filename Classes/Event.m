@@ -42,4 +42,10 @@
     return self;
 }
 
+- (NSString *)stageAndTimeIntervalString
+{
+    NSString *end = [self.end.hourAndMinuteString isEqualToString:@"23:59"] ? @"00:00" : self.end.hourAndMinuteString;
+    return [NSString stringWithFormat:@"%@ %@–%@ %@", self.begin.weekdayName, self.begin.hourAndMinuteString, end, self.location];
+}
+
 @end

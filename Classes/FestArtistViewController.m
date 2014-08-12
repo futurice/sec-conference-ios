@@ -16,7 +16,7 @@
 #import "UIView+XYWidthHeight.h"
 
 @interface FestArtistViewController ()
-@property (nonatomic, strong) Gig *gig;
+@property (nonatomic, strong) id event;
 
 @property (nonatomic, strong) IBOutlet UIImageView *imageView;
 
@@ -34,13 +34,13 @@
 
 @implementation FestArtistViewController
 
-+ (instancetype)newWithGig:(Gig *)gig
++ (instancetype)newWithEvent:(id)event
 {
     FestArtistViewController *controller = [[FestArtistViewController alloc] initWithNibName:@"FestArtistViewController" bundle:nil];
 
     // TODO: implement me
 
-    controller.gig = gig;
+    controller.event = event;
 
     return controller;
 }
@@ -60,9 +60,21 @@
 
     self.navigationItem.title = @"";
 
-    self.gigLabel.text = self.gig.gigName;
-    self.stageLabel.text = self.gig.stageAndTimeIntervalString;
-    self.infoLabel.text = self.gig.info;
+    if([self.event isKindOfClass:[Gig class]]) {
+        
+        Gig *gig = [Gig cast:self.event];
+        
+        self.gigLabel.text = gig.gigName;
+        self.stageLabel.text = gig.stageAndTimeIntervalString;
+        self.infoLabel.text = gig.info;
+    }
+    else {
+        Event *eventModel = [Event cast:self.event];
+        
+        self.gigLabel.text = eventModel.title;
+        self.stageLabel.text = eventModel.location;
+        self.infoLabel.text = eventModel.description;
+    }
 
     // Favourite
     [self.favouriteButton setImage:[UIImage imageNamed:@"star-selected.png"] forState:UIControlStateSelected];
@@ -72,18 +84,46 @@
 
     FestFavouritesManager *favouriteManager = [FestFavouritesManager sharedFavouritesManager];
     [favouriteManager.favouritesSignal subscribeNext:^(NSArray *favourites) {
-        BOOL favourited = [favourites containsObject:self.gig.gigId];
-        self.favouriteButton.selected = favourited;
+        
+        if([self.event isKindOfClass:[Gig class]]) {
+            
+            Gig *gig = [Gig cast:self.event];
+            
+            BOOL favourited = [favourites containsObject:gig.gigId];
+            self.favouriteButton.selected = favourited;
+        }
+        else {
+            Event *eventModel = [Event cast:self.event];
+            
+            BOOL favourited = [favourites containsObject:eventModel.identifier];
+            self.favouriteButton.selected = favourited;
+        }
     }];
 
     // Load image
-    FestImageManager *imageManager = [FestImageManager sharedFestImageManager];
-    [[imageManager imageSignalFor:self.gig.imagePath] subscribeNext:^(UIImage *image) {
-        self.imageView.image = image;
-    }];
-
-    // wikipedia button
-    if (self.gig.wikipediaUrl == nil) {
+    
+    if([self.event isKindOfClass:[Gig class]]) {
+        
+        Gig *gig = [Gig cast:self.event];
+        
+        FestImageManager *imageManager = [FestImageManager sharedFestImageManager];
+        [[imageManager imageSignalFor:gig.imagePath] subscribeNext:^(UIImage *image) {
+            self.imageView.image = image;
+        }];
+        
+        // wikipedia button
+        if (gig.wikipediaUrl == nil) {
+            self.wikipediaButton.hidden = YES;
+        }
+    }
+    else {
+        Event *eventModel = [Event cast:self.event];
+        
+        FestImageManager *imageManager = [FestImageManager sharedFestImageManager];
+        [[imageManager imageSignalFor:eventModel.imageURL] subscribeNext:^(UIImage *image) {
+            self.imageView.image = image;
+        }];
+        
         self.wikipediaButton.hidden = YES;
     }
 }
@@ -104,11 +144,14 @@
 - (IBAction)toggleFavourite:(id)sender
 {
     FestFavouritesManager *favouriteManager = [FestFavouritesManager sharedFavouritesManager];
-    [favouriteManager toggleFavourite:self.gig favourite:!self.favouriteButton.selected];
+    [favouriteManager toggleFavourite:self.event favourite:!self.favouriteButton.selected];
 }
 
 - (IBAction)openWikipedia:(id)sender
 {
-    [UIApplication.sharedApplication openURL:self.gig.wikipediaUrl];
+    if([self.event isKindOfClass:[Gig class]]) {
+        Gig *gig = [Gig cast:self.event];
+        [UIApplication.sharedApplication openURL:gig.wikipediaUrl];
+    }
 }
 @end

@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 #import "Gig.h"
+#import "Event.h"
 
 @interface FestArtistViewController : UIViewController
-+ (FestArtistViewController *) newWithGig:(Gig *)gig;
++ (FestArtistViewController *) newWithEvent:(id)event;
 @end

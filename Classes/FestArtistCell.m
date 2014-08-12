@@ -68,7 +68,7 @@
     
     _event = event;
     self.nameLabel.text = event.title;
-    //self.stageLabel.text = gig.stageAndTimeIntervalString; //TODO: Change time interval
+    self.stageLabel.text = event.stageAndTimeIntervalString;
 }
 
 @end
