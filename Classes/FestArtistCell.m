@@ -67,7 +67,7 @@
     }
     
     _event = event;
-    self.nameLabel.text = event.title;
+    self.nameLabel.text = event.artist;
     self.stageLabel.text = event.stageAndTimeIntervalString;
 }
 
