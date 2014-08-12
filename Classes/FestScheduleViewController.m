@@ -85,6 +85,11 @@
     [APPDELEGATE showGig:gig];
 }
 
+- (void)timeLineView:(TimelineView *)timeLineView eventSelected:(Event *)event
+{
+    [APPDELEGATE showEvent:event];
+}
+
 - (void)timeLineView:(TimelineView *)timeLineView gigFavourited:(Gig *)gig favourite:(BOOL)favourite
 {
     FestFavouritesManager *favouriteManager = [FestFavouritesManager sharedFavouritesManager];

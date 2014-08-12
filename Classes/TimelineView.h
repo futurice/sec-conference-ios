@@ -5,11 +5,13 @@
 
 #import <UIKit/UIKit.h>
 #import "Gig.h"
+#import "Event.h"
 
 @class TimelineView;
 
 @protocol TimelineViewDelegate
 - (void)timeLineView:(TimelineView *)timeLineView gigSelected:(Gig *)gig;
+- (void)timeLineView:(TimelineView *)timeLineView eventSelected:(Event *)event;
 - (void)timeLineView:(TimelineView *)timeLineView gigFavourited:(Gig *)gig favourite:(BOOL)favourite;
 @end
 

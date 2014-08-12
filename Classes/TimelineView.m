@@ -428,7 +428,13 @@ CGFloat timeWidthFrom(NSDate *from, NSDate *to)
 
 - (void)gigButtonPressed:(GigButton *)sender
 {
-    [self.delegate timeLineView:self gigSelected:sender.gig];
+    if(sender.gig) {
+        [self.delegate timeLineView:self gigSelected:sender.gig];
+    }
+    else {
+        [self.delegate timeLineView:self eventSelected:sender.event];
+    }
+    
 }
 
 - (void)favButtonPressed:(FavButton *)sender

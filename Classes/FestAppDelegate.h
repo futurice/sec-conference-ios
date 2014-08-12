@@ -39,5 +39,6 @@
 - (void)showNewsItem:(NewsItem *)newsItem;
 - (void)showInfoItem:(InfoItem *)infoItem;
 - (void)showGig:(Gig *)gig;
+- (void)showEvent:(Event *)event;
 
 @end

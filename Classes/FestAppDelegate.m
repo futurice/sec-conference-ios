@@ -144,6 +144,12 @@ void uncaughtExceptionHandler(NSException *exception)
     [self.navController pushViewController:controller animated:YES];
 }
 
+- (void)showEvent:(Event *)event
+{
+    UIViewController *controller = [FestArtistViewController newWithEvent:event];
+    [self.navController pushViewController:controller animated:YES];
+}
+
 - (void)showGig:(Gig *)gig
 {
     UIViewController *controller = [FestArtistViewController newWithEvent:gig];
