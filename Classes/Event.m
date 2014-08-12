@@ -36,7 +36,7 @@
         _starredCount = [NSNumber cast:json[@"starredCount"]];
         _identifier = [NSString cast:json[@"_id"]];
     
-        _imageURL = [NSString cast:json[@"imageURL"]];
+        _imageURL = [NSString cast:json[@"image_url"]];
         
     }
     return self;

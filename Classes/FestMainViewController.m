@@ -154,23 +154,20 @@
             return [[FestImageManager sharedFestImageManager] imageSignalFor:gig.imagePath];
         }
         else {
-            Event *currentEvent = [Event cast:event];
-            return currentEvent.imageURL;
+            Event *eventObject = [Event cast:event];
+            return [[FestImageManager sharedFestImageManager] imageSignalFor:eventObject.imageURL];
         }
         
     }] switchToLatest];
 
-    [imageSignal subscribeNext:^(id image) {
-        if ([image isKindOfClass:[UIImage class]]) {
+    [imageSignal subscribeNext:^(UIImage *image) {
+        if (image) {
             [UIView transitionWithView:self.view
                               duration:kTransitionAnimationDuration
                                options:UIViewAnimationOptionTransitionCrossDissolve
                             animations:^{
                                 self.gigImageView.image = image;
                             } completion:NULL];
-        }
-        else if([image isKindOfClass:[NSString class]]) {
-            NSLog(@"TEST");
         }
     }];
 

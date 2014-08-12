@@ -11,6 +11,8 @@
 #import "FestHTTPSessionManager.h"
 #import "NSString+MD5.h"
 
+#import "AFHTTPRequestOperation.h"
+
 @interface FestImageManager ()
 @property (strong, nonatomic) NSString *directory;
 @property (strong, nonatomic) NSFileManager *fileManager;
@@ -84,16 +86,43 @@
 
 - (RACSignal *)imageSignalFor:(NSString *)imagePath withSize:(CGSize)size
 {
-    UIImage *image = [UIImage imageNamed:imagePath];
-    if (!image) {
-        image = [UIImage imageNamed:@"artist-placeholder.jpg"];
-    }
+    //UIImage *image = nil;
+    
+    
+    RACSubject *subject = [RACBehaviorSubject behaviorSubjectWithDefaultValue:[UIImage imageNamed:@"artist-placeholder.jpg"]];
+    
+    
+    
+    NSURL *url = [NSURL URLWithString:imagePath];
+    if(url) {
 
-    if (size.width > 0 && size.height > 0) {
-        image = [FestImageManager imageWithImage:image scaledToSize:size];
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+        [request addValue:@"image/*" forHTTPHeaderField:@"Accept"];
+        
+        AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+        [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *op, id responseObject) {
+            
+            UIImage *image = [UIImage cast:[UIImage imageWithData:responseObject]];
+            [subject sendNext:image];
+        
+        } failure:^(AFHTTPRequestOperation *op, NSError *error) {
+            [subject sendError:error];
+        }];
+        
+        [operation start];
     }
-
-    RACSubject *subject = [RACBehaviorSubject behaviorSubjectWithDefaultValue:image];
+    else {
+        UIImage *image = [UIImage imageNamed:imagePath];
+        if (!image) {
+            image = [UIImage imageNamed:@"artist-placeholder.jpg"];
+        }
+        
+        if (size.width > 0 && size.height > 0) {
+            image = [FestImageManager imageWithImage:image scaledToSize:size];
+        }
+        
+        [subject sendNext:image];
+    }
 
     return subject;
 }

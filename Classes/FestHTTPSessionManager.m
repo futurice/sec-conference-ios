@@ -26,6 +26,13 @@
     if (self) {
         self.responseSerializer = [AFJSONResponseSerializer serializer];
         self.requestSerializer = [AFJSONRequestSerializer serializer];
+        
+        NSMutableSet *contentTypes = [[NSMutableSet alloc] initWithSet:self.responseSerializer.acceptableContentTypes];
+        
+        [contentTypes addObject:@"image/png"];
+        [contentTypes addObject:@"image/jpeg"];
+        
+        self.responseSerializer.acceptableContentTypes = contentTypes;
     }
 
     NSOperationQueue *operationQueue = self.operationQueue;
