@@ -20,7 +20,6 @@
 		4908019B199CC69700E650A5 /* keytalks-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49080198199CC69700E650A5 /* keytalks-icon.png */; };
 		4908019C199CC69700E650A5 /* venue-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49080199199CC69700E650A5 /* venue-icon.png */; };
 		4908019D199CC69700E650A5 /* wifi-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908019A199CC69700E650A5 /* wifi-icon.png */; };
-		4908019F199CC82A00E650A5 /* futurice-orange-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908019E199CC82A00E650A5 /* futurice-orange-background.png */; };
 		490801A1199CF29700E650A5 /* futurice-orange-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 490801A0199CF29700E650A5 /* futurice-orange-background.png */; };
 		490801A3199CF49600E650A5 /* home-image.png in Resources */ = {isa = PBXBuildFile; fileRef = 490801A2199CF49600E650A5 /* home-image.png */; };
 		4D186E6A1393CCA900CDA3DB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D186E691393CCA800CDA3DB /* QuartzCore.framework */; };
@@ -210,7 +209,6 @@
 		49080198199CC69700E650A5 /* keytalks-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "keytalks-icon.png"; path = "../../../../Google Drive/Side projects/Service Experience Camp/icons/keytalks-icon.png"; sourceTree = "<group>"; };
 		49080199199CC69700E650A5 /* venue-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "venue-icon.png"; path = "../../../../Google Drive/Side projects/Service Experience Camp/icons/venue-icon.png"; sourceTree = "<group>"; };
 		4908019A199CC69700E650A5 /* wifi-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wifi-icon.png"; path = "../../../../Google Drive/Side projects/Service Experience Camp/icons/wifi-icon.png"; sourceTree = "<group>"; };
-		4908019E199CC82A00E650A5 /* futurice-orange-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "futurice-orange-background.png"; path = "../../../../Google Drive/Side projects/Service Experience Camp/icons/futurice-orange-background.png"; sourceTree = "<group>"; };
 		490801A0199CF29700E650A5 /* futurice-orange-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "futurice-orange-background.png"; sourceTree = "<group>"; };
 		490801A2199CF49600E650A5 /* home-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-image.png"; sourceTree = "<group>"; };
 		4D186E691393CCA800CDA3DB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -567,7 +565,6 @@
 			isa = PBXGroup;
 			children = (
 				490801A2199CF49600E650A5 /* home-image.png */,
-				4908019E199CC82A00E650A5 /* futurice-orange-background.png */,
 				490801A0199CF29700E650A5 /* futurice-orange-background.png */,
 				88C00EA81988E21200AF869A /* artist-placeholder@2x.jpg */,
 				88C00DD71988046900AF869A /* background@2x.png */,
@@ -898,7 +895,6 @@
 				88C00DEB1988046900AF869A /* news in Resources */,
 				88C00E9E1988E1F400AF869A /* gentzen.jpg in Resources */,
 				88C00E831988056A00AF869A /* Images.xcassets in Resources */,
-				4908019F199CC82A00E650A5 /* futurice-orange-background.png in Resources */,
 				88C00E711988047600AF869A /* FestWindow.xib in Resources */,
 				88C00E5B1988047600AF869A /* FestArtistCell.xib in Resources */,
 				88C00E9B1988E1F400AF869A /* church.jpg in Resources */,
