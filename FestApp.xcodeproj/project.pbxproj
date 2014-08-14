@@ -16,6 +16,13 @@
 		48EE8C41158B721200C5345E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EE8C40158B721100C5345E /* SystemConfiguration.framework */; };
 		48EE8C43158B725000C5345E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EE8C42158B724F00C5345E /* libz.dylib */; };
 		48EE8C45158B725B00C5345E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EE8C44158B725A00C5345E /* MobileCoreServices.framework */; };
+		49080191199CC55F00E650A5 /* agenda-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49080190199CC55F00E650A5 /* agenda-icon.png */; };
+		4908019B199CC69700E650A5 /* keytalks-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49080198199CC69700E650A5 /* keytalks-icon.png */; };
+		4908019C199CC69700E650A5 /* venue-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49080199199CC69700E650A5 /* venue-icon.png */; };
+		4908019D199CC69700E650A5 /* wifi-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908019A199CC69700E650A5 /* wifi-icon.png */; };
+		4908019F199CC82A00E650A5 /* futurice-orange-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908019E199CC82A00E650A5 /* futurice-orange-background.png */; };
+		490801A1199CF29700E650A5 /* futurice-orange-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 490801A0199CF29700E650A5 /* futurice-orange-background.png */; };
+		490801A3199CF49600E650A5 /* home-image.png in Resources */ = {isa = PBXBuildFile; fileRef = 490801A2199CF49600E650A5 /* home-image.png */; };
 		4D186E6A1393CCA900CDA3DB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D186E691393CCA800CDA3DB /* QuartzCore.framework */; };
 		4D1ED38D139CBB7600BB1D47 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1ED38C139CBB7600BB1D47 /* AudioToolbox.framework */; };
 		4D30E8411396CBAB007E9D0B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D30E8401396CBA9007E9D0B /* AVFoundation.framework */; };
@@ -199,6 +206,13 @@
 		48EE8C40158B721100C5345E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		48EE8C42158B724F00C5345E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		48EE8C44158B725A00C5345E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		49080190199CC55F00E650A5 /* agenda-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "agenda-icon.png"; sourceTree = "<group>"; };
+		49080198199CC69700E650A5 /* keytalks-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "keytalks-icon.png"; path = "../../../../Google Drive/Side projects/Service Experience Camp/icons/keytalks-icon.png"; sourceTree = "<group>"; };
+		49080199199CC69700E650A5 /* venue-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "venue-icon.png"; path = "../../../../Google Drive/Side projects/Service Experience Camp/icons/venue-icon.png"; sourceTree = "<group>"; };
+		4908019A199CC69700E650A5 /* wifi-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wifi-icon.png"; path = "../../../../Google Drive/Side projects/Service Experience Camp/icons/wifi-icon.png"; sourceTree = "<group>"; };
+		4908019E199CC82A00E650A5 /* futurice-orange-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "futurice-orange-background.png"; path = "../../../../Google Drive/Side projects/Service Experience Camp/icons/futurice-orange-background.png"; sourceTree = "<group>"; };
+		490801A0199CF29700E650A5 /* futurice-orange-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "futurice-orange-background.png"; sourceTree = "<group>"; };
+		490801A2199CF49600E650A5 /* home-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-image.png"; sourceTree = "<group>"; };
 		4D186E691393CCA800CDA3DB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4D1ED38C139CBB7600BB1D47 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4D30E8401396CBA9007E9D0B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -536,6 +550,10 @@
 		88C00DD11988046900AF869A /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				49080198199CC69700E650A5 /* keytalks-icon.png */,
+				49080199199CC69700E650A5 /* venue-icon.png */,
+				4908019A199CC69700E650A5 /* wifi-icon.png */,
+				49080190199CC55F00E650A5 /* agenda-icon.png */,
 				88C00DD21988046900AF869A /* icon1024.png */,
 				88C00DD31988046900AF869A /* icon120.png */,
 				88C00DD41988046900AF869A /* icon58.png */,
@@ -548,6 +566,9 @@
 		88C00DD61988046900AF869A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				490801A2199CF49600E650A5 /* home-image.png */,
+				4908019E199CC82A00E650A5 /* futurice-orange-background.png */,
+				490801A0199CF29700E650A5 /* futurice-orange-background.png */,
 				88C00EA81988E21200AF869A /* artist-placeholder@2x.jpg */,
 				88C00DD71988046900AF869A /* background@2x.png */,
 				88C00DD81988046900AF869A /* daychooser-selected@2x.png */,
@@ -868,6 +889,8 @@
 				88C00DFB1988046900AF869A /* schedule-bg@2x.png in Resources */,
 				88C00DFE1988046900AF869A /* star-selected-yellow@2x.png in Resources */,
 				88A78C8719890CB7005F4D70 /* info in Resources */,
+				4908019D199CC69700E650A5 /* wifi-icon.png in Resources */,
+				49080191199CC55F00E650A5 /* agenda-icon.png in Resources */,
 				88C00E691988047600AF869A /* FestMapViewController.xib in Resources */,
 				88C00DF51988046900AF869A /* frontpage-button-lc@2x.png in Resources */,
 				88C00DFF1988046900AF869A /* star-selected@2x.png in Resources */,
@@ -875,12 +898,15 @@
 				88C00DEB1988046900AF869A /* news in Resources */,
 				88C00E9E1988E1F400AF869A /* gentzen.jpg in Resources */,
 				88C00E831988056A00AF869A /* Images.xcassets in Resources */,
+				4908019F199CC82A00E650A5 /* futurice-orange-background.png in Resources */,
 				88C00E711988047600AF869A /* FestWindow.xib in Resources */,
 				88C00E5B1988047600AF869A /* FestArtistCell.xib in Resources */,
 				88C00E9B1988E1F400AF869A /* church.jpg in Resources */,
+				4908019C199CC69700E650A5 /* venue-icon.png in Resources */,
 				88C00E5F1988047600AF869A /* FestArtistViewController.xib in Resources */,
 				88C00DF11988046900AF869A /* daychooser-selected@2x.png in Resources */,
 				88C00DED1988046900AF869A /* icon120.png in Resources */,
+				490801A1199CF29700E650A5 /* futurice-orange-background.png in Resources */,
 				88C00E011988046900AF869A /* wikipedia@2x.png in Resources */,
 				88C00E8F1988486300AF869A /* frontpage-label-schedule@2x.png in Resources */,
 				88C00DFA1988046900AF869A /* navigation-bar@2x.png in Resources */,
@@ -896,6 +922,7 @@
 				88C00DF21988046900AF869A /* daychooser@2x.png in Resources */,
 				88C00DEE1988046900AF869A /* icon58.png in Resources */,
 				88C00DEA1988046900AF869A /* gigs in Resources */,
+				4908019B199CC69700E650A5 /* keytalks-icon.png in Resources */,
 				88C00E001988046900AF869A /* star@2x.png in Resources */,
 				88C00E6C1988047600AF869A /* FestNewsViewController.xib in Resources */,
 				88C00DF01988046900AF869A /* background@2x.png in Resources */,
@@ -903,6 +930,7 @@
 				88C00EA01988E1F400AF869A /* martin-lof.jpg in Resources */,
 				88C00E9F1988E1F400AF869A /* godel.jpg in Resources */,
 				88C00DFD1988046900AF869A /* schedule-stages@2x.png in Resources */,
+				490801A3199CF49600E650A5 /* home-image.png in Resources */,
 				88C00DF61988046900AF869A /* frontpage-button-map@2x.png in Resources */,
 				88C00DF71988046900AF869A /* frontpage-label-news@2x.png in Resources */,
 				88C00DEC1988046900AF869A /* icon1024.png in Resources */,
