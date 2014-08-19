@@ -16,12 +16,16 @@
 		48EE8C41158B721200C5345E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EE8C40158B721100C5345E /* SystemConfiguration.framework */; };
 		48EE8C43158B725000C5345E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EE8C42158B724F00C5345E /* libz.dylib */; };
 		48EE8C45158B725B00C5345E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EE8C44158B725A00C5345E /* MobileCoreServices.framework */; };
-		49080191199CC55F00E650A5 /* agenda-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49080190199CC55F00E650A5 /* agenda-icon.png */; };
-		4908019B199CC69700E650A5 /* keytalks-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49080198199CC69700E650A5 /* keytalks-icon.png */; };
-		4908019C199CC69700E650A5 /* venue-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49080199199CC69700E650A5 /* venue-icon.png */; };
-		4908019D199CC69700E650A5 /* wifi-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908019A199CC69700E650A5 /* wifi-icon.png */; };
 		490801A1199CF29700E650A5 /* futurice-orange-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 490801A0199CF29700E650A5 /* futurice-orange-background.png */; };
 		490801A3199CF49600E650A5 /* home-image.png in Resources */ = {isa = PBXBuildFile; fileRef = 490801A2199CF49600E650A5 /* home-image.png */; };
+		499D632019A2472F00951A5A /* agenda-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 499D631C19A2472F00951A5A /* agenda-icon.png */; };
+		499D632119A2472F00951A5A /* keytalks-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 499D631D19A2472F00951A5A /* keytalks-icon.png */; };
+		499D632219A2472F00951A5A /* venue-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 499D631E19A2472F00951A5A /* venue-icon.png */; };
+		499D632319A2472F00951A5A /* wifi-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 499D631F19A2472F00951A5A /* wifi-icon.png */; };
+		499D632519A24EFB00951A5A /* futurice-logo-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 499D632419A24EFB00951A5A /* futurice-logo-black.png */; };
+		499D632919A2632700951A5A /* schedule-stages@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 499D632819A2632700951A5A /* schedule-stages@2x.png */; };
+		499D632B19A263E000951A5A /* daychooser-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 499D632A19A263E000951A5A /* daychooser-selected@2x.png */; };
+		499D632D19A2674100951A5A /* schedule-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 499D632C19A2674100951A5A /* schedule-bg@2x.png */; };
 		4D186E6A1393CCA900CDA3DB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D186E691393CCA800CDA3DB /* QuartzCore.framework */; };
 		4D1ED38D139CBB7600BB1D47 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1ED38C139CBB7600BB1D47 /* AudioToolbox.framework */; };
 		4D30E8411396CBAB007E9D0B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D30E8401396CBA9007E9D0B /* AVFoundation.framework */; };
@@ -50,7 +54,6 @@
 		88C00DEE1988046900AF869A /* icon58.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DD41988046900AF869A /* icon58.png */; };
 		88C00DEF1988046900AF869A /* icon80.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DD51988046900AF869A /* icon80.png */; };
 		88C00DF01988046900AF869A /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DD71988046900AF869A /* background@2x.png */; };
-		88C00DF11988046900AF869A /* daychooser-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DD81988046900AF869A /* daychooser-selected@2x.png */; };
 		88C00DF21988046900AF869A /* daychooser@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DD91988046900AF869A /* daychooser@2x.png */; };
 		88C00DF41988046900AF869A /* frontpage-button-info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DDB1988046900AF869A /* frontpage-button-info@2x.png */; };
 		88C00DF51988046900AF869A /* frontpage-button-lc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DDC1988046900AF869A /* frontpage-button-lc@2x.png */; };
@@ -58,9 +61,7 @@
 		88C00DF71988046900AF869A /* frontpage-label-news@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DDE1988046900AF869A /* frontpage-label-news@2x.png */; };
 		88C00DF91988046900AF869A /* launch-h548@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DE01988046900AF869A /* launch-h548@2x.png */; };
 		88C00DFA1988046900AF869A /* navigation-bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DE11988046900AF869A /* navigation-bar@2x.png */; };
-		88C00DFB1988046900AF869A /* schedule-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DE21988046900AF869A /* schedule-bg@2x.png */; };
 		88C00DFC1988046900AF869A /* schedule-hoursep@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DE31988046900AF869A /* schedule-hoursep@2x.png */; };
-		88C00DFD1988046900AF869A /* schedule-stages@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DE41988046900AF869A /* schedule-stages@2x.png */; };
 		88C00DFE1988046900AF869A /* star-selected-yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DE51988046900AF869A /* star-selected-yellow@2x.png */; };
 		88C00DFF1988046900AF869A /* star-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DE61988046900AF869A /* star-selected@2x.png */; };
 		88C00E001988046900AF869A /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DE71988046900AF869A /* star@2x.png */; };
@@ -205,12 +206,16 @@
 		48EE8C40158B721100C5345E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		48EE8C42158B724F00C5345E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		48EE8C44158B725A00C5345E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		49080190199CC55F00E650A5 /* agenda-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "agenda-icon.png"; sourceTree = "<group>"; };
-		49080198199CC69700E650A5 /* keytalks-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "keytalks-icon.png"; path = "../../../../Google Drive/Side projects/Service Experience Camp/icons/keytalks-icon.png"; sourceTree = "<group>"; };
-		49080199199CC69700E650A5 /* venue-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "venue-icon.png"; path = "../../../../Google Drive/Side projects/Service Experience Camp/icons/venue-icon.png"; sourceTree = "<group>"; };
-		4908019A199CC69700E650A5 /* wifi-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wifi-icon.png"; path = "../../../../Google Drive/Side projects/Service Experience Camp/icons/wifi-icon.png"; sourceTree = "<group>"; };
 		490801A0199CF29700E650A5 /* futurice-orange-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "futurice-orange-background.png"; sourceTree = "<group>"; };
 		490801A2199CF49600E650A5 /* home-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-image.png"; sourceTree = "<group>"; };
+		499D631C19A2472F00951A5A /* agenda-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "agenda-icon.png"; sourceTree = "<group>"; };
+		499D631D19A2472F00951A5A /* keytalks-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keytalks-icon.png"; sourceTree = "<group>"; };
+		499D631E19A2472F00951A5A /* venue-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "venue-icon.png"; sourceTree = "<group>"; };
+		499D631F19A2472F00951A5A /* wifi-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wifi-icon.png"; sourceTree = "<group>"; };
+		499D632419A24EFB00951A5A /* futurice-logo-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "futurice-logo-black.png"; sourceTree = "<group>"; };
+		499D632819A2632700951A5A /* schedule-stages@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule-stages@2x.png"; sourceTree = "<group>"; };
+		499D632A19A263E000951A5A /* daychooser-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "daychooser-selected@2x.png"; sourceTree = "<group>"; };
+		499D632C19A2674100951A5A /* schedule-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule-bg@2x.png"; sourceTree = "<group>"; };
 		4D186E691393CCA800CDA3DB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4D1ED38C139CBB7600BB1D47 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4D30E8401396CBA9007E9D0B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -249,7 +254,6 @@
 		88C00DD41988046900AF869A /* icon58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon58.png; sourceTree = "<group>"; };
 		88C00DD51988046900AF869A /* icon80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon80.png; sourceTree = "<group>"; };
 		88C00DD71988046900AF869A /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
-		88C00DD81988046900AF869A /* daychooser-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "daychooser-selected@2x.png"; sourceTree = "<group>"; };
 		88C00DD91988046900AF869A /* daychooser@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "daychooser@2x.png"; sourceTree = "<group>"; };
 		88C00DDB1988046900AF869A /* frontpage-button-info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "frontpage-button-info@2x.png"; sourceTree = "<group>"; };
 		88C00DDC1988046900AF869A /* frontpage-button-lc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "frontpage-button-lc@2x.png"; sourceTree = "<group>"; };
@@ -257,9 +261,7 @@
 		88C00DDE1988046900AF869A /* frontpage-label-news@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "frontpage-label-news@2x.png"; sourceTree = "<group>"; };
 		88C00DE01988046900AF869A /* launch-h548@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch-h548@2x.png"; sourceTree = "<group>"; };
 		88C00DE11988046900AF869A /* navigation-bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation-bar@2x.png"; sourceTree = "<group>"; };
-		88C00DE21988046900AF869A /* schedule-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule-bg@2x.png"; sourceTree = "<group>"; };
 		88C00DE31988046900AF869A /* schedule-hoursep@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule-hoursep@2x.png"; sourceTree = "<group>"; };
-		88C00DE41988046900AF869A /* schedule-stages@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule-stages@2x.png"; sourceTree = "<group>"; };
 		88C00DE51988046900AF869A /* star-selected-yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-selected-yellow@2x.png"; sourceTree = "<group>"; };
 		88C00DE61988046900AF869A /* star-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-selected@2x.png"; sourceTree = "<group>"; };
 		88C00DE71988046900AF869A /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
@@ -548,10 +550,11 @@
 		88C00DD11988046900AF869A /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				49080198199CC69700E650A5 /* keytalks-icon.png */,
-				49080199199CC69700E650A5 /* venue-icon.png */,
-				4908019A199CC69700E650A5 /* wifi-icon.png */,
-				49080190199CC55F00E650A5 /* agenda-icon.png */,
+				499D632419A24EFB00951A5A /* futurice-logo-black.png */,
+				499D631C19A2472F00951A5A /* agenda-icon.png */,
+				499D631D19A2472F00951A5A /* keytalks-icon.png */,
+				499D631E19A2472F00951A5A /* venue-icon.png */,
+				499D631F19A2472F00951A5A /* wifi-icon.png */,
 				88C00DD21988046900AF869A /* icon1024.png */,
 				88C00DD31988046900AF869A /* icon120.png */,
 				88C00DD41988046900AF869A /* icon58.png */,
@@ -564,11 +567,13 @@
 		88C00DD61988046900AF869A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				499D632C19A2674100951A5A /* schedule-bg@2x.png */,
+				499D632A19A263E000951A5A /* daychooser-selected@2x.png */,
+				499D632819A2632700951A5A /* schedule-stages@2x.png */,
 				490801A2199CF49600E650A5 /* home-image.png */,
 				490801A0199CF29700E650A5 /* futurice-orange-background.png */,
 				88C00EA81988E21200AF869A /* artist-placeholder@2x.jpg */,
 				88C00DD71988046900AF869A /* background@2x.png */,
-				88C00DD81988046900AF869A /* daychooser-selected@2x.png */,
 				88C00DD91988046900AF869A /* daychooser@2x.png */,
 				88C00DDB1988046900AF869A /* frontpage-button-info@2x.png */,
 				88C00DDC1988046900AF869A /* frontpage-button-lc@2x.png */,
@@ -579,9 +584,7 @@
 				88C00DE01988046900AF869A /* launch-h548@2x.png */,
 				88C00E841988063000AF869A /* launch@2x.png */,
 				88C00DE11988046900AF869A /* navigation-bar@2x.png */,
-				88C00DE21988046900AF869A /* schedule-bg@2x.png */,
 				88C00DE31988046900AF869A /* schedule-hoursep@2x.png */,
-				88C00DE41988046900AF869A /* schedule-stages@2x.png */,
 				88C00DE51988046900AF869A /* star-selected-yellow@2x.png */,
 				88C00DE61988046900AF869A /* star-selected@2x.png */,
 				88C00DE71988046900AF869A /* star@2x.png */,
@@ -883,24 +886,23 @@
 			files = (
 				88C00DFC1988046900AF869A /* schedule-hoursep@2x.png in Resources */,
 				88C00DEF1988046900AF869A /* icon80.png in Resources */,
-				88C00DFB1988046900AF869A /* schedule-bg@2x.png in Resources */,
+				499D632D19A2674100951A5A /* schedule-bg@2x.png in Resources */,
 				88C00DFE1988046900AF869A /* star-selected-yellow@2x.png in Resources */,
 				88A78C8719890CB7005F4D70 /* info in Resources */,
-				4908019D199CC69700E650A5 /* wifi-icon.png in Resources */,
-				49080191199CC55F00E650A5 /* agenda-icon.png in Resources */,
 				88C00E691988047600AF869A /* FestMapViewController.xib in Resources */,
 				88C00DF51988046900AF869A /* frontpage-button-lc@2x.png in Resources */,
 				88C00DFF1988046900AF869A /* star-selected@2x.png in Resources */,
 				88C00DF91988046900AF869A /* launch-h548@2x.png in Resources */,
 				88C00DEB1988046900AF869A /* news in Resources */,
+				499D632119A2472F00951A5A /* keytalks-icon.png in Resources */,
 				88C00E9E1988E1F400AF869A /* gentzen.jpg in Resources */,
+				499D632219A2472F00951A5A /* venue-icon.png in Resources */,
+				499D632919A2632700951A5A /* schedule-stages@2x.png in Resources */,
 				88C00E831988056A00AF869A /* Images.xcassets in Resources */,
 				88C00E711988047600AF869A /* FestWindow.xib in Resources */,
 				88C00E5B1988047600AF869A /* FestArtistCell.xib in Resources */,
 				88C00E9B1988E1F400AF869A /* church.jpg in Resources */,
-				4908019C199CC69700E650A5 /* venue-icon.png in Resources */,
 				88C00E5F1988047600AF869A /* FestArtistViewController.xib in Resources */,
-				88C00DF11988046900AF869A /* daychooser-selected@2x.png in Resources */,
 				88C00DED1988046900AF869A /* icon120.png in Resources */,
 				490801A1199CF29700E650A5 /* futurice-orange-background.png in Resources */,
 				88C00E011988046900AF869A /* wikipedia@2x.png in Resources */,
@@ -911,6 +913,7 @@
 				88C00E671988047600AF869A /* FestMainViewController.xib in Resources */,
 				88C00DF41988046900AF869A /* frontpage-button-info@2x.png in Resources */,
 				88C00EA11988E1F400AF869A /* tarski.jpg in Resources */,
+				499D632319A2472F00951A5A /* wifi-icon.png in Resources */,
 				88C00E851988063000AF869A /* launch@2x.png in Resources */,
 				88C00E6E1988047600AF869A /* FestScheduleViewController.xib in Resources */,
 				88C00E5D1988047600AF869A /* FestArtistsViewController.xib in Resources */,
@@ -918,14 +921,14 @@
 				88C00DF21988046900AF869A /* daychooser@2x.png in Resources */,
 				88C00DEE1988046900AF869A /* icon58.png in Resources */,
 				88C00DEA1988046900AF869A /* gigs in Resources */,
-				4908019B199CC69700E650A5 /* keytalks-icon.png in Resources */,
+				499D632B19A263E000951A5A /* daychooser-selected@2x.png in Resources */,
 				88C00E001988046900AF869A /* star@2x.png in Resources */,
 				88C00E6C1988047600AF869A /* FestNewsViewController.xib in Resources */,
 				88C00DF01988046900AF869A /* background@2x.png in Resources */,
 				88A78C8F19891660005F4D70 /* map.jpg in Resources */,
+				499D632019A2472F00951A5A /* agenda-icon.png in Resources */,
 				88C00EA01988E1F400AF869A /* martin-lof.jpg in Resources */,
 				88C00E9F1988E1F400AF869A /* godel.jpg in Resources */,
-				88C00DFD1988046900AF869A /* schedule-stages@2x.png in Resources */,
 				490801A3199CF49600E650A5 /* home-image.png in Resources */,
 				88C00DF61988046900AF869A /* frontpage-button-map@2x.png in Resources */,
 				88C00DF71988046900AF869A /* frontpage-label-news@2x.png in Resources */,
@@ -934,6 +937,7 @@
 				88C00E9C1988E1F400AF869A /* coquand.jpg in Resources */,
 				88C00EA91988E21200AF869A /* artist-placeholder@2x.jpg in Resources */,
 				88C00E9219884D9D00AF869A /* turing.jpg in Resources */,
+				499D632519A24EFB00951A5A /* futurice-logo-black.png in Resources */,
 				88C00E631988047600AF869A /* FestInfoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

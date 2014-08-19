@@ -18,15 +18,11 @@
             <rect key="frame" x="0.0" y="64" width="320" height="504"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="GKf-Ay-SXA">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qvb-69-9rC">
-                    <rect key="frame" x="0.0" y="154" width="320" height="350"/>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qvb-69-9rC">
+                    <rect key="frame" x="0.0" y="120" width="320" height="350"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="schedule-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="gES-qe-7v2">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="schedule-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="gES-qe-7v2">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
@@ -39,11 +35,11 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="schedule-stages.png" translatesAutoresizingMaskIntoConstraints="NO" id="zEK-Vt-yOf">
-                                            <rect key="frame" x="0.0" y="0.0" width="43" height="350"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="43" height="320"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
                             </subviews>
                             <constraints>
@@ -79,7 +75,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="qib-Zm-jch" secondAttribute="trailing" id="RKX-Em-waH"/>
                 <constraint firstItem="Qvb-69-9rC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dSd-hf-xQZ"/>
@@ -95,8 +91,7 @@
         </view>
     </objects>
     <resources>
-        <image name="background.png" width="320" height="568"/>
-        <image name="schedule-bg.png" width="320" height="350"/>
-        <image name="schedule-stages.png" width="43" height="350"/>
+        <image name="schedule-bg.png" width="526" height="394"/>
+        <image name="schedule-stages.png" width="76" height="430"/>
     </resources>
 </document>

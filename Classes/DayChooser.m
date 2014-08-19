@@ -55,7 +55,7 @@
     buttons = [NSMutableArray arrayWithCapacity:dayCount];
 
     buttonContainer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, kDayChooserHeight)];
-    buttonContainer.backgroundColor = [UIColor clearColor];
+    buttonContainer.backgroundColor = [UIColor blackColor];
     [self addSubview:buttonContainer];
 
     CGFloat fontPointSize = 14;
@@ -71,9 +71,9 @@
         button.titleLabel.font = [UIFont boldSystemFontOfSize:fontPointSize];
         [button setTitle:dayName.uppercaseString forState:UIControlStateNormal];
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
-        [button setTitleColor:FEST_COLOR_GOLD forState:UIControlStateNormal];
+        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchDown];
-        button.titleLabel.font = [UIFont fontWithName:@"Palatino-Roman" size:19];
+        button.titleLabel.font = [UIFont fontWithName:@"Verdana" size:14];
 
         [button setBackgroundImage:self.unselectedImage forState:UIControlStateNormal];
         [button setBackgroundImage:self.selectedImage forState:UIControlStateSelected];
