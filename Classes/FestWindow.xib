@@ -72,8 +72,8 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="YDG-ja-E81">
                 <autoresizingMask key="autoresizingMask"/>
-                <color key="tintColor" red="0.80000000000000004" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                <color key="barTintColor" red="0.80000000000000004" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="tintColor" red="1" green="0.52220710099561174" blue="0.15129534773464359" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="barTintColor" red="1" green="0.52220710099561174" blue="0.15129534773464359" alpha="1" colorSpace="calibratedRGB"/>
             </navigationBar>
             <viewControllers>
                 <viewController id="dra-uv-rfN" customClass="FestMainViewController">

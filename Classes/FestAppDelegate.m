@@ -51,9 +51,10 @@ void uncaughtExceptionHandler(NSException *exception)
 
     // Navigation bar
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigation-bar.png"] forBarMetrics:UIBarMetricsDefault];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 
     // No navbar shadow
-    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
+//    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
 
     // Custom back bar button item
     // [[UINavigationBar appearance] setBackIndicatorImage:[UIImage imageNamed:@"back_arrow.png"]];

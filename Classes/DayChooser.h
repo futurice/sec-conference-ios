@@ -5,7 +5,7 @@
 
 #import <UIKit/UIKit.h>
 
-#define kDayChooserHeight 50
+#define kDayChooserHeight 45
 
 @class DayChooser;
 

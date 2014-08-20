@@ -35,13 +35,13 @@
         [self setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
         [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 
-        [self setImage:[UIImage imageNamed:@"star.png"] forState:UIControlStateNormal];
-        [self setImage:[UIImage imageNamed:@"star-selected-yellow.png"] forState:UIControlStateSelected];
+//        [self setImage:[UIImage imageNamed:@"star.png"] forState:UIControlStateNormal];
+//        [self setImage:[UIImage imageNamed:@"star-selected-yellow.png"] forState:UIControlStateSelected];
 
         self.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
         self.titleLabel.numberOfLines = 3;
 
-        self.titleLabel.font = [UIFont fontWithName:@"Palatino-Roman" size:15];
+        self.titleLabel.font = [UIFont systemFontOfSize:15];
     }
     return self;
 }
@@ -53,20 +53,22 @@
         _event = event;
         
         self.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-        self.contentEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 5);
-        [self setTitle:event.title.uppercaseString forState:UIControlStateNormal];
+        self.contentEdgeInsets = UIEdgeInsetsMake(0, 8, 0, 8);
+        [self setTitle:event.title forState:UIControlStateNormal];
         
-        self.backgroundColor = [UIColor grayColor];
-        [self setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
-        [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        self.backgroundColor = [UIColor clearColor];
+        [self setBackgroundImage:[UIImage imageNamed:@"eventBackground"] forState:UIControlStateNormal];
+        [self setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
+        [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         
-        [self setImage:[UIImage imageNamed:@"star.png"] forState:UIControlStateNormal];
-        [self setImage:[UIImage imageNamed:@"star-selected-yellow.png"] forState:UIControlStateSelected];
+//        [self setImage:[UIImage imageNamed:@"star.png"] forState:UIControlStateNormal];
+//        [self setImage:[UIImage imageNamed:@"star-selected-yellow.png"] forState:UIControlStateSelected];
         
         self.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
         self.titleLabel.numberOfLines = 3;
-        
-        self.titleLabel.font = [UIFont fontWithName:@"Palatino-Roman" size:15];
+        self.titleLabel.font = [UIFont systemFontOfSize:13];
+
+//        self.titleLabel.font = [UIFont fontWithName:@"Palatino-Roman" size:15];
     }
     return self;
 }
@@ -117,11 +119,11 @@
 @end
 
 #define kHourWidth 200
-#define kRowHeight 50
-#define kTopPadding 20
-#define kLeftPadding 50
-#define kRightPadding 20
-#define kRowPadding 5
+#define kRowHeight 48
+#define kTopPadding 0
+#define kLeftPadding 76
+#define kRightPadding 40
+#define kRowPadding 1
 
 CGFloat timeWidthFrom(NSDate *from, NSDate *to);
 
@@ -321,7 +323,7 @@ CGFloat timeWidthFrom(NSDate *from, NSDate *to)
 
     while ([fretDate compare:self.end] == NSOrderedAscending) {
         // fret
-        CGRect frame = CGRectMake(timeWidthFrom(self.begin, fretDate) - 2, 0, 4, 350);
+        CGRect frame = CGRectMake(timeWidthFrom(self.begin, fretDate) - 2, 0, 1, 365);
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:frame];
         imageView.image = fretImage;
 
@@ -331,10 +333,10 @@ CGFloat timeWidthFrom(NSDate *from, NSDate *to)
         CGRect timeFrame = CGRectMake(timeWidthFrom(self.begin, fretDate) - 50, 0, 100, 20);
         UILabel *timeLabel = [[UILabel alloc] initWithFrame:timeFrame];
 
-        timeLabel.textColor = [UIColor blackColor];
+        timeLabel.textColor = [UIColor whiteColor];
         timeLabel.text = [dateFormatter stringFromDate:fretDate];
         timeLabel.textAlignment = NSTextAlignmentCenter;
-        timeLabel.font = [UIFont fontWithName:@"Palatino-Roman" size:17];
+        timeLabel.font = [UIFont systemFontOfSize:17];
 
         [self.innerView addSubview:timeLabel];
 
@@ -394,7 +396,7 @@ CGFloat timeWidthFrom(NSDate *from, NSDate *to)
             CGFloat y = kTopPadding + kRowPadding + kRowHeight * stageIdx;
             CGFloat w = timeWidthFrom(event.begin, event.end);
             CGFloat h = kRowHeight - kRowPadding * 2;
-            CGRect frame = CGRectMake(x, y, w, h);
+            CGRect frame = CGRectMake(x, y - 23, w, h);
             
             GigButton *button = [[GigButton alloc] initWithFrame:frame event:event];
             
@@ -439,7 +441,7 @@ CGFloat timeWidthFrom(NSDate *from, NSDate *to)
 #pragma mark - AutoLayout
 - (CGSize)intrinsicContentSize
 {
-    return CGSizeMake(timeWidthFrom(self.dayBegin, self.dayEnd) + kLeftPadding, 100);
+    return CGSizeMake(timeWidthFrom(self.dayBegin, self.dayEnd) + kLeftPadding + kRightPadding, 100);
 }
 
 #pragma mark - Audio

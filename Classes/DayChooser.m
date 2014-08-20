@@ -38,7 +38,8 @@
     self.backgroundColor = [UIColor clearColor];
 
     self.selectedImage = [UIImage imageNamed:@"daychooser-selected"];
-    self.unselectedImage = [UIImage imageNamed:@"daychooser"];
+    self.selectedImage = [[UIImage imageNamed:@"daychooser-selected"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 15, 0, 15)  resizingMode:UIImageResizingModeStretch];
+    self.unselectedImage = [[UIImage imageNamed:@"daychooser"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 15, 0, 15)  resizingMode:UIImageResizingModeStretch];
 
     selectedDayIndex = NSNotFound;
 }
