@@ -25,6 +25,7 @@
 @property (nonatomic, strong) IBOutlet UILabel *gigLabel;
 @property (nonatomic, strong) IBOutlet UILabel *stageLabel;
 @property (nonatomic, strong) IBOutlet UILabel *infoLabel;
+@property (weak, nonatomic) IBOutlet UILabel *hourLabel;
 
 @property (nonatomic, strong) IBOutlet UIButton *wikipediaButton;
 
@@ -74,6 +75,12 @@
         self.gigLabel.text = eventModel.title;
         self.stageLabel.text = eventModel.location;
         self.infoLabel.text = eventModel.description;
+    
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"hh:mm"];
+        
+        self.hourLabel.text = [NSString stringWithFormat:@"%@ - %@",[dateFormatter stringFromDate:eventModel.begin],[dateFormatter stringFromDate:eventModel.end]];
+        
     }
 
     // Favourite
