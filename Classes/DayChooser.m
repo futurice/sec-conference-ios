@@ -72,7 +72,7 @@
         button.titleLabel.font = [UIFont boldSystemFontOfSize:fontPointSize];
         [button setTitle:dayName.uppercaseString forState:UIControlStateNormal];
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
-        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [button setTitleColor:RGB_COLOR(240, 142, 12) forState:UIControlStateNormal];
         [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchDown];
         button.titleLabel.font = [UIFont fontWithName:@"Verdana" size:14];
 

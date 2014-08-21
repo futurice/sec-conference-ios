@@ -47,7 +47,6 @@
 		88C00DEA1988046900AF869A /* gigs in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DCF1988046900AF869A /* gigs */; };
 		88C00DEB1988046900AF869A /* news in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DD01988046900AF869A /* news */; };
 		88C00DEC1988046900AF869A /* icon1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DD21988046900AF869A /* icon1024.png */; };
-		88C00DED1988046900AF869A /* icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DD31988046900AF869A /* icon120.png */; };
 		88C00DEE1988046900AF869A /* icon58.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DD41988046900AF869A /* icon58.png */; };
 		88C00DEF1988046900AF869A /* icon80.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DD51988046900AF869A /* icon80.png */; };
 		88C00DF01988046900AF869A /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DD71988046900AF869A /* background@2x.png */; };
@@ -125,6 +124,10 @@
 		C094537B19A4E1E7004268BA /* daychooser-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C094537919A4E1E7004268BA /* daychooser-selected@2x.png */; };
 		C094537C19A4E1E7004268BA /* daychooser@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C094537A19A4E1E7004268BA /* daychooser@2x.png */; };
 		C094538219A4E534004268BA /* navigation-bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C094538119A4E534004268BA /* navigation-bar@2x.png */; };
+		C0E8935C19A5F8AB00C9FF9B /* Icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = C0E8935B19A5F8AB00C9FF9B /* Icon120.png */; };
+		C0E8936319A6127400C9FF9B /* twitterButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0E8936119A6127400C9FF9B /* twitterButton@2x.png */; };
+		C0E8936419A6127400C9FF9B /* linkedinButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0E8936219A6127400C9FF9B /* linkedinButton@2x.png */; };
+		C0E8936619A6161000C9FF9B /* favButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0E8936519A6161000C9FF9B /* favButton@2x.png */; };
 		CD7852321378AD2500711F11 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7852311378AD2500711F11 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -248,7 +251,6 @@
 		88C00DCF1988046900AF869A /* gigs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gigs; sourceTree = "<group>"; };
 		88C00DD01988046900AF869A /* news */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = news; sourceTree = "<group>"; };
 		88C00DD21988046900AF869A /* icon1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1024.png; sourceTree = "<group>"; };
-		88C00DD31988046900AF869A /* icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon120.png; sourceTree = "<group>"; };
 		88C00DD41988046900AF869A /* icon58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon58.png; sourceTree = "<group>"; };
 		88C00DD51988046900AF869A /* icon80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon80.png; sourceTree = "<group>"; };
 		88C00DD71988046900AF869A /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
@@ -362,6 +364,10 @@
 		C094537919A4E1E7004268BA /* daychooser-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "daychooser-selected@2x.png"; sourceTree = "<group>"; };
 		C094537A19A4E1E7004268BA /* daychooser@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "daychooser@2x.png"; sourceTree = "<group>"; };
 		C094538119A4E534004268BA /* navigation-bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation-bar@2x.png"; sourceTree = "<group>"; };
+		C0E8935B19A5F8AB00C9FF9B /* Icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon120.png; sourceTree = "<group>"; };
+		C0E8936119A6127400C9FF9B /* twitterButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitterButton@2x.png"; sourceTree = "<group>"; };
+		C0E8936219A6127400C9FF9B /* linkedinButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "linkedinButton@2x.png"; sourceTree = "<group>"; };
+		C0E8936519A6161000C9FF9B /* favButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favButton@2x.png"; sourceTree = "<group>"; };
 		CD7852311378AD2500711F11 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -552,13 +558,13 @@
 		88C00DD11988046900AF869A /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				C0E8935B19A5F8AB00C9FF9B /* Icon120.png */,
 				499D632419A24EFB00951A5A /* futurice-logo-black.png */,
 				499D631C19A2472F00951A5A /* agenda-icon.png */,
 				499D631D19A2472F00951A5A /* keytalks-icon.png */,
 				499D631E19A2472F00951A5A /* venue-icon.png */,
 				499D631F19A2472F00951A5A /* wifi-icon.png */,
 				88C00DD21988046900AF869A /* icon1024.png */,
-				88C00DD31988046900AF869A /* icon120.png */,
 				88C00DD41988046900AF869A /* icon58.png */,
 				88C00DD51988046900AF869A /* icon80.png */,
 			);
@@ -569,9 +575,12 @@
 		88C00DD61988046900AF869A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C0E8936119A6127400C9FF9B /* twitterButton@2x.png */,
+				C0E8936219A6127400C9FF9B /* linkedinButton@2x.png */,
 				C094538119A4E534004268BA /* navigation-bar@2x.png */,
 				C094537919A4E1E7004268BA /* daychooser-selected@2x.png */,
 				C094537A19A4E1E7004268BA /* daychooser@2x.png */,
+				C0E8936519A6161000C9FF9B /* favButton@2x.png */,
 				C094537319A4DC98004268BA /* schedule-hoursep@2x.png */,
 				C094536F19A4DA81004268BA /* eventBackground@2x.png */,
 				C094536B19A4D2BE004268BA /* schedule-stages@2x.png */,
@@ -908,7 +917,6 @@
 				88C00E5B1988047600AF869A /* FestArtistCell.xib in Resources */,
 				88C00E9B1988E1F400AF869A /* church.jpg in Resources */,
 				88C00E5F1988047600AF869A /* FestArtistViewController.xib in Resources */,
-				88C00DED1988046900AF869A /* icon120.png in Resources */,
 				490801A1199CF29700E650A5 /* futurice-orange-background.png in Resources */,
 				88C00E011988046900AF869A /* wikipedia@2x.png in Resources */,
 				88C00E8F1988486300AF869A /* frontpage-label-schedule@2x.png in Resources */,
@@ -930,8 +938,12 @@
 				88C00DF01988046900AF869A /* background@2x.png in Resources */,
 				88A78C8F19891660005F4D70 /* map.jpg in Resources */,
 				499D632019A2472F00951A5A /* agenda-icon.png in Resources */,
+				C0E8935C19A5F8AB00C9FF9B /* Icon120.png in Resources */,
+				C0E8936419A6127400C9FF9B /* linkedinButton@2x.png in Resources */,
 				88C00EA01988E1F400AF869A /* martin-lof.jpg in Resources */,
 				88C00E9F1988E1F400AF869A /* godel.jpg in Resources */,
+				C0E8936319A6127400C9FF9B /* twitterButton@2x.png in Resources */,
+				C0E8936619A6161000C9FF9B /* favButton@2x.png in Resources */,
 				490801A3199CF49600E650A5 /* home-image.png in Resources */,
 				88C00DF61988046900AF869A /* frontpage-button-map@2x.png in Resources */,
 				C094537C19A4E1E7004268BA /* daychooser@2x.png in Resources */,

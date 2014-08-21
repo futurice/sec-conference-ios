@@ -26,6 +26,9 @@
 @property (nonatomic, strong) IBOutlet UILabel *stageLabel;
 @property (nonatomic, strong) IBOutlet UILabel *infoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *hourLabel;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIButton *twitterButton;
+@property (weak, nonatomic) IBOutlet UIButton *linkedinButton;
 
 @property (nonatomic, strong) IBOutlet UIButton *wikipediaButton;
 
@@ -71,16 +74,29 @@
     }
     else {
         Event *eventModel = [Event cast:self.event];
-        
         self.gigLabel.text = eventModel.title;
+//        self.gigLabel.text = [NSString stringWithFormat:@"%@ - %@",eventModel.artist,eventModel.title];
         self.stageLabel.text = eventModel.location;
         self.infoLabel.text = eventModel.description;
-    
+        
+        if (eventModel.speakerRole) {
+            self.titleLabel.text = [NSString stringWithFormat:@"%@ - %@",eventModel.artist,eventModel.speakerRole];
+        }else{
+            self.titleLabel.text = eventModel.artist;
+        }
+        
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"hh:mm"];
         
         self.hourLabel.text = [NSString stringWithFormat:@"%@ - %@",[dateFormatter stringFromDate:eventModel.begin],[dateFormatter stringFromDate:eventModel.end]];
         
+        if (eventModel.twitter) {
+            self.twitterButton.enabled = YES;
+        }
+        
+        if (eventModel.linkedIn) {
+            self.linkedinButton.enabled = YES;
+        }
     }
 
     // Favourite
@@ -144,6 +160,26 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)openLinkedIn:(id)sender {
+    
+    if([self.event isKindOfClass:[Gig class]]) {
+        Gig *gig = [Gig cast:self.event];
+        [UIApplication.sharedApplication openURL:gig.wikipediaUrl];
+    }
+    
+    Event *eventModel = [Event cast:self.event];
+    if (eventModel.linkedIn) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:eventModel.linkedIn]];
+    }
+}
+- (IBAction)openTwitter:(id)sender {
+    Event *eventModel = [Event cast:self.event];
+
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"twitter://"]]) {
+        NSURL *twitterURL = [NSURL URLWithString:[NSString stringWithFormat:@"twitter://user?screen_name=%@",eventModel.twitter]];
+        [[UIApplication sharedApplication] openURL:twitterURL];
+    }
 }
 
 #pragma mark - Actions

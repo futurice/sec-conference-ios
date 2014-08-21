@@ -57,7 +57,13 @@
         [self setTitle:event.title forState:UIControlStateNormal];
         
         self.backgroundColor = [UIColor clearColor];
-        [self setBackgroundImage:[UIImage imageNamed:@"eventBackground"] forState:UIControlStateNormal];
+        
+        if ([event.bar_camp boolValue]) {
+            [self setBackgroundImage:[UIImage imageNamed:@"eventBackground"] forState:UIControlStateNormal];
+        }else{
+            self.backgroundColor = RGB_COLOR(226,14,121);
+        }
+        
         [self setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
         [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         
@@ -333,7 +339,7 @@ CGFloat timeWidthFrom(NSDate *from, NSDate *to)
         CGRect timeFrame = CGRectMake(timeWidthFrom(self.begin, fretDate) - 50, 0, 100, 20);
         UILabel *timeLabel = [[UILabel alloc] initWithFrame:timeFrame];
 
-        timeLabel.textColor = [UIColor whiteColor];
+        timeLabel.textColor = RGB_COLOR(240, 142, 12);
         timeLabel.text = [dateFormatter stringFromDate:fretDate];
         timeLabel.textAlignment = NSTextAlignmentCenter;
         timeLabel.font = [UIFont systemFontOfSize:17];

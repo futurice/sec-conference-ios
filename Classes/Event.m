@@ -37,7 +37,11 @@
         _identifier = [NSString cast:json[@"_id"]];
     
         _imageURL = [NSString cast:json[@"image_url"]];
-        
+        _speakerRole = [NSString cast:json[@"speaker_role"]];
+        _bar_camp = (NSNumber *)json[@"bar_camp"];
+        _linkedIn = [NSString cast:json[@"linkedin_url"]];
+        _twitter = [NSString cast:json[@"twitter_handle"]];
+                     
     }
     return self;
 }
