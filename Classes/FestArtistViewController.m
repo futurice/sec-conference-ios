@@ -176,10 +176,15 @@
 - (IBAction)openTwitter:(id)sender {
     Event *eventModel = [Event cast:self.event];
 
+    NSURL *twitterURL = nil;
+    
     if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"twitter://"]]) {
-        NSURL *twitterURL = [NSURL URLWithString:[NSString stringWithFormat:@"twitter://user?screen_name=%@",eventModel.twitter]];
+        twitterURL = [NSURL URLWithString:[NSString stringWithFormat:@"twitter://user?screen_name=%@",eventModel.twitter]];
         [[UIApplication sharedApplication] openURL:twitterURL];
+    }else{
+        twitterURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://twitter.com/%@",eventModel.twitter]];
     }
+    [[UIApplication sharedApplication] openURL:twitterURL];
 }
 
 #pragma mark - Actions
