@@ -7,10 +7,11 @@
 //
 
 #import "FestArtistCell.h"
-
 #import "FestImageManager.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface FestArtistCell ()
+@property (strong, nonatomic) IBOutlet UIImageView *speakerImageView;
 @property (nonatomic, strong) IBOutlet UILabel *nameLabel;
 @property (nonatomic, strong) IBOutlet UILabel *stageLabel;
 @end
@@ -41,11 +42,11 @@
 {
     [super setHighlighted:highlighted animated:animated];
 
-    if (highlighted) {
-        self.nameLabel.textColor = self.stageLabel.textColor = FEST_COLOR_GOLD;
-    } else {
-        self.nameLabel.textColor = self.stageLabel.textColor = [UIColor blackColor];
-    }
+//    if (highlighted) {
+//        self.nameLabel.textColor = self.stageLabel.textColor = FEST_COLOR_GOLD;
+//    } else {
+//        self.nameLabel.textColor = self.stageLabel.textColor = [UIColor blackColor];
+//    }
 }
 
 #pragma mark - setter
@@ -69,6 +70,9 @@
     _event = event;
     self.nameLabel.text = event.artist;
     self.stageLabel.text = event.stageAndTimeIntervalString;
+    if (event.speakerImageUrl) {
+        [self.speakerImageView setImageWithURL:[NSURL URLWithString:event.speakerImageUrl]];
+    }
 }
 
 @end

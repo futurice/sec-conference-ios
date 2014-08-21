@@ -20,7 +20,7 @@
 @end
 
 #define kCellButtonTag 1000
-#define kCellHeight 59
+#define kCellHeight 69
 
 @implementation FestArtistsViewController
 
@@ -99,7 +99,7 @@
         cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     }
 
-    cell.backgroundColor = [UIColor clearColor];// (idx % 2 == 0) ? PJ_COLOR_LIGHT : PJ_COLOR_DARK;
+//    cell.backgroundColor = [UIColor clearColor];// (idx % 2 == 0) ? PJ_COLOR_LIGHT : PJ_COLOR_DARK;
     
     if([self.gigs[idx] isKindOfClass:[Gig class]]) {
         cell.gig = self.gigs[idx];

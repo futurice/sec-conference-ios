@@ -20,6 +20,7 @@
 @property (nonatomic, strong) NSString *identifier;
 @property (nonatomic, strong) NSString *imageURL;
 @property (nonatomic, strong) NSString *speakerRole;
+@property (nonatomic, strong) NSString *speakerImageUrl;
 @property (nonatomic, strong) NSNumber *bar_camp;
 @property (nonatomic, strong) NSString *linkedIn;
 @property (nonatomic, strong) NSString *twitter;
