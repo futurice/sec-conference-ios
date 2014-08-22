@@ -132,8 +132,7 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    
-    UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 0,self.tableView.bounds.size.width - 20,0)];
+    UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     headerLabel.backgroundColor = RGB_COLOR(240,142,12);
     headerLabel.font = [UIFont fontWithName:@"AvenirNext-Regular" size:20];
     headerLabel.textAlignment = NSTextAlignmentCenter;
@@ -163,7 +162,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    Gig *gig = self.gigs[indexPath.row];
+    Gig *gig = (self.days[indexPath.section])[indexPath.row];
     [APPDELEGATE showGig:gig];
 }
 
