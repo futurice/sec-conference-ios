@@ -130,24 +130,6 @@
 
 #pragma mark UITableViewDelegate
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-
-    NSString *title;
-    
-    switch (section) {
-        case 0:
-            title = @"Saturday";
-            break;
-        case 1:
-            title = @"Sunday";
-            break;
-        default:
-            break;
-    }
-    return title;
-}
-
-
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     
@@ -155,7 +137,7 @@
     headerLabel.backgroundColor = RGB_COLOR(240,142,12);
     headerLabel.font = [UIFont fontWithName:@"AvenirNext-Regular" size:20];
     headerLabel.textAlignment = NSTextAlignmentCenter;
-    headerLabel.text = @"Saturday";
+    headerLabel.text = section ? @"Sunday" : @"Saturday";
     return headerLabel;
 }
 
