@@ -7,7 +7,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FestMainViewController">
             <connections>
-                <outlet property="gigImageView" destination="AEE-Hx-XEM" id="3Zh-RX-b54"/>
                 <outlet property="gigLabel" destination="IMi-vI-OdU" id="B5V-PH-oPe"/>
                 <outlet property="gigSublabel" destination="nrP-hl-Gy2" id="bmr-Dg-4aR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -18,21 +17,6 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="620"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fsS-DL-6so" userLabel="Image View - Background">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                </imageView>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DSR-Z4-st0" userLabel="View - Background">
-                    <rect key="frame" x="-46" y="0.0" width="424" height="568"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                </view>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="home-image.png" translatesAutoresizingMaskIntoConstraints="NO" id="AEE-Hx-XEM">
-                    <rect key="frame" x="0.0" y="15" width="320" height="240"/>
-                    <autoresizingMask key="autoresizingMask"/>
-                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home-image.png" translatesAutoresizingMaskIntoConstraints="NO" id="HAW-3d-6HJ">
                     <rect key="frame" x="0.0" y="15" width="320" height="225"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -50,21 +34,17 @@
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Next: Alan Turing" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMi-vI-OdU">
                             <rect key="frame" x="10" y="4" width="280" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="13"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Computing (15 min)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrP-hl-Gy2">
                             <rect key="frame" x="10" y="20" width="280" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="13"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="frontpage-label-schedule.png" translatesAutoresizingMaskIntoConstraints="NO" id="LTm-NX-wv3">
-                            <rect key="frame" x="175" y="270" width="125" height="30"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </imageView>
                     </subviews>
                 </view>
                 <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ovj-lG-VTF" userLabel="View - News container">
@@ -100,10 +80,10 @@
                     <rect key="frame" x="0.0" y="235" width="320" height="70"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="20"/>
-                    <inset key="titleEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                    <inset key="titleEdgeInsets" minX="40" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <inset key="imageEdgeInsets" minX="15" minY="15" maxX="265" maxY="15"/>
-                    <state key="normal" title="Agenda" image="agenda-icon.png"/>
+                    <state key="normal" title="Agenda" image="icon-1-agenda.png"/>
                     <connections>
                         <action selector="showSchedule:" destination="-1" eventType="touchUpInside" id="OCf-Wc-RaC"/>
                     </connections>
@@ -112,10 +92,10 @@
                     <rect key="frame" x="0.0" y="305" width="320" height="70"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="20"/>
-                    <inset key="titleEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                    <inset key="titleEdgeInsets" minX="40" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <inset key="imageEdgeInsets" minX="15" minY="15" maxX="265" maxY="15"/>
-                    <state key="normal" title="Key talks" image="keytalks-icon.png"/>
+                    <state key="normal" title="Key talks" image="icon-2-key-talks.png"/>
                     <connections>
                         <action selector="showGigs:" destination="-1" eventType="touchUpInside" id="NV8-9C-P0J"/>
                     </connections>
@@ -124,10 +104,10 @@
                     <rect key="frame" x="0.0" y="375" width="320" height="70"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="20"/>
-                    <inset key="titleEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                    <inset key="titleEdgeInsets" minX="40" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <inset key="imageEdgeInsets" minX="15" minY="15" maxX="265" maxY="15"/>
-                    <state key="normal" title="Venue" image="venue-icon.png"/>
+                    <state key="normal" title="Venue" image="icon-3-venune.png"/>
                     <connections>
                         <action selector="showMap:" destination="-1" eventType="touchUpInside" id="g8f-Hd-yhD"/>
                     </connections>
@@ -136,10 +116,10 @@
                     <rect key="frame" x="0.0" y="445" width="320" height="70"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="20"/>
-                    <inset key="titleEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                    <inset key="titleEdgeInsets" minX="40" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <inset key="imageEdgeInsets" minX="15" minY="15" maxX="265" maxY="15"/>
-                    <state key="normal" title="Info" image="agenda-icon.png"/>
+                    <state key="normal" title="Info" image="icon-4-wifi.png"/>
                     <connections>
                         <action selector="showInfo:" destination="-1" eventType="touchUpInside" id="D8J-gc-LEa"/>
                     </connections>
@@ -165,17 +145,17 @@
                     <color key="backgroundColor" red="1" green="0.48235297203063965" blue="0.20392158627510071" alpha="1" colorSpace="deviceRGB"/>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.99215692281723022" green="0.9960784912109375" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
     <resources>
-        <image name="agenda-icon.png" width="88" height="88"/>
-        <image name="frontpage-label-schedule.png" width="125" height="30"/>
         <image name="futurice-logo-black.png" width="300" height="88"/>
         <image name="home-image.png" width="1280" height="796"/>
-        <image name="keytalks-icon.png" width="78" height="82"/>
-        <image name="venue-icon.png" width="74" height="76"/>
+        <image name="icon-1-agenda.png" width="40" height="40"/>
+        <image name="icon-2-key-talks.png" width="40" height="39"/>
+        <image name="icon-3-venune.png" width="40" height="41"/>
+        <image name="icon-4-wifi.png" width="40" height="40"/>
     </resources>
 </document>

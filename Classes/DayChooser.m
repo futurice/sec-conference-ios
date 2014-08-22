@@ -37,7 +37,7 @@
 {
     self.backgroundColor = [UIColor clearColor];
 
-    self.selectedImage = [UIImage imageNamed:@"daychooser-selected"];
+//    self.selectedImage = [UIImage imageNamed:@"daychooser-selected"];
     self.selectedImage = [[UIImage imageNamed:@"daychooser-selected"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 15, 0, 15)  resizingMode:UIImageResizingModeStretch];
     self.unselectedImage = [[UIImage imageNamed:@"daychooser"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 15, 0, 15)  resizingMode:UIImageResizingModeStretch];
 
@@ -69,7 +69,7 @@
         NSString *dayName = dayNames[i];
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
 
-        button.titleLabel.font = [UIFont boldSystemFontOfSize:fontPointSize];
+        button.titleLabel.font = [UIFont fontWithName:@"AvenirNext" size:fontPointSize];
         [button setTitle:dayName.uppercaseString forState:UIControlStateNormal];
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
         [button setTitleColor:RGB_COLOR(240, 142, 12) forState:UIControlStateNormal];
