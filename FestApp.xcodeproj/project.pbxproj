@@ -128,6 +128,7 @@
 		C0E8936319A6127400C9FF9B /* twitterButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0E8936119A6127400C9FF9B /* twitterButton@2x.png */; };
 		C0E8936419A6127400C9FF9B /* linkedinButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0E8936219A6127400C9FF9B /* linkedinButton@2x.png */; };
 		C0E8936619A6161000C9FF9B /* favButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0E8936519A6161000C9FF9B /* favButton@2x.png */; };
+		C0E8936819A723C700C9FF9B /* person_placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0E8936719A723C700C9FF9B /* person_placeholder@2x.png */; };
 		CD7852321378AD2500711F11 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7852311378AD2500711F11 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -368,6 +369,7 @@
 		C0E8936119A6127400C9FF9B /* twitterButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitterButton@2x.png"; sourceTree = "<group>"; };
 		C0E8936219A6127400C9FF9B /* linkedinButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "linkedinButton@2x.png"; sourceTree = "<group>"; };
 		C0E8936519A6161000C9FF9B /* favButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favButton@2x.png"; sourceTree = "<group>"; };
+		C0E8936719A723C700C9FF9B /* person_placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "person_placeholder@2x.png"; sourceTree = "<group>"; };
 		CD7852311378AD2500711F11 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -577,6 +579,7 @@
 			children = (
 				C0E8936119A6127400C9FF9B /* twitterButton@2x.png */,
 				C0E8936219A6127400C9FF9B /* linkedinButton@2x.png */,
+				C0E8936719A723C700C9FF9B /* person_placeholder@2x.png */,
 				C094538119A4E534004268BA /* navigation-bar@2x.png */,
 				C094537919A4E1E7004268BA /* daychooser-selected@2x.png */,
 				C094537A19A4E1E7004268BA /* daychooser@2x.png */,
@@ -951,6 +954,7 @@
 				88C00DEC1988046900AF869A /* icon1024.png in Resources */,
 				88C00E8E1988486300AF869A /* frontpage-button-speakers@2x.png in Resources */,
 				88C00E9C1988E1F400AF869A /* coquand.jpg in Resources */,
+				C0E8936819A723C700C9FF9B /* person_placeholder@2x.png in Resources */,
 				88C00EA91988E21200AF869A /* artist-placeholder@2x.jpg in Resources */,
 				88C00E9219884D9D00AF869A /* turing.jpg in Resources */,
 				499D632519A24EFB00951A5A /* futurice-logo-black.png in Resources */,

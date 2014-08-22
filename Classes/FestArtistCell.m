@@ -70,9 +70,9 @@
     _event = event;
     self.nameLabel.text = event.artist;
     self.stageLabel.text = event.stageAndTimeIntervalString;
-    if (event.speakerImageUrl) {
-        [self.speakerImageView setImageWithURL:[NSURL URLWithString:event.speakerImageUrl]];
-    }
+//    if (event.speakerImageUrl) {
+        [self.speakerImageView setImageWithURL:[NSURL URLWithString:event.speakerImageUrl] placeholderImage:[UIImage imageNamed:@"person_placeholder"]];
+//    }
 }
 
 @end
