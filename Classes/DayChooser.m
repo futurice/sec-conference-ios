@@ -69,12 +69,11 @@
         NSString *dayName = dayNames[i];
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
 
-        button.titleLabel.font = [UIFont fontWithName:@"AvenirNext" size:fontPointSize];
+        button.titleLabel.font = [UIFont fontWithName:@"AvenirNext-Medium" size:fontPointSize];
         [button setTitle:dayName.uppercaseString forState:UIControlStateNormal];
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
         [button setTitleColor:RGB_COLOR(240, 142, 12) forState:UIControlStateNormal];
         [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchDown];
-        button.titleLabel.font = [UIFont fontWithName:@"Verdana" size:14];
 
         [button setBackgroundImage:self.unselectedImage forState:UIControlStateNormal];
         [button setBackgroundImage:self.selectedImage forState:UIControlStateSelected];

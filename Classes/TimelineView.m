@@ -9,6 +9,7 @@
 #import "NSDate+Additions.h"
 #import <AudioToolbox/AudioServices.h>
 #import <AVFoundation/AVFoundation.h>
+#import "FestFavouritesManager.h"
 
 #pragma mark - GigButton
 
@@ -53,7 +54,7 @@
         _event = event;
         
         self.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-        self.contentEdgeInsets = UIEdgeInsetsMake(0, 8, 0, 8);
+        self.contentEdgeInsets = UIEdgeInsetsMake(0, 8, 0, 12);
         [self setTitle:event.title forState:UIControlStateNormal];
         
         if ([event.bar_camp boolValue]) {
@@ -70,7 +71,7 @@
         
         self.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
         self.titleLabel.numberOfLines = 3;
-        self.titleLabel.font = [UIFont systemFontOfSize:13];
+        self.titleLabel.font = [UIFont fontWithName:@"AvenirNext-DemiBold" size:11];
 
 //        self.titleLabel.font = [UIFont fontWithName:@"Palatino-Roman" size:15];
     }
@@ -148,6 +149,12 @@ CGFloat timeWidthFrom(NSDate *from, NSDate *to)
     self.autoresizesSubviews = NO;
     self.innerView = [[UIView alloc] initWithFrame:self.bounds];
     self.innerView.clipsToBounds = YES;
+    [[FestFavouritesManager sharedFavouritesManager].favouritesSignal subscribeNext:^(NSArray *favourites) {
+    
+        self.favouritedGigs = [favourites copy];
+        [self recreate];
+    
+    }];
 
     [self addSubview:self.innerView];
 }
@@ -344,8 +351,7 @@ CGFloat timeWidthFrom(NSDate *from, NSDate *to)
         timeLabel.textColor = RGB_COLOR(240, 142, 12);
         timeLabel.text = [dateFormatter stringFromDate:fretDate];
         timeLabel.textAlignment = NSTextAlignmentCenter;
-        timeLabel.font = [UIFont systemFontOfSize:17];
-
+        timeLabel.font = [UIFont fontWithName:@"AvenirNext-Medium" size:17];
         [self.innerView addSubview:timeLabel];
 
         // next
@@ -412,14 +418,17 @@ CGFloat timeWidthFrom(NSDate *from, NSDate *to)
             button.alpha = favourited ? 1.0f : 0.8f;
             
             [button addTarget:self action:@selector(gigButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-            
-            CGRect favFrame = CGRectMake(x, y, 40, h);
-            FavButton *favButton = [[FavButton alloc] initWithFrame:favFrame event:event];
-            
-            [favButton addTarget:self action:@selector(favButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-            
             [self.innerView addSubview:button];
-//            [self.innerView addSubview:favButton];
+
+            CGRect favFrame = CGRectMake(button.frame.origin.x + button.frame.size.width - 12, button.frame.origin.y + button.frame.size.height - 12, 10, 10);
+            if (favourited) {
+                FavButton *favButton = [[FavButton alloc] initWithFrame:favFrame event:event];
+                [favButton setImage:[UIImage imageNamed:@"star-selected-white"] forState:UIControlStateNormal];
+                favButton.adjustsImageWhenHighlighted = NO;
+                [self.innerView addSubview:favButton];
+            }
+
+//            [favButton addTarget:self action:@selector(favButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
         }
     }
 

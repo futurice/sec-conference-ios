@@ -122,6 +122,7 @@
 		C0C9B40B19A75F4F00426305 /* timeIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B40A19A75F4F00426305 /* timeIcon@2x.png */; };
 		C0C9B40D19A75F7A00426305 /* stageIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B40C19A75F7A00426305 /* stageIcon@2x.png */; };
 		C0C9B40F19A76CAD00426305 /* favButtonSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B40E19A76CAD00426305 /* favButtonSelected@2x.png */; };
+		C0C9B41119A771D500426305 /* star-selected-white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B41019A771D500426305 /* star-selected-white@2x.png */; };
 		C0E8935C19A5F8AB00C9FF9B /* Icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = C0E8935B19A5F8AB00C9FF9B /* Icon120.png */; };
 		C0E8936319A6127400C9FF9B /* twitterButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0E8936119A6127400C9FF9B /* twitterButton@2x.png */; };
 		C0E8936419A6127400C9FF9B /* linkedinButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0E8936219A6127400C9FF9B /* linkedinButton@2x.png */; };
@@ -365,6 +366,7 @@
 		C0C9B40A19A75F4F00426305 /* timeIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timeIcon@2x.png"; sourceTree = "<group>"; };
 		C0C9B40C19A75F7A00426305 /* stageIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stageIcon@2x.png"; sourceTree = "<group>"; };
 		C0C9B40E19A76CAD00426305 /* favButtonSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favButtonSelected@2x.png"; sourceTree = "<group>"; };
+		C0C9B41019A771D500426305 /* star-selected-white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-selected-white@2x.png"; sourceTree = "<group>"; };
 		C0E8935B19A5F8AB00C9FF9B /* Icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon120.png; sourceTree = "<group>"; };
 		C0E8936119A6127400C9FF9B /* twitterButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitterButton@2x.png"; sourceTree = "<group>"; };
 		C0E8936219A6127400C9FF9B /* linkedinButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "linkedinButton@2x.png"; sourceTree = "<group>"; };
@@ -606,6 +608,7 @@
 				88C00E8C1988486300AF869A /* frontpage-button-speakers@2x.png */,
 				88C00DDE1988046900AF869A /* frontpage-label-news@2x.png */,
 				88C00E8D1988486300AF869A /* frontpage-label-schedule@2x.png */,
+				C0C9B41019A771D500426305 /* star-selected-white@2x.png */,
 				88C00DE51988046900AF869A /* star-selected-yellow@2x.png */,
 				88C00DE61988046900AF869A /* star-selected@2x.png */,
 				88C00DE71988046900AF869A /* star@2x.png */,
@@ -917,6 +920,7 @@
 				C094537019A4DA81004268BA /* eventBackground@2x.png in Resources */,
 				88C00DEB1988046900AF869A /* news in Resources */,
 				C094537B19A4E1E7004268BA /* daychooser-selected@2x.png in Resources */,
+				C0C9B41119A771D500426305 /* star-selected-white@2x.png in Resources */,
 				C0C9B40B19A75F4F00426305 /* timeIcon@2x.png in Resources */,
 				88C00E9E1988E1F400AF869A /* gentzen.jpg in Resources */,
 				C0C9B40619A7346A00426305 /* icon80.png in Resources */,
