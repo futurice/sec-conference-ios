@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FestArtistViewController">
             <connections>
+                <outlet property="favouriteButton" destination="dL7-zB-uQk" id="3pV-p5-AKX"/>
                 <outlet property="gigLabel" destination="rs5-oC-si9" id="CtF-tq-dEf"/>
                 <outlet property="hourLabel" destination="Nyc-k8-iJg" id="P4V-LK-7Fr"/>
                 <outlet property="imageView" destination="MEP-b4-8Cf" id="gFq-YY-VL9"/>
@@ -203,6 +204,10 @@
                                     <state key="normal" image="favButton.png">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <state key="selected" image="favButtonSelected.png"/>
+                                    <connections>
+                                        <action selector="toggleFavourite:" destination="-1" eventType="touchUpInside" id="bdK-an-z0W"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -260,6 +265,7 @@
     </objects>
     <resources>
         <image name="favButton.png" width="170" height="35"/>
+        <image name="favButtonSelected.png" width="170" height="35"/>
         <image name="linkedinButton.png" width="30" height="30"/>
         <image name="stageIcon.png" width="12" height="18"/>
         <image name="timeIcon.png" width="19" height="19"/>

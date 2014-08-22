@@ -110,8 +110,16 @@
 
                           if (favourites.count != 0) {
                               NSString *gigId = favourites[rd.random % favourites.count];
+                              
                               NSUInteger gigIdx = [gigs indexOfObjectPassingTest:^BOOL(Gig* art, NSUInteger idx, BOOL *stop) {
-                                  return [art.gigId isEqualToString:gigId];
+                                  BOOL result;
+                                  if ([art isKindOfClass:[Gig class]]) {
+                                      result = [art.gigId isEqualToString:gigId];
+                                  }else{
+                                      Event *event = [Event cast:art];
+                                      result = [event.identifier isEqualToString:gigId];
+                                  }
+                                  return result;
                               }];
 
                               if (gigIdx != NSNotFound) {

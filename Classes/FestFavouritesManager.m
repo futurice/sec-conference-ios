@@ -57,13 +57,37 @@
     NSMutableArray *mutableFavourites = [NSMutableArray arrayWithArray:favourites];
     if (favourite) {
         // add only if not already there
-        if (![mutableFavourites containsObject:gig.gigId]) {
-            [mutableFavourites addObject:gig.gigId];
+        
+        if ([gig isKindOfClass:[Gig class]]) {
+            if (![mutableFavourites containsObject:gig.gigId]) {
+                [mutableFavourites addObject:gig.gigId];
+            }
         }
+        if ([gig isKindOfClass:[Event class]]) {
+            
+            Event *event = [Event cast:gig];
+    
+            if (![mutableFavourites containsObject:event.identifier]) {
+                [mutableFavourites addObject:event.identifier];
+            }
+        }
+        
+
     } else {
         // remove while there are objects
-        while ([mutableFavourites containsObject:gig.gigId]) {
-            [mutableFavourites removeObject:gig.gigId];
+        
+        if ([gig isKindOfClass:[Gig class]]) {
+            while ([mutableFavourites containsObject:gig.gigId]) {
+                [mutableFavourites removeObject:gig.gigId];
+            }
+        }
+        if ([gig isKindOfClass:[Event class]]) {
+            
+            Event *event = [Event cast:gig];
+
+            while ([mutableFavourites containsObject:event.identifier]) {
+                [mutableFavourites removeObject:event.identifier];
+            }
         }
     }
 
@@ -78,32 +102,66 @@
 - (void)toggleNotification:(Gig *)gig favourite:(BOOL)favourite
 {
     if (favourite) {
-        if ([gig.begin after:[NSDate date]]) {
-
-            NSString *alertText = [NSString stringWithFormat:@"%@\n%@-%@ (%@)", gig.gigName, [gig.begin hourAndMinuteString], [gig.end hourAndMinuteString], gig.stage];
-
-            UILocalNotification *localNotif = [[UILocalNotification alloc] init];
-            if (localNotif == nil) return;
-            localNotif.fireDate = [gig.begin dateByAddingTimeInterval:-kAlertIntervalInMinutes*kOneMinute];
-            localNotif.alertBody = alertText;
-            localNotif.soundName = UILocalNotificationDefaultSoundName;
-            [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
-
-            NSLog(@"added alert: %@", alertText);
-        }
-
-    } else {
-
-        UILocalNotification *notificationToCancel = nil;
-        for (UILocalNotification *aNotif in [[UIApplication sharedApplication] scheduledLocalNotifications]) {
-            if([aNotif.alertBody rangeOfString:gig.gigName].location == 0) {
-                notificationToCancel = aNotif;
-                break;
+        
+        if ([gig isKindOfClass:[Gig class]]) {
+            
+            if ([gig.begin after:[NSDate date]]) {
+                
+                NSString *alertText = [NSString stringWithFormat:@"%@\n%@-%@ (%@)", gig.gigName, [gig.begin hourAndMinuteString], [gig.end hourAndMinuteString], gig.stage];
+                
+                UILocalNotification *localNotif = [[UILocalNotification alloc] init];
+                if (localNotif == nil) {return;}
+                localNotif.fireDate = [gig.begin dateByAddingTimeInterval:-kAlertIntervalInMinutes*kOneMinute];
+                localNotif.alertBody = alertText;
+                localNotif.soundName = UILocalNotificationDefaultSoundName;
+                [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
+                
+                NSLog(@"added alert: %@", alertText);
+            }else {
+            
+                UILocalNotification *notificationToCancel = nil;
+                for (UILocalNotification *aNotif in [[UIApplication sharedApplication] scheduledLocalNotifications]) {
+                    if([aNotif.alertBody rangeOfString:gig.gigName].location == 0) {
+                        notificationToCancel = aNotif;
+                        break;
+                    }
+                }
+                if (notificationToCancel != nil) {
+                    NSLog(@"removed alert: %@", notificationToCancel.alertBody);
+                    [[UIApplication sharedApplication] cancelLocalNotification:notificationToCancel];
+                }
             }
         }
-        if (notificationToCancel != nil) {
-            NSLog(@"removed alert: %@", notificationToCancel.alertBody);
-            [[UIApplication sharedApplication] cancelLocalNotification:notificationToCancel];
+        if ([gig isKindOfClass:[Event class]]) {
+            Event *event = [Event cast:gig];
+            
+            if ([event.begin after:[NSDate date]]) {
+                
+                NSString *alertText = [NSString stringWithFormat:@"%@\n%@-%@ (%@)", event.title, [event.begin hourAndMinuteString], [event.end hourAndMinuteString], event.location];
+                
+                UILocalNotification *localNotif = [[UILocalNotification alloc] init];
+                if (localNotif == nil) return;
+                localNotif.fireDate = [event.begin dateByAddingTimeInterval:-kAlertIntervalInMinutes*kOneMinute];
+                localNotif.alertBody = alertText;
+                localNotif.soundName = UILocalNotificationDefaultSoundName;
+                [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
+                
+                NSLog(@"added alert: %@", alertText);
+            }else {
+            
+                UILocalNotification *notificationToCancel = nil;
+                for (UILocalNotification *aNotif in [[UIApplication sharedApplication] scheduledLocalNotifications]) {
+                    if([aNotif.alertBody rangeOfString:event.title].location == 0) {
+                        notificationToCancel = aNotif;
+                        break;
+                    }
+                }
+                if (notificationToCancel != nil) {
+                    NSLog(@"removed alert: %@", notificationToCancel.alertBody);
+                    [[UIApplication sharedApplication] cancelLocalNotification:notificationToCancel];
+                }
+            }
+        
         }
     }
 }

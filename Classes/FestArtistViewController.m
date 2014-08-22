@@ -100,10 +100,10 @@
     }
 
     // Favourite
-    [self.favouriteButton setImage:[UIImage imageNamed:@"star-selected.png"] forState:UIControlStateSelected];
+//    [self.favouriteButton setImage:[UIImage imageNamed:@"star-selected.png"] forState:UIControlStateSelected];
 
-    [self.favouriteButton setTitle:@"Star" forState:UIControlStateNormal];
-    [self.favouriteButton setTitle:@"Starred" forState:UIControlStateSelected];
+//    [self.favouriteButton setTitle:@"Star" forState:UIControlStateNormal];
+//    [self.favouriteButton setTitle:@"Starred" forState:UIControlStateSelected];
 
     FestFavouritesManager *favouriteManager = [FestFavouritesManager sharedFavouritesManager];
     [favouriteManager.favouritesSignal subscribeNext:^(NSArray *favourites) {

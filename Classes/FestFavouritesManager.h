@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import "Gig.h"
-
+#import "Event.h"
 @interface FestFavouritesManager : NSObject
 // NSArray of gigIds
 @property (nonatomic, readonly) RACSignal *favouritesSignal;
