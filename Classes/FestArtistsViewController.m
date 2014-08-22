@@ -15,6 +15,7 @@
 
 @interface FestArtistsViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSArray *gigs;
+@property (nonatomic,strong) NSArray *days;
 
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @end

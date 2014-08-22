@@ -43,15 +43,11 @@
 		88C00DE91988046900AF869A /* festival in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DCE1988046900AF869A /* festival */; };
 		88C00DEA1988046900AF869A /* gigs in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DCF1988046900AF869A /* gigs */; };
 		88C00DEB1988046900AF869A /* news in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DD01988046900AF869A /* news */; };
-		88C00DEC1988046900AF869A /* icon1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DD21988046900AF869A /* icon1024.png */; };
-		88C00DEE1988046900AF869A /* icon58.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DD41988046900AF869A /* icon58.png */; };
-		88C00DEF1988046900AF869A /* icon80.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DD51988046900AF869A /* icon80.png */; };
 		88C00DF01988046900AF869A /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DD71988046900AF869A /* background@2x.png */; };
 		88C00DF41988046900AF869A /* frontpage-button-info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DDB1988046900AF869A /* frontpage-button-info@2x.png */; };
 		88C00DF51988046900AF869A /* frontpage-button-lc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DDC1988046900AF869A /* frontpage-button-lc@2x.png */; };
 		88C00DF61988046900AF869A /* frontpage-button-map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DDD1988046900AF869A /* frontpage-button-map@2x.png */; };
 		88C00DF71988046900AF869A /* frontpage-label-news@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DDE1988046900AF869A /* frontpage-label-news@2x.png */; };
-		88C00DF91988046900AF869A /* launch-h548@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DE01988046900AF869A /* launch-h548@2x.png */; };
 		88C00DFE1988046900AF869A /* star-selected-yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DE51988046900AF869A /* star-selected-yellow@2x.png */; };
 		88C00DFF1988046900AF869A /* star-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DE61988046900AF869A /* star-selected@2x.png */; };
 		88C00E001988046900AF869A /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00DE71988046900AF869A /* star@2x.png */; };
@@ -92,7 +88,6 @@
 		88C00E7F1988047600AF869A /* UIView+XYWidthHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C00E4F1988047600AF869A /* UIView+XYWidthHeight.m */; };
 		88C00E801988047600AF869A /* UIViewController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C00E511988047600AF869A /* UIViewController+Additions.m */; };
 		88C00E831988056A00AF869A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88C00E821988056A00AF869A /* Images.xcassets */; };
-		88C00E851988063000AF869A /* launch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00E841988063000AF869A /* launch@2x.png */; };
 		88C00E8E1988486300AF869A /* frontpage-button-speakers@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00E8C1988486300AF869A /* frontpage-button-speakers@2x.png */; };
 		88C00E8F1988486300AF869A /* frontpage-label-schedule@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C00E8D1988486300AF869A /* frontpage-label-schedule@2x.png */; };
 		88C00E9219884D9D00AF869A /* turing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88C00E9119884D9D00AF869A /* turing.jpg */; };
@@ -120,7 +115,10 @@
 		C094537419A4DC98004268BA /* schedule-hoursep@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C094537319A4DC98004268BA /* schedule-hoursep@2x.png */; };
 		C094537B19A4E1E7004268BA /* daychooser-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C094537919A4E1E7004268BA /* daychooser-selected@2x.png */; };
 		C094537C19A4E1E7004268BA /* daychooser@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C094537A19A4E1E7004268BA /* daychooser@2x.png */; };
-		C094538219A4E534004268BA /* navigation-bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C094538119A4E534004268BA /* navigation-bar@2x.png */; };
+		C0C9B40519A7346A00426305 /* icon58.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B40219A7346A00426305 /* icon58.png */; };
+		C0C9B40619A7346A00426305 /* icon80.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B40319A7346A00426305 /* icon80.png */; };
+		C0C9B40719A7346A00426305 /* icon1024.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B40419A7346A00426305 /* icon1024.png */; };
+		C0C9B40919A7373B00426305 /* navigation-bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B40819A7373B00426305 /* navigation-bar@2x.png */; };
 		C0E8935C19A5F8AB00C9FF9B /* Icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = C0E8935B19A5F8AB00C9FF9B /* Icon120.png */; };
 		C0E8936319A6127400C9FF9B /* twitterButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0E8936119A6127400C9FF9B /* twitterButton@2x.png */; };
 		C0E8936419A6127400C9FF9B /* linkedinButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0E8936219A6127400C9FF9B /* linkedinButton@2x.png */; };
@@ -249,15 +247,11 @@
 		88C00DCE1988046900AF869A /* festival */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = festival; sourceTree = "<group>"; };
 		88C00DCF1988046900AF869A /* gigs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gigs; sourceTree = "<group>"; };
 		88C00DD01988046900AF869A /* news */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = news; sourceTree = "<group>"; };
-		88C00DD21988046900AF869A /* icon1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1024.png; sourceTree = "<group>"; };
-		88C00DD41988046900AF869A /* icon58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon58.png; sourceTree = "<group>"; };
-		88C00DD51988046900AF869A /* icon80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon80.png; sourceTree = "<group>"; };
 		88C00DD71988046900AF869A /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
 		88C00DDB1988046900AF869A /* frontpage-button-info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "frontpage-button-info@2x.png"; sourceTree = "<group>"; };
 		88C00DDC1988046900AF869A /* frontpage-button-lc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "frontpage-button-lc@2x.png"; sourceTree = "<group>"; };
 		88C00DDD1988046900AF869A /* frontpage-button-map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "frontpage-button-map@2x.png"; sourceTree = "<group>"; };
 		88C00DDE1988046900AF869A /* frontpage-label-news@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "frontpage-label-news@2x.png"; sourceTree = "<group>"; };
-		88C00DE01988046900AF869A /* launch-h548@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch-h548@2x.png"; sourceTree = "<group>"; };
 		88C00DE51988046900AF869A /* star-selected-yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-selected-yellow@2x.png"; sourceTree = "<group>"; };
 		88C00DE61988046900AF869A /* star-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-selected@2x.png"; sourceTree = "<group>"; };
 		88C00DE71988046900AF869A /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
@@ -323,7 +317,6 @@
 		88C00E501988047600AF869A /* UIViewController+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Additions.h"; sourceTree = "<group>"; };
 		88C00E511988047600AF869A /* UIViewController+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Additions.m"; sourceTree = "<group>"; };
 		88C00E821988056A00AF869A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = FestApp/Images.xcassets; sourceTree = "<group>"; };
-		88C00E841988063000AF869A /* launch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch@2x.png"; sourceTree = "<group>"; };
 		88C00E8B19880E3600AF869A /* FestApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FestApp.h; sourceTree = "<group>"; };
 		88C00E8C1988486300AF869A /* frontpage-button-speakers@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "frontpage-button-speakers@2x.png"; sourceTree = "<group>"; };
 		88C00E8D1988486300AF869A /* frontpage-label-schedule@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "frontpage-label-schedule@2x.png"; sourceTree = "<group>"; };
@@ -362,7 +355,10 @@
 		C094537319A4DC98004268BA /* schedule-hoursep@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule-hoursep@2x.png"; sourceTree = "<group>"; };
 		C094537919A4E1E7004268BA /* daychooser-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "daychooser-selected@2x.png"; sourceTree = "<group>"; };
 		C094537A19A4E1E7004268BA /* daychooser@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "daychooser@2x.png"; sourceTree = "<group>"; };
-		C094538119A4E534004268BA /* navigation-bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation-bar@2x.png"; sourceTree = "<group>"; };
+		C0C9B40219A7346A00426305 /* icon58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon58.png; sourceTree = "<group>"; };
+		C0C9B40319A7346A00426305 /* icon80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon80.png; sourceTree = "<group>"; };
+		C0C9B40419A7346A00426305 /* icon1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1024.png; sourceTree = "<group>"; };
+		C0C9B40819A7373B00426305 /* navigation-bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation-bar@2x.png"; sourceTree = "<group>"; };
 		C0E8935B19A5F8AB00C9FF9B /* Icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon120.png; sourceTree = "<group>"; };
 		C0E8936119A6127400C9FF9B /* twitterButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitterButton@2x.png"; sourceTree = "<group>"; };
 		C0E8936219A6127400C9FF9B /* linkedinButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "linkedinButton@2x.png"; sourceTree = "<group>"; };
@@ -562,12 +558,12 @@
 		88C00DD11988046900AF869A /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				C0C9B40219A7346A00426305 /* icon58.png */,
+				C0C9B40319A7346A00426305 /* icon80.png */,
+				C0C9B40419A7346A00426305 /* icon1024.png */,
 				C0E8935B19A5F8AB00C9FF9B /* Icon120.png */,
 				499D632419A24EFB00951A5A /* futurice-logo-black.png */,
 				499D631F19A2472F00951A5A /* wifi-icon.png */,
-				88C00DD21988046900AF869A /* icon1024.png */,
-				88C00DD41988046900AF869A /* icon58.png */,
-				88C00DD51988046900AF869A /* icon80.png */,
 			);
 			name = Icons;
 			path = Resources/Icons;
@@ -576,6 +572,7 @@
 		88C00DD61988046900AF869A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C0C9B40819A7373B00426305 /* navigation-bar@2x.png */,
 				C0E8937119A72B8000C9FF9B /* icon-1-agenda@2x.png */,
 				C0E8937219A72B8000C9FF9B /* icon-2-key-talks@2x.png */,
 				C0E8937319A72B8000C9FF9B /* icon-3-venune@2x.png */,
@@ -583,7 +580,6 @@
 				C0E8936119A6127400C9FF9B /* twitterButton@2x.png */,
 				C0E8936219A6127400C9FF9B /* linkedinButton@2x.png */,
 				C0E8936719A723C700C9FF9B /* person_placeholder@2x.png */,
-				C094538119A4E534004268BA /* navigation-bar@2x.png */,
 				C094537919A4E1E7004268BA /* daychooser-selected@2x.png */,
 				C094537A19A4E1E7004268BA /* daychooser@2x.png */,
 				C0E8936519A6161000C9FF9B /* favButton@2x.png */,
@@ -601,8 +597,6 @@
 				88C00E8C1988486300AF869A /* frontpage-button-speakers@2x.png */,
 				88C00DDE1988046900AF869A /* frontpage-label-news@2x.png */,
 				88C00E8D1988486300AF869A /* frontpage-label-schedule@2x.png */,
-				88C00DE01988046900AF869A /* launch-h548@2x.png */,
-				88C00E841988063000AF869A /* launch@2x.png */,
 				88C00DE51988046900AF869A /* star-selected-yellow@2x.png */,
 				88C00DE61988046900AF869A /* star-selected@2x.png */,
 				88C00DE71988046900AF869A /* star@2x.png */,
@@ -902,7 +896,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88C00DEF1988046900AF869A /* icon80.png in Resources */,
 				88C00DFE1988046900AF869A /* star-selected-yellow@2x.png in Resources */,
 				C094536E19A4D6CF004268BA /* schedule-bg@2x.png in Resources */,
 				88A78C8719890CB7005F4D70 /* info in Resources */,
@@ -910,13 +903,13 @@
 				88C00DF51988046900AF869A /* frontpage-button-lc@2x.png in Resources */,
 				88C00DFF1988046900AF869A /* star-selected@2x.png in Resources */,
 				C0E8937519A72B8000C9FF9B /* icon-1-agenda@2x.png in Resources */,
+				C0C9B40919A7373B00426305 /* navigation-bar@2x.png in Resources */,
 				C094536C19A4D2BE004268BA /* schedule-stages@2x.png in Resources */,
 				C094537019A4DA81004268BA /* eventBackground@2x.png in Resources */,
-				88C00DF91988046900AF869A /* launch-h548@2x.png in Resources */,
 				88C00DEB1988046900AF869A /* news in Resources */,
 				C094537B19A4E1E7004268BA /* daychooser-selected@2x.png in Resources */,
-				C094538219A4E534004268BA /* navigation-bar@2x.png in Resources */,
 				88C00E9E1988E1F400AF869A /* gentzen.jpg in Resources */,
+				C0C9B40619A7346A00426305 /* icon80.png in Resources */,
 				88C00E831988056A00AF869A /* Images.xcassets in Resources */,
 				88C00E711988047600AF869A /* FestWindow.xib in Resources */,
 				88C00E5B1988047600AF869A /* FestArtistCell.xib in Resources */,
@@ -925,18 +918,17 @@
 				490801A1199CF29700E650A5 /* futurice-orange-background.png in Resources */,
 				88C00E011988046900AF869A /* wikipedia@2x.png in Resources */,
 				88C00E8F1988486300AF869A /* frontpage-label-schedule@2x.png in Resources */,
+				C0C9B40519A7346A00426305 /* icon58.png in Resources */,
 				88C00DE91988046900AF869A /* festival in Resources */,
 				88C00E701988047600AF869A /* FestWebContentViewController.xib in Resources */,
 				88C00E671988047600AF869A /* FestMainViewController.xib in Resources */,
 				88C00DF41988046900AF869A /* frontpage-button-info@2x.png in Resources */,
 				88C00EA11988E1F400AF869A /* tarski.jpg in Resources */,
 				499D632319A2472F00951A5A /* wifi-icon.png in Resources */,
-				88C00E851988063000AF869A /* launch@2x.png in Resources */,
 				88C00E6E1988047600AF869A /* FestScheduleViewController.xib in Resources */,
 				88C00E5D1988047600AF869A /* FestArtistsViewController.xib in Resources */,
 				C0E8937719A72B8000C9FF9B /* icon-3-venune@2x.png in Resources */,
 				88C00E9D1988E1F400AF869A /* curry.jpg in Resources */,
-				88C00DEE1988046900AF869A /* icon58.png in Resources */,
 				C094537419A4DC98004268BA /* schedule-hoursep@2x.png in Resources */,
 				C0E8937819A72B8000C9FF9B /* icon-4-wifi@2x.png in Resources */,
 				88C00DEA1988046900AF869A /* gigs in Resources */,
@@ -944,6 +936,7 @@
 				88C00E6C1988047600AF869A /* FestNewsViewController.xib in Resources */,
 				88C00DF01988046900AF869A /* background@2x.png in Resources */,
 				88A78C8F19891660005F4D70 /* map.jpg in Resources */,
+				C0C9B40719A7346A00426305 /* icon1024.png in Resources */,
 				C0E8935C19A5F8AB00C9FF9B /* Icon120.png in Resources */,
 				C0E8936419A6127400C9FF9B /* linkedinButton@2x.png in Resources */,
 				88C00EA01988E1F400AF869A /* martin-lof.jpg in Resources */,
@@ -955,7 +948,6 @@
 				88C00DF61988046900AF869A /* frontpage-button-map@2x.png in Resources */,
 				C094537C19A4E1E7004268BA /* daychooser@2x.png in Resources */,
 				88C00DF71988046900AF869A /* frontpage-label-news@2x.png in Resources */,
-				88C00DEC1988046900AF869A /* icon1024.png in Resources */,
 				88C00E8E1988486300AF869A /* frontpage-button-speakers@2x.png in Resources */,
 				88C00E9C1988E1F400AF869A /* coquand.jpg in Resources */,
 				C0E8936819A723C700C9FF9B /* person_placeholder@2x.png in Resources */,

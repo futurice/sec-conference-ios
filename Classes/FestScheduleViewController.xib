@@ -15,58 +15,63 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+            <rect key="frame" x="0.0" y="64" width="320" height="504"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qib-Zm-jch" userLabel="DaysContainer">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Beo-zt-EzU" customClass="DayChooser">
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Beo-zt-EzU" customClass="DayChooser">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="4Vj-tr-1ea"/>
-                            </constraints>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="Beo-zt-EzU" firstAttribute="leading" secondItem="qib-Zm-jch" secondAttribute="leading" id="BiW-3S-3yL"/>
-                        <constraint firstAttribute="centerY" secondItem="Beo-zt-EzU" secondAttribute="centerY" id="IjB-8W-w54"/>
-                        <constraint firstAttribute="trailing" secondItem="Beo-zt-EzU" secondAttribute="trailing" id="ZHe-Gb-DTn"/>
-                        <constraint firstAttribute="centerX" secondItem="Beo-zt-EzU" secondAttribute="centerX" id="mYA-rd-B0D"/>
+                        <constraint firstAttribute="height" constant="50" id="o3p-x5-Uql"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qvb-69-9rC" userLabel="TimelineContainer">
-                    <rect key="frame" x="0.0" y="50" width="320" height="365"/>
+                    <rect key="frame" x="0.0" y="50" width="320" height="454"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="schedule-stages.png" translatesAutoresizingMaskIntoConstraints="NO" id="zEK-Vt-yOf">
-                            <rect key="frame" x="0.0" y="0.0" width="75" height="365"/>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="schedule-stages.png" translatesAutoresizingMaskIntoConstraints="NO" id="zEK-Vt-yOf">
+                            <rect key="frame" x="0.0" y="44" width="75" height="365"/>
                             <autoresizingMask key="autoresizingMask"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="365" id="GOU-3o-fUN"/>
+                                <constraint firstAttribute="width" constant="75" id="ynK-iH-xZd"/>
+                            </constraints>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="schedule-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="gES-qe-7v2">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="365"/>
+                            <rect key="frame" x="0.0" y="44" width="320" height="365"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="365" id="9X0-Cz-EPl"/>
+                                <constraint firstAttribute="width" constant="320" id="O55-E5-yXF"/>
+                            </constraints>
                         </imageView>
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QZU-Uj-jQk">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="365"/>
+                            <rect key="frame" x="0.0" y="44" width="320" height="365"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cFC-R6-OQf" customClass="TimelineView">
+                                <view clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cFC-R6-OQf" customClass="TimelineView">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="365"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                             </subviews>
-                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" red="0.94117647410000005" green="0.55686277149999996" blue="0.047058824450000002" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstItem="cFC-R6-OQf" firstAttribute="leading" secondItem="QZU-Uj-jQk" secondAttribute="leading" id="6Rf-qC-aAA"/>
-                                <constraint firstItem="cFC-R6-OQf" firstAttribute="top" secondItem="QZU-Uj-jQk" secondAttribute="top" id="RBy-wG-Wm2"/>
-                                <constraint firstAttribute="trailing" secondItem="cFC-R6-OQf" secondAttribute="trailing" id="UB5-Y5-7ir"/>
-                                <constraint firstAttribute="bottom" secondItem="cFC-R6-OQf" secondAttribute="bottom" id="zNT-q6-kjq"/>
+                                <constraint firstAttribute="height" constant="365" id="ACC-bC-GZc"/>
+                                <constraint firstItem="cFC-R6-OQf" firstAttribute="top" secondItem="QZU-Uj-jQk" secondAttribute="top" id="AQ9-SP-Ua6"/>
+                                <constraint firstAttribute="bottom" secondItem="cFC-R6-OQf" secondAttribute="bottom" id="L2g-LR-6LE"/>
+                                <constraint firstItem="cFC-R6-OQf" firstAttribute="leading" secondItem="QZU-Uj-jQk" secondAttribute="leading" id="Okn-Vx-yfK"/>
+                                <constraint firstAttribute="trailing" secondItem="cFC-R6-OQf" secondAttribute="trailing" id="SAX-3u-t7X"/>
+                                <constraint firstAttribute="width" constant="320" id="f93-cq-IeJ"/>
                             </constraints>
                             <connections>
                                 <outlet property="delegate" destination="-1" id="QV6-ob-fCF"/>
@@ -75,36 +80,29 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="gES-qe-7v2" firstAttribute="top" secondItem="Qvb-69-9rC" secondAttribute="top" id="1sX-NM-BAX"/>
-                        <constraint firstItem="gES-qe-7v2" firstAttribute="leading" secondItem="Qvb-69-9rC" secondAttribute="leading" id="CE8-i0-9nJ"/>
-                        <constraint firstAttribute="height" constant="365" id="CoP-1U-wXc"/>
-                        <constraint firstItem="QZU-Uj-jQk" firstAttribute="top" secondItem="Qvb-69-9rC" secondAttribute="top" id="Hg0-vr-QXg"/>
-                        <constraint firstAttribute="trailing" secondItem="QZU-Uj-jQk" secondAttribute="trailing" id="JlC-zp-TeS"/>
-                        <constraint firstItem="QZU-Uj-jQk" firstAttribute="leading" secondItem="Qvb-69-9rC" secondAttribute="leading" id="LX1-vv-FmZ"/>
-                        <constraint firstAttribute="trailing" secondItem="QZU-Uj-jQk" secondAttribute="trailing" id="OtE-bH-m5G"/>
-                        <constraint firstAttribute="bottom" secondItem="QZU-Uj-jQk" secondAttribute="bottom" id="Xox-z4-Kbe"/>
-                        <constraint firstAttribute="bottom" secondItem="gES-qe-7v2" secondAttribute="bottom" id="ZWJ-6A-vwq"/>
-                        <constraint firstAttribute="trailing" secondItem="gES-qe-7v2" secondAttribute="trailing" id="e3B-gi-lKG"/>
-                        <constraint firstItem="QZU-Uj-jQk" firstAttribute="top" secondItem="Qvb-69-9rC" secondAttribute="top" id="hNo-8W-CvQ"/>
-                        <constraint firstAttribute="bottom" secondItem="QZU-Uj-jQk" secondAttribute="bottom" id="wCU-hT-gLC"/>
-                        <constraint firstItem="QZU-Uj-jQk" firstAttribute="leading" secondItem="Qvb-69-9rC" secondAttribute="leading" id="ySC-xZ-4sk"/>
+                        <constraint firstAttribute="centerY" secondItem="QZU-Uj-jQk" secondAttribute="centerY" id="3Hd-cB-eaa"/>
+                        <constraint firstAttribute="centerY" secondItem="zEK-Vt-yOf" secondAttribute="centerY" id="C5x-ai-WhG"/>
+                        <constraint firstAttribute="centerX" secondItem="QZU-Uj-jQk" secondAttribute="centerX" id="H0h-YO-exS"/>
+                        <constraint firstAttribute="centerX" secondItem="gES-qe-7v2" secondAttribute="centerX" id="ggm-FZ-mSh"/>
+                        <constraint firstAttribute="centerY" secondItem="gES-qe-7v2" secondAttribute="centerY" id="mkL-ao-yNM"/>
+                        <constraint firstItem="zEK-Vt-yOf" firstAttribute="leading" secondItem="Qvb-69-9rC" secondAttribute="leading" id="t7a-nS-hkU"/>
                     </constraints>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="Qvb-69-9rC" firstAttribute="top" secondItem="qib-Zm-jch" secondAttribute="bottom" id="4mo-GB-xOf"/>
-                <constraint firstAttribute="bottom" secondItem="Qvb-69-9rC" secondAttribute="bottom" constant="1" id="BZx-7U-w5M"/>
-                <constraint firstItem="Qvb-69-9rC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GxG-cL-9Rb"/>
-                <constraint firstItem="qib-Zm-jch" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="MLd-yA-wSS"/>
-                <constraint firstItem="qib-Zm-jch" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TSa-dH-SVS"/>
-                <constraint firstAttribute="trailing" secondItem="qib-Zm-jch" secondAttribute="trailing" id="qjt-EF-qUF"/>
-                <constraint firstAttribute="trailing" secondItem="Qvb-69-9rC" secondAttribute="trailing" id="yGz-KA-DK5"/>
+                <constraint firstItem="Qvb-69-9rC" firstAttribute="top" secondItem="qib-Zm-jch" secondAttribute="bottom" id="1Ig-uS-Rfv"/>
+                <constraint firstAttribute="trailing" secondItem="Qvb-69-9rC" secondAttribute="trailing" id="304-5E-sEF"/>
+                <constraint firstAttribute="bottom" secondItem="Qvb-69-9rC" secondAttribute="bottom" id="E5r-Yi-jkT"/>
+                <constraint firstItem="qib-Zm-jch" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Jjq-Vh-wpL"/>
+                <constraint firstAttribute="trailing" secondItem="qib-Zm-jch" secondAttribute="trailing" id="T5g-a6-5Tp"/>
+                <constraint firstItem="Qvb-69-9rC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XEE-ZZ-NMp"/>
+                <constraint firstItem="qib-Zm-jch" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uLf-xd-Hkj"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
     <resources>

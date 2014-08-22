@@ -56,8 +56,6 @@
         self.contentEdgeInsets = UIEdgeInsetsMake(0, 8, 0, 8);
         [self setTitle:event.title forState:UIControlStateNormal];
         
-        self.backgroundColor = [UIColor clearColor];
-        
         if ([event.bar_camp boolValue]) {
             [self setBackgroundImage:[UIImage imageNamed:@"eventBackground"] forState:UIControlStateNormal];
         }else{
@@ -146,7 +144,11 @@ CGFloat timeWidthFrom(NSDate *from, NSDate *to)
     self.backgroundColor = [UIColor clearColor];
     [self performSelectorInBackground:@selector(preloadGroovyGuitarSounds) withObject:nil];
 
-    self.innerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+//    self.innerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    self.autoresizesSubviews = NO;
+    self.innerView = [[UIView alloc] initWithFrame:self.bounds];
+    self.innerView.clipsToBounds = YES;
+
     [self addSubview:self.innerView];
 }
 
@@ -264,7 +266,7 @@ CGFloat timeWidthFrom(NSDate *from, NSDate *to)
     CGFloat x = kLeftPadding - timeWidthFrom(self.begin, self.dayBegin);
     CGFloat y = 0;
     CGFloat w = timeWidthFrom(self.begin, self.end) + kRightPadding;
-    CGFloat h = kTopPadding + kRowHeight * 5;
+    CGFloat h = kTopPadding + (kRowHeight + kRowPadding + 3 ) * 7;
 
     [UIView animateWithDuration:0.5 animations:^{
         self.innerView.frame = CGRectMake(x, y, w, h);
@@ -383,7 +385,7 @@ CGFloat timeWidthFrom(NSDate *from, NSDate *to)
             [favButton addTarget:self action:@selector(favButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
             
             [self.innerView addSubview:button];
-            [self.innerView addSubview:favButton];
+//            [self.innerView addSubview:favButton];
         }
     }
     else if([[self.gigs firstObject] isKindOfClass:[Event class]]) {
@@ -400,7 +402,7 @@ CGFloat timeWidthFrom(NSDate *from, NSDate *to)
             
             CGFloat x = timeWidthFrom(self.begin, event.begin);
             CGFloat y = kTopPadding + kRowPadding + kRowHeight * stageIdx;
-            CGFloat w = timeWidthFrom(event.begin, event.end);
+            CGFloat w = timeWidthFrom(event.begin, event.end) - 1;
             CGFloat h = kRowHeight - kRowPadding * 2;
             CGRect frame = CGRectMake(x, y - 23, w, h);
             
@@ -417,7 +419,7 @@ CGFloat timeWidthFrom(NSDate *from, NSDate *to)
             [favButton addTarget:self action:@selector(favButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
             
             [self.innerView addSubview:button];
-            [self.innerView addSubview:favButton];
+//            [self.innerView addSubview:favButton];
         }
     }
 
