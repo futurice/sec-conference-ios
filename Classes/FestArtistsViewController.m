@@ -53,6 +53,15 @@
         else {
             self.gigs = events;
         }
+        
+        if ([[self.gigs firstObject] isKindOfClass:[Event class]]) {
+            self.days = @[[self.gigs filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"day contains[c] 'Saturday'"]],
+                          [self.gigs filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"day contains[c] 'Sunday'"]]
+                          ];
+        }
+        
+
+        
 
         [self.tableView reloadData];
     }];
@@ -80,12 +89,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return self.days.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.gigs.count;
+    return ((NSArray *)self.days[section]).count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -100,13 +109,15 @@
         cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     }
 
+    NSArray *gigs = self.days[indexPath.section];
+    
 //    cell.backgroundColor = [UIColor clearColor];// (idx % 2 == 0) ? PJ_COLOR_LIGHT : PJ_COLOR_DARK;
     
-    if([self.gigs[idx] isKindOfClass:[Gig class]]) {
+    if([gigs[idx] isKindOfClass:[Gig class]]) {
         cell.gig = self.gigs[idx];
     }
-    else if([self.gigs[idx] isKindOfClass:[Event class]]) {
-        cell.event = self.gigs[idx];
+    else if([gigs[idx] isKindOfClass:[Event class]]) {
+        cell.event = gigs[idx];
     }
 
     return cell;
@@ -119,9 +130,33 @@
 
 #pragma mark UITableViewDelegate
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+
+    NSString *title;
+    
+    switch (section) {
+        case 0:
+            title = @"Saturday";
+            break;
+        case 1:
+            title = @"Sunday";
+            break;
+        default:
+            break;
+    }
+    return title;
+}
+
+
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    return [[UIView alloc] initWithFrame:CGRectZero];
+    
+    UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 0,self.tableView.bounds.size.width - 20,0)];
+    headerLabel.backgroundColor = RGB_COLOR(240,142,12);
+    headerLabel.font = [UIFont fontWithName:@"AvenirNext-Regular" size:20];
+    headerLabel.textAlignment = NSTextAlignmentCenter;
+    headerLabel.text = @"Saturday";
+    return headerLabel;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
@@ -136,7 +171,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 0;
+    return 50;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
