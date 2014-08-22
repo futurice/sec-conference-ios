@@ -264,6 +264,7 @@
         </view>
     </objects>
     <resources>
+        <image name="artist-placeholder.png" width="320" height="180"/>
         <image name="favButton.png" width="170" height="35"/>
         <image name="favButtonSelected.png" width="170" height="35"/>
         <image name="linkedinButton.png" width="30" height="30"/>

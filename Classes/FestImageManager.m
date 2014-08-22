@@ -114,7 +114,7 @@
     else {
         UIImage *image = [UIImage imageNamed:imagePath];
         if (!image) {
-            image = [UIImage imageNamed:@"artist-placeholder.jpg"];
+            image = [UIImage imageNamed:@"artist-placeholder"];
         }
         
         if (size.width > 0 && size.height > 0) {

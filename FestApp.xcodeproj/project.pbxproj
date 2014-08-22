@@ -98,7 +98,6 @@
 		88C00E9F1988E1F400AF869A /* godel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88C00E981988E1F400AF869A /* godel.jpg */; };
 		88C00EA01988E1F400AF869A /* martin-lof.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88C00E991988E1F400AF869A /* martin-lof.jpg */; };
 		88C00EA11988E1F400AF869A /* tarski.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88C00E9A1988E1F400AF869A /* tarski.jpg */; };
-		88C00EA91988E21200AF869A /* artist-placeholder@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88C00EA81988E21200AF869A /* artist-placeholder@2x.jpg */; };
 		88C1835F18DDC89C0014495D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C1835E18DDC89C0014495D /* Security.framework */; };
 		88C1839118DDCAAA0014495D /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C1837F18DDCAAA0014495D /* AFHTTPRequestOperation.m */; };
 		88C1839218DDCAAA0014495D /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C1838118DDCAAA0014495D /* AFHTTPRequestOperationManager.m */; };
@@ -123,6 +122,7 @@
 		C0C9B40D19A75F7A00426305 /* stageIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B40C19A75F7A00426305 /* stageIcon@2x.png */; };
 		C0C9B40F19A76CAD00426305 /* favButtonSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B40E19A76CAD00426305 /* favButtonSelected@2x.png */; };
 		C0C9B41119A771D500426305 /* star-selected-white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B41019A771D500426305 /* star-selected-white@2x.png */; };
+		C0C9B41319A7796000426305 /* artist-placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B41219A7796000426305 /* artist-placeholder@2x.png */; };
 		C0E8935C19A5F8AB00C9FF9B /* Icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = C0E8935B19A5F8AB00C9FF9B /* Icon120.png */; };
 		C0E8936319A6127400C9FF9B /* twitterButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0E8936119A6127400C9FF9B /* twitterButton@2x.png */; };
 		C0E8936419A6127400C9FF9B /* linkedinButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0E8936219A6127400C9FF9B /* linkedinButton@2x.png */; };
@@ -332,7 +332,6 @@
 		88C00E981988E1F400AF869A /* godel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = godel.jpg; sourceTree = "<group>"; };
 		88C00E991988E1F400AF869A /* martin-lof.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "martin-lof.jpg"; sourceTree = "<group>"; };
 		88C00E9A1988E1F400AF869A /* tarski.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tarski.jpg; sourceTree = "<group>"; };
-		88C00EA81988E21200AF869A /* artist-placeholder@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "artist-placeholder@2x.jpg"; sourceTree = "<group>"; };
 		88C1835E18DDC89C0014495D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		88C1837E18DDCAAA0014495D /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		88C1837F18DDCAAA0014495D /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
@@ -367,6 +366,7 @@
 		C0C9B40C19A75F7A00426305 /* stageIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stageIcon@2x.png"; sourceTree = "<group>"; };
 		C0C9B40E19A76CAD00426305 /* favButtonSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favButtonSelected@2x.png"; sourceTree = "<group>"; };
 		C0C9B41019A771D500426305 /* star-selected-white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-selected-white@2x.png"; sourceTree = "<group>"; };
+		C0C9B41219A7796000426305 /* artist-placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "artist-placeholder@2x.png"; sourceTree = "<group>"; };
 		C0E8935B19A5F8AB00C9FF9B /* Icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon120.png; sourceTree = "<group>"; };
 		C0E8936119A6127400C9FF9B /* twitterButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitterButton@2x.png"; sourceTree = "<group>"; };
 		C0E8936219A6127400C9FF9B /* linkedinButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "linkedinButton@2x.png"; sourceTree = "<group>"; };
@@ -592,6 +592,7 @@
 				C0E8936119A6127400C9FF9B /* twitterButton@2x.png */,
 				C0E8936219A6127400C9FF9B /* linkedinButton@2x.png */,
 				C0E8936719A723C700C9FF9B /* person_placeholder@2x.png */,
+				C0C9B41219A7796000426305 /* artist-placeholder@2x.png */,
 				C094537919A4E1E7004268BA /* daychooser-selected@2x.png */,
 				C094537A19A4E1E7004268BA /* daychooser@2x.png */,
 				C094537319A4DC98004268BA /* schedule-hoursep@2x.png */,
@@ -600,7 +601,6 @@
 				C094536D19A4D6CF004268BA /* schedule-bg@2x.png */,
 				490801A2199CF49600E650A5 /* home-image.png */,
 				490801A0199CF29700E650A5 /* futurice-orange-background.png */,
-				88C00EA81988E21200AF869A /* artist-placeholder@2x.jpg */,
 				88C00DD71988046900AF869A /* background@2x.png */,
 				88C00DDB1988046900AF869A /* frontpage-button-info@2x.png */,
 				88C00DDC1988046900AF869A /* frontpage-button-lc@2x.png */,
@@ -951,6 +951,7 @@
 				88C00E6C1988047600AF869A /* FestNewsViewController.xib in Resources */,
 				88C00DF01988046900AF869A /* background@2x.png in Resources */,
 				C0C9B40D19A75F7A00426305 /* stageIcon@2x.png in Resources */,
+				C0C9B41319A7796000426305 /* artist-placeholder@2x.png in Resources */,
 				88A78C8F19891660005F4D70 /* map.jpg in Resources */,
 				C0C9B40719A7346A00426305 /* icon1024.png in Resources */,
 				C0E8935C19A5F8AB00C9FF9B /* Icon120.png in Resources */,
@@ -967,7 +968,6 @@
 				88C00E8E1988486300AF869A /* frontpage-button-speakers@2x.png in Resources */,
 				88C00E9C1988E1F400AF869A /* coquand.jpg in Resources */,
 				C0E8936819A723C700C9FF9B /* person_placeholder@2x.png in Resources */,
-				88C00EA91988E21200AF869A /* artist-placeholder@2x.jpg in Resources */,
 				88C00E9219884D9D00AF869A /* turing.jpg in Resources */,
 				499D632519A24EFB00951A5A /* futurice-logo-black.png in Resources */,
 				88C00E631988047600AF869A /* FestInfoViewController.xib in Resources */,
