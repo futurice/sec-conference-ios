@@ -26,9 +26,10 @@
 @property (nonatomic, strong) IBOutlet UILabel *stageLabel;
 @property (nonatomic, strong) IBOutlet UILabel *infoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *hourLabel;
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIButton *twitterButton;
 @property (weak, nonatomic) IBOutlet UIButton *linkedinButton;
+@property (strong, nonatomic) IBOutlet UILabel *speakerLabel;
+@property (strong, nonatomic) IBOutlet UILabel *speakerRoleLabel;
 
 @property (nonatomic, strong) IBOutlet UIButton *wikipediaButton;
 
@@ -79,11 +80,8 @@
         self.stageLabel.text = eventModel.location;
         self.infoLabel.text = eventModel.description;
         
-        if (eventModel.speakerRole) {
-            self.titleLabel.text = [NSString stringWithFormat:@"%@\n%@",eventModel.artist,eventModel.speakerRole];
-        }else{
-            self.titleLabel.text = eventModel.artist;
-        }
+        self.speakerLabel.text = eventModel.artist;
+        self.speakerRoleLabel.text = eventModel.speakerRole;
         
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"hh:mm"];
