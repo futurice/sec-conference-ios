@@ -17,7 +17,7 @@
 @implementation InfoTableCellView
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated
 {
-    self.textLabel.textColor = highlighted ? FEST_COLOR_GOLD : [UIColor blackColor];
+    self.textLabel.textColor = highlighted ? RGB_COLOR(240,142,12) : [UIColor whiteColor];
 }
 @end
 
@@ -94,8 +94,8 @@
 
     cell.backgroundColor = [UIColor clearColor];
     cell.textLabel.text = infoItem.title;
-    cell.textLabel.textColor = [UIColor blackColor];
-    cell.textLabel.font = [UIFont fontWithName:@"Palatino-Roman" size:23];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.font = [UIFont fontWithName:@"AvenirNext-Medium" size:18];
 
     return cell;
 }
@@ -103,6 +103,10 @@
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
 {
 	return nil;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 60.0f;
 }
 
 #pragma mark UITableViewDelegate

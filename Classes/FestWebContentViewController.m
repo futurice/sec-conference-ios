@@ -42,11 +42,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.content = [self.content stringByReplacingOccurrencesOfString:@"\\n" withString:@"<br>"];
+    
 
     NSMutableString *html = [@"<html> "
                              "<head> "
                              "  <style> "
-                             "* { color: black; font-family: Palatino-Roman, HelveticaNeue-Light, HelveticaNeue, Helvetica; }"
+                             "* { color: white; font-family: AvenirNext-Medium, HelveticaNeue-Light, HelveticaNeue, Helvetica; }"
                              "    html, body { "
                              "        margin:0;"
                              "        padding:0;"
