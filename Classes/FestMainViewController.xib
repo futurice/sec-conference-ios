@@ -21,7 +21,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="238"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jkY-7v-BXG" userLabel="View - Gig container">
+                <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jkY-7v-BXG" userLabel="View - Gig container">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
@@ -103,17 +103,17 @@
                             <color key="backgroundColor" red="0.94117647409439087" green="0.55686277151107788" blue="0.047058824449777603" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bMn-EG-rqe" userLabel="View - Divider line">
-                            <rect key="frame" x="20" y="70" width="280" height="1"/>
+                            <rect key="frame" x="15" y="70" width="285" height="1"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.94117647409439087" green="0.55686277151107788" blue="0.047058824449777603" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QgF-ap-IZa" userLabel="View - Divider line">
-                            <rect key="frame" x="20" y="140" width="280" height="1"/>
+                            <rect key="frame" x="15" y="140" width="285" height="1"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.94117647409439087" green="0.55686277151107788" blue="0.047058824449777603" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3ZK-qa-YM5" userLabel="View - Divider line">
-                            <rect key="frame" x="20" y="210" width="280" height="1"/>
+                            <rect key="frame" x="15" y="210" width="285" height="1"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.94117647409439087" green="0.55686277151107788" blue="0.047058824449777603" alpha="1" colorSpace="calibratedRGB"/>
                         </view>

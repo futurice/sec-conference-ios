@@ -49,7 +49,7 @@
     NSMutableString *html = [@"<html> "
                              "<head> "
                              "  <style> "
-                             "* { color: white; font-family: AvenirNext-Medium, HelveticaNeue-Light, HelveticaNeue, Helvetica; }"
+                             "* { color: white; font-family: AvenirNext-Regular, HelveticaNeue-Light, HelveticaNeue, Helvetica; }"
                              "    html, body { "
                              "        margin:0;"
                              "        padding:0;"
@@ -74,9 +74,9 @@
 
                              "    } "
 
-                             "    h1.title { "
-                             "      font-size: 22px; "
-                             "      font-weight: 200; "
+                             "    h1 { "
+                             "      font-size: 24px; "
+                             "      font-family: AvenirNext-Medium; "
                              "      text-align: left; "
                              "      margin-bottom: 20px; "
                              "    } "

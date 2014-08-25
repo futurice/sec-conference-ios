@@ -55,8 +55,8 @@
         }
         
         if ([[self.gigs firstObject] isKindOfClass:[Event class]]) {
-            self.days = @[[self.gigs filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"day contains[c] 'Saturday'"]],
-                          [self.gigs filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"day contains[c] 'Sunday'"]]
+            self.days = @[[self.gigs filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"day contains[c] 'Saturday' AND bar_camp == NO"]],
+                          [self.gigs filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"day contains[c] 'Sunday' AND bar_camp == NO"]]
                           ];
         }
         
@@ -142,8 +142,12 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
-    return [[UIView alloc] initWithFrame:CGRectZero];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 0)];
+    view.backgroundColor = RGB_COLOR(240,142,12);
+
+    return view;
 }
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -152,7 +156,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 50;
+    return 40;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
