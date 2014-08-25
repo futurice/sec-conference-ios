@@ -79,8 +79,8 @@
         self.stageLabel.text = eventModel.location;
         self.infoLabel.text = eventModel.description;
         
-        if (eventModel.speakerRole) {
-            self.titleLabel.text = [NSString stringWithFormat:@"%@ - %@",eventModel.artist,eventModel.speakerRole];
+        if (eventModel.speakerRole) {   
+            self.titleLabel.text = [NSString stringWithFormat:@"%@\n%@",eventModel.artist,eventModel.speakerRole];
         }else{
             self.titleLabel.text = eventModel.artist;
         }
