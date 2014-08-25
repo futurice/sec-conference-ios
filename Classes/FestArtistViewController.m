@@ -78,7 +78,7 @@
         self.gigLabel.text = eventModel.title;
 //        self.gigLabel.text = [NSString stringWithFormat:@"%@ - %@",eventModel.artist,eventModel.title];
         self.stageLabel.text = eventModel.location;
-        self.infoLabel.text = eventModel.description;
+        self.infoLabel.text = [eventModel.description stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
         
         self.speakerLabel.text = eventModel.artist;
         self.speakerRoleLabel.text = eventModel.speakerRole;
