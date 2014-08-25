@@ -108,12 +108,12 @@
 		88C1839718DDCAAA0014495D /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C1838C18DDCAAA0014495D /* AFURLRequestSerialization.m */; };
 		88C1839818DDCAAA0014495D /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C1838E18DDCAAA0014495D /* AFURLResponseSerialization.m */; };
 		88C1839918DDCAAA0014495D /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C1839018DDCAAA0014495D /* AFURLSessionManager.m */; };
-		C094536C19A4D2BE004268BA /* schedule-stages@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C094536B19A4D2BE004268BA /* schedule-stages@2x.png */; };
-		C094536E19A4D6CF004268BA /* schedule-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C094536D19A4D6CF004268BA /* schedule-bg@2x.png */; };
+		C000223D19AB35FA007CD472 /* schedule-stages@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C000223C19AB35FA007CD472 /* schedule-stages@2x.png */; };
+		C000223F19AB3C54007CD472 /* schedule-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C000223E19AB3C54007CD472 /* schedule-bg@2x.png */; };
+		C000224219AB3D07007CD472 /* daychooser-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C000224019AB3D07007CD472 /* daychooser-selected@2x.png */; };
+		C000224319AB3D07007CD472 /* daychooser@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C000224119AB3D07007CD472 /* daychooser@2x.png */; };
+		C000224719AB3E5D007CD472 /* schedule-hoursep@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C000224619AB3E5D007CD472 /* schedule-hoursep@2x.png */; };
 		C094537019A4DA81004268BA /* eventBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C094536F19A4DA81004268BA /* eventBackground@2x.png */; };
-		C094537419A4DC98004268BA /* schedule-hoursep@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C094537319A4DC98004268BA /* schedule-hoursep@2x.png */; };
-		C094537B19A4E1E7004268BA /* daychooser-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C094537919A4E1E7004268BA /* daychooser-selected@2x.png */; };
-		C094537C19A4E1E7004268BA /* daychooser@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C094537A19A4E1E7004268BA /* daychooser@2x.png */; };
 		C0C9B40519A7346A00426305 /* icon58.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B40219A7346A00426305 /* icon58.png */; };
 		C0C9B40619A7346A00426305 /* icon80.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B40319A7346A00426305 /* icon80.png */; };
 		C0C9B40719A7346A00426305 /* icon1024.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B40419A7346A00426305 /* icon1024.png */; };
@@ -352,12 +352,12 @@
 		88C1838E18DDCAAA0014495D /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		88C1838F18DDCAAA0014495D /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		88C1839018DDCAAA0014495D /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		C094536B19A4D2BE004268BA /* schedule-stages@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule-stages@2x.png"; sourceTree = "<group>"; };
-		C094536D19A4D6CF004268BA /* schedule-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule-bg@2x.png"; sourceTree = "<group>"; };
+		C000223C19AB35FA007CD472 /* schedule-stages@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule-stages@2x.png"; sourceTree = "<group>"; };
+		C000223E19AB3C54007CD472 /* schedule-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule-bg@2x.png"; sourceTree = "<group>"; };
+		C000224019AB3D07007CD472 /* daychooser-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "daychooser-selected@2x.png"; sourceTree = "<group>"; };
+		C000224119AB3D07007CD472 /* daychooser@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "daychooser@2x.png"; sourceTree = "<group>"; };
+		C000224619AB3E5D007CD472 /* schedule-hoursep@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule-hoursep@2x.png"; sourceTree = "<group>"; };
 		C094536F19A4DA81004268BA /* eventBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eventBackground@2x.png"; sourceTree = "<group>"; };
-		C094537319A4DC98004268BA /* schedule-hoursep@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule-hoursep@2x.png"; sourceTree = "<group>"; };
-		C094537919A4E1E7004268BA /* daychooser-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "daychooser-selected@2x.png"; sourceTree = "<group>"; };
-		C094537A19A4E1E7004268BA /* daychooser@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "daychooser@2x.png"; sourceTree = "<group>"; };
 		C0C9B40219A7346A00426305 /* icon58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon58.png; sourceTree = "<group>"; };
 		C0C9B40319A7346A00426305 /* icon80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon80.png; sourceTree = "<group>"; };
 		C0C9B40419A7346A00426305 /* icon1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1024.png; sourceTree = "<group>"; };
@@ -580,6 +580,11 @@
 		88C00DD61988046900AF869A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C000224019AB3D07007CD472 /* daychooser-selected@2x.png */,
+				C000224119AB3D07007CD472 /* daychooser@2x.png */,
+				C000224619AB3E5D007CD472 /* schedule-hoursep@2x.png */,
+				C000223E19AB3C54007CD472 /* schedule-bg@2x.png */,
+				C000223C19AB35FA007CD472 /* schedule-stages@2x.png */,
 				C0C9B40E19A76CAD00426305 /* favButtonSelected@2x.png */,
 				C0E8936519A6161000C9FF9B /* favButton@2x.png */,
 				C0C9B40C19A75F7A00426305 /* stageIcon@2x.png */,
@@ -593,12 +598,7 @@
 				C0E8936219A6127400C9FF9B /* linkedinButton@2x.png */,
 				C0E8936719A723C700C9FF9B /* person_placeholder@2x.png */,
 				C0C9B41219A7796000426305 /* artist-placeholder@2x.png */,
-				C094537919A4E1E7004268BA /* daychooser-selected@2x.png */,
-				C094537A19A4E1E7004268BA /* daychooser@2x.png */,
-				C094537319A4DC98004268BA /* schedule-hoursep@2x.png */,
 				C094536F19A4DA81004268BA /* eventBackground@2x.png */,
-				C094536B19A4D2BE004268BA /* schedule-stages@2x.png */,
-				C094536D19A4D6CF004268BA /* schedule-bg@2x.png */,
 				490801A2199CF49600E650A5 /* home-image.png */,
 				490801A0199CF29700E650A5 /* futurice-orange-background.png */,
 				88C00DD71988046900AF869A /* background@2x.png */,
@@ -909,22 +909,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				88C00DFE1988046900AF869A /* star-selected-yellow@2x.png in Resources */,
-				C094536E19A4D6CF004268BA /* schedule-bg@2x.png in Resources */,
 				88A78C8719890CB7005F4D70 /* info in Resources */,
 				88C00E691988047600AF869A /* FestMapViewController.xib in Resources */,
 				88C00DF51988046900AF869A /* frontpage-button-lc@2x.png in Resources */,
 				88C00DFF1988046900AF869A /* star-selected@2x.png in Resources */,
 				C0E8937519A72B8000C9FF9B /* icon-1-agenda@2x.png in Resources */,
 				C0C9B40919A7373B00426305 /* navigation-bar@2x.png in Resources */,
-				C094536C19A4D2BE004268BA /* schedule-stages@2x.png in Resources */,
 				C094537019A4DA81004268BA /* eventBackground@2x.png in Resources */,
 				88C00DEB1988046900AF869A /* news in Resources */,
-				C094537B19A4E1E7004268BA /* daychooser-selected@2x.png in Resources */,
 				C0C9B41119A771D500426305 /* star-selected-white@2x.png in Resources */,
 				C0C9B40B19A75F4F00426305 /* timeIcon@2x.png in Resources */,
 				88C00E9E1988E1F400AF869A /* gentzen.jpg in Resources */,
+				C000224319AB3D07007CD472 /* daychooser@2x.png in Resources */,
 				C0C9B40619A7346A00426305 /* icon80.png in Resources */,
 				88C00E831988056A00AF869A /* Images.xcassets in Resources */,
+				C000224719AB3E5D007CD472 /* schedule-hoursep@2x.png in Resources */,
 				88C00E711988047600AF869A /* FestWindow.xib in Resources */,
 				88C00E5B1988047600AF869A /* FestArtistCell.xib in Resources */,
 				88C00E9B1988E1F400AF869A /* church.jpg in Resources */,
@@ -933,10 +932,12 @@
 				88C00E011988046900AF869A /* wikipedia@2x.png in Resources */,
 				88C00E8F1988486300AF869A /* frontpage-label-schedule@2x.png in Resources */,
 				C0C9B40519A7346A00426305 /* icon58.png in Resources */,
+				C000224219AB3D07007CD472 /* daychooser-selected@2x.png in Resources */,
 				88C00DE91988046900AF869A /* festival in Resources */,
 				88C00E701988047600AF869A /* FestWebContentViewController.xib in Resources */,
 				88C00E671988047600AF869A /* FestMainViewController.xib in Resources */,
 				88C00DF41988046900AF869A /* frontpage-button-info@2x.png in Resources */,
+				C000223F19AB3C54007CD472 /* schedule-bg@2x.png in Resources */,
 				88C00EA11988E1F400AF869A /* tarski.jpg in Resources */,
 				499D632319A2472F00951A5A /* wifi-icon.png in Resources */,
 				88C00E6E1988047600AF869A /* FestScheduleViewController.xib in Resources */,
@@ -944,9 +945,9 @@
 				C0E8937719A72B8000C9FF9B /* icon-3-venune@2x.png in Resources */,
 				C0C9B40F19A76CAD00426305 /* favButtonSelected@2x.png in Resources */,
 				88C00E9D1988E1F400AF869A /* curry.jpg in Resources */,
-				C094537419A4DC98004268BA /* schedule-hoursep@2x.png in Resources */,
 				C0E8937819A72B8000C9FF9B /* icon-4-wifi@2x.png in Resources */,
 				88C00DEA1988046900AF869A /* gigs in Resources */,
+				C000223D19AB35FA007CD472 /* schedule-stages@2x.png in Resources */,
 				88C00E001988046900AF869A /* star@2x.png in Resources */,
 				88C00E6C1988047600AF869A /* FestNewsViewController.xib in Resources */,
 				88C00DF01988046900AF869A /* background@2x.png in Resources */,
@@ -963,7 +964,6 @@
 				C0E8936619A6161000C9FF9B /* favButton@2x.png in Resources */,
 				490801A3199CF49600E650A5 /* home-image.png in Resources */,
 				88C00DF61988046900AF869A /* frontpage-button-map@2x.png in Resources */,
-				C094537C19A4E1E7004268BA /* daychooser@2x.png in Resources */,
 				88C00DF71988046900AF869A /* frontpage-label-news@2x.png in Resources */,
 				88C00E8E1988486300AF869A /* frontpage-button-speakers@2x.png in Resources */,
 				88C00E9C1988E1F400AF869A /* coquand.jpg in Resources */,

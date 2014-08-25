@@ -21,7 +21,7 @@
 @end
 
 #define kCellButtonTag 1000
-#define kCellHeight 69
+#define kCellHeight 86
 
 @implementation FestArtistsViewController
 

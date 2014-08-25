@@ -37,14 +37,6 @@
                     <rect key="frame" x="0.0" y="50" width="320" height="454"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="schedule-stages.png" translatesAutoresizingMaskIntoConstraints="NO" id="zEK-Vt-yOf">
-                            <rect key="frame" x="0.0" y="44" width="75" height="365"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="365" id="GOU-3o-fUN"/>
-                                <constraint firstAttribute="width" constant="75" id="ynK-iH-xZd"/>
-                            </constraints>
-                        </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="schedule-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="gES-qe-7v2">
                             <rect key="frame" x="0.0" y="44" width="320" height="365"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -77,6 +69,14 @@
                                 <outlet property="delegate" destination="-1" id="QV6-ob-fCF"/>
                             </connections>
                         </scrollView>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="schedule-stages.png" translatesAutoresizingMaskIntoConstraints="NO" id="zEK-Vt-yOf">
+                            <rect key="frame" x="0.0" y="44" width="75" height="365"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="365" id="GOU-3o-fUN"/>
+                                <constraint firstAttribute="width" constant="75" id="ynK-iH-xZd"/>
+                            </constraints>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>

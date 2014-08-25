@@ -68,8 +68,8 @@
     }
     
     _event = event;
-    self.nameLabel.text = event.artist;
-    self.stageLabel.text = event.stageAndTimeIntervalString;
+    self.nameLabel.text = event.title;
+    self.stageLabel.text = [NSString stringWithFormat:@"%@ - %@",event.artist,event.speakerRole];
 //    if (event.speakerImageUrl) {
         [self.speakerImageView setImageWithURL:[NSURL URLWithString:event.speakerImageUrl] placeholderImage:[UIImage imageNamed:@"person_placeholder"]];
 //    }

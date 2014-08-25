@@ -58,13 +58,14 @@
         [self setTitle:event.title forState:UIControlStateNormal];
         
         if ([event.bar_camp boolValue]) {
-            [self setBackgroundImage:[UIImage imageNamed:@"eventBackground"] forState:UIControlStateNormal];
+//            [self setBackgroundImage:[UIImage imageNamed:@"eventBackground"] forState:UIControlStateNormal];
+            self.backgroundColor = RGB_COLOR(240,142,12);
         }else{
             self.backgroundColor = RGB_COLOR(226,14,121);
         }
         
-        [self setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
-        [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [self setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
+        [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         
 //        [self setImage:[UIImage imageNamed:@"star.png"] forState:UIControlStateNormal];
 //        [self setImage:[UIImage imageNamed:@"star-selected-yellow.png"] forState:UIControlStateSelected];
@@ -124,8 +125,8 @@
 @end
 
 #define kHourWidth 200
-#define kRowHeight 48
-#define kTopPadding 0
+#define kRowHeight 47
+#define kTopPadding 26
 #define kLeftPadding 76
 #define kRightPadding 40
 #define kRowPadding 1
@@ -210,12 +211,12 @@ CGFloat timeWidthFrom(NSDate *from, NSDate *to)
 
     for (UIView *view in self.innerView.subviews) {
         if ([view isKindOfClass:[GigButton class]]) {
-            GigButton *button = (GigButton *)view;
+//            GigButton *button = (GigButton *)view;
 
-            BOOL favourited = [self.favouritedGigs containsObject:button.gig.gigId];
+//            BOOL favourited = [self.favouritedGigs containsObject:button.gig.gigId];
 
-            button.selected = favourited;
-            button.alpha = favourited ? 1.0f : 0.8f;
+//            button.selected = favourited;
+//            button.alpha = favourited ? 1.0f : 0.8f;
         }
     }
 }
@@ -338,7 +339,7 @@ CGFloat timeWidthFrom(NSDate *from, NSDate *to)
 
     while ([fretDate compare:self.end] == NSOrderedAscending) {
         // fret
-        CGRect frame = CGRectMake(timeWidthFrom(self.begin, fretDate) - 2, 0, 1, 365);
+        CGRect frame = CGRectMake(timeWidthFrom(self.begin, fretDate) - 2, -4, 1, 365);
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:frame];
         imageView.image = fretImage;
 
@@ -407,15 +408,15 @@ CGFloat timeWidthFrom(NSDate *from, NSDate *to)
             BOOL favourited = [self.favouritedGigs containsObject:event.identifier];
             
             CGFloat x = timeWidthFrom(self.begin, event.begin);
-            CGFloat y = kTopPadding + kRowPadding + kRowHeight * stageIdx;
+            CGFloat y = kTopPadding + ((kRowPadding + kRowHeight) * (stageIdx - 1));
             CGFloat w = timeWidthFrom(event.begin, event.end) - 1;
             CGFloat h = kRowHeight - kRowPadding * 2;
-            CGRect frame = CGRectMake(x, y - 23, w, h);
+            CGRect frame = CGRectMake(x, y, w, h);
             
             GigButton *button = [[GigButton alloc] initWithFrame:frame event:event];
             
-            button.selected = favourited;
-            button.alpha = favourited ? 1.0f : 0.8f;
+//            button.selected = favourited;
+            button.alpha = 1;
             
             [button addTarget:self action:@selector(gigButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
             [self.innerView addSubview:button];
