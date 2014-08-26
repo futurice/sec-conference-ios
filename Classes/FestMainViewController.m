@@ -205,6 +205,7 @@
 
 - (IBAction)showSchedule:(id)sender
 {
+    [[FestDataManager sharedFestDataManager] reload];
     NSLog(@"show schedule");
     [APPDELEGATE showSchedule:sender];
 }
@@ -212,6 +213,7 @@
 - (IBAction)showNews:(id)sender
 {
     NSLog(@"show news");
+    [[FestDataManager sharedFestDataManager] reload];
     [APPDELEGATE showNews:sender];
 }
 
@@ -223,18 +225,21 @@
 
 - (IBAction)showMap:(id)sender
 {
+    [[FestDataManager sharedFestDataManager] reload];
     NSLog("@show map");
     [APPDELEGATE showMap:sender];
 }
 
 - (IBAction)showLC:(id)sender
 {
+    [[FestDataManager sharedFestDataManager] reload];
     NSLog(@"show lambda calculus");
     [APPDELEGATE showLambdaCalculus:sender];
 }
 
 - (IBAction)showInfo:(id)sender
 {
+    [[FestDataManager sharedFestDataManager] reload];
     NSLog("@show general info");
     [APPDELEGATE showGeneralInfo:sender];
 }

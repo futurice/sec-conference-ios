@@ -12,9 +12,9 @@
 
 // Resource poll interval in seconds
 #ifdef NDEBUG
-#define kResourcePollInterval      10*60
+#define kResourcePollInterval      1
 #else
-#define kResourcePollInterval      60
+#define kResourcePollInterval      1
 #endif
 
 #define kRefreshIntervalInHours    (6)

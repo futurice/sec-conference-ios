@@ -11,6 +11,8 @@
 @interface FestDataManager : NSObject
 + (FestDataManager *)sharedFestDataManager;
 
+- (void)reload;
+
 @property (nonatomic, readonly) RACSignal *festivalSignal;
 @property (nonatomic, readonly) RACSignal *gigsSignal;
 @property (nonatomic, readonly) RACSignal *newsSignal;

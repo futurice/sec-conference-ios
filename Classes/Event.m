@@ -21,27 +21,24 @@
         
         _begin    = [NSDate cast:[dateFormatter dateFromString:json[@"start_time"]]];
         _end      = [NSDate cast:[dateFormatter dateFromString:json[@"end_time"]]];
-        _location    = [NSString cast:json[@"location"]];
+        _location = [NSString cast:json[@"location"]];
         
         if(!_location) {
             _location = @"Unknown Location";
         }
         
-        _day = [NSString cast:json[@"day"]];
-
-        _artist = [NSString cast:json[@"artists"]];
-        
-        _title = [NSString cast:json[@"title"]];
-        _description = [NSString cast:json[@"description"]];
-        _starredCount = [NSNumber cast:json[@"starredCount"]];
-        _identifier = [NSString cast:json[@"_id"]];
-    
-        _imageURL = [NSString cast:json[@"image_url"]];
+        _day             = [NSString cast:json[@"day"]];
+        _artist          = [NSString cast:json[@"artists"]];
+        _title           = [NSString cast:json[@"title"]];
+        _description     = [NSString cast:json[@"description"]];
+        _starredCount    = [NSNumber cast:json[@"starredCount"]];
+        _identifier      = [NSString cast:json[@"_id"]];
+        _imageURL        = [NSString cast:json[@"image_url"]];
         _speakerImageUrl = [NSString cast:json[@"speaker_image_url"]];
-        _speakerRole = [NSString cast:json[@"speaker_role"]];
-        _bar_camp = (NSNumber *)json[@"bar_camp"];
-        _linkedIn = [NSString cast:json[@"linkedin_url"]];
-        _twitter = [NSString cast:json[@"twitter_handle"]];
+        _speakerRole     = [NSString cast:json[@"speaker_role"]];
+        _bar_camp        = (NSNumber *)json[@"bar_camp"];
+        _linkedIn        = [NSString cast:json[@"linkedin_url"]];
+        _twitter         = [NSString cast:json[@"twitter_handle"]];
                      
     }
     return self;

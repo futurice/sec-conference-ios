@@ -72,6 +72,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [[FestDataManager sharedFestDataManager] reload];
     [[self navigationController] setNavigationBarHidden:NO animated:animated];
 }
 

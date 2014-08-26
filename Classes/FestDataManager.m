@@ -69,6 +69,15 @@
         _infoSignal = infoSubject;
     }
     return self;
+
+}
+
+-(void)reload{
+
+    [self reloadResource:@"gigs" path:FEST_GIGS_JSON_URL selector:@selector(transformGigs:) subject:(RACSubject *)self.gigsSignal force:NO];
+    [self reloadResource:@"news" path:FEST_NEWS_JSON_URL selector:@selector(transformNews:) subject:(RACSubject *)self.newsSignal force:NO];
+    [self reloadResource:@"info" path:FEST_INFO_JSON_URL selector:@selector(transformInfo:) subject:(RACSubject *)self.infoSignal force:NO];
+
 }
 
 
