@@ -107,11 +107,11 @@
 		88C1839718DDCAAA0014495D /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C1838C18DDCAAA0014495D /* AFURLRequestSerialization.m */; };
 		88C1839818DDCAAA0014495D /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C1838E18DDCAAA0014495D /* AFURLResponseSerialization.m */; };
 		88C1839918DDCAAA0014495D /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C1839018DDCAAA0014495D /* AFURLSessionManager.m */; };
-		C000223D19AB35FA007CD472 /* schedule-stages@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C000223C19AB35FA007CD472 /* schedule-stages@2x.png */; };
 		C000223F19AB3C54007CD472 /* schedule-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C000223E19AB3C54007CD472 /* schedule-bg@2x.png */; };
 		C000224219AB3D07007CD472 /* daychooser-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C000224019AB3D07007CD472 /* daychooser-selected@2x.png */; };
 		C000224319AB3D07007CD472 /* daychooser@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C000224119AB3D07007CD472 /* daychooser@2x.png */; };
 		C000224719AB3E5D007CD472 /* schedule-hoursep@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C000224619AB3E5D007CD472 /* schedule-hoursep@2x.png */; };
+		C08E9C8419AC76350067B4E6 /* schedule-stages@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C08E9C8319AC76350067B4E6 /* schedule-stages@2x.png */; };
 		C094537019A4DA81004268BA /* eventBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C094536F19A4DA81004268BA /* eventBackground@2x.png */; };
 		C0C9B40519A7346A00426305 /* icon58.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B40219A7346A00426305 /* icon58.png */; };
 		C0C9B40619A7346A00426305 /* icon80.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B40319A7346A00426305 /* icon80.png */; };
@@ -350,11 +350,11 @@
 		88C1838E18DDCAAA0014495D /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		88C1838F18DDCAAA0014495D /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		88C1839018DDCAAA0014495D /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		C000223C19AB35FA007CD472 /* schedule-stages@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule-stages@2x.png"; sourceTree = "<group>"; };
 		C000223E19AB3C54007CD472 /* schedule-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule-bg@2x.png"; sourceTree = "<group>"; };
 		C000224019AB3D07007CD472 /* daychooser-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "daychooser-selected@2x.png"; sourceTree = "<group>"; };
 		C000224119AB3D07007CD472 /* daychooser@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "daychooser@2x.png"; sourceTree = "<group>"; };
 		C000224619AB3E5D007CD472 /* schedule-hoursep@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule-hoursep@2x.png"; sourceTree = "<group>"; };
+		C08E9C8319AC76350067B4E6 /* schedule-stages@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule-stages@2x.png"; sourceTree = "<group>"; };
 		C094536F19A4DA81004268BA /* eventBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eventBackground@2x.png"; sourceTree = "<group>"; };
 		C0C9B40219A7346A00426305 /* icon58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon58.png; sourceTree = "<group>"; };
 		C0C9B40319A7346A00426305 /* icon80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon80.png; sourceTree = "<group>"; };
@@ -579,10 +579,10 @@
 			isa = PBXGroup;
 			children = (
 				C000224019AB3D07007CD472 /* daychooser-selected@2x.png */,
+				C08E9C8319AC76350067B4E6 /* schedule-stages@2x.png */,
 				C000224119AB3D07007CD472 /* daychooser@2x.png */,
 				C000224619AB3E5D007CD472 /* schedule-hoursep@2x.png */,
 				C000223E19AB3C54007CD472 /* schedule-bg@2x.png */,
-				C000223C19AB35FA007CD472 /* schedule-stages@2x.png */,
 				C0C9B40E19A76CAD00426305 /* favButtonSelected@2x.png */,
 				C0E8936519A6161000C9FF9B /* favButton@2x.png */,
 				C0C9B40C19A75F7A00426305 /* stageIcon@2x.png */,
@@ -938,13 +938,13 @@
 				88C00EA11988E1F400AF869A /* tarski.jpg in Resources */,
 				499D632319A2472F00951A5A /* wifi-icon.png in Resources */,
 				88C00E6E1988047600AF869A /* FestScheduleViewController.xib in Resources */,
+				C08E9C8419AC76350067B4E6 /* schedule-stages@2x.png in Resources */,
 				88C00E5D1988047600AF869A /* FestArtistsViewController.xib in Resources */,
 				C0E8937719A72B8000C9FF9B /* icon-3-venune@2x.png in Resources */,
 				C0C9B40F19A76CAD00426305 /* favButtonSelected@2x.png in Resources */,
 				88C00E9D1988E1F400AF869A /* curry.jpg in Resources */,
 				C0E8937819A72B8000C9FF9B /* icon-4-wifi@2x.png in Resources */,
 				88C00DEA1988046900AF869A /* gigs in Resources */,
-				C000223D19AB35FA007CD472 /* schedule-stages@2x.png in Resources */,
 				88C00E001988046900AF869A /* star@2x.png in Resources */,
 				88C00E6C1988047600AF869A /* FestNewsViewController.xib in Resources */,
 				C0C9B40D19A75F7A00426305 /* stageIcon@2x.png in Resources */,
