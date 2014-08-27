@@ -408,7 +408,7 @@ CGFloat timeWidthFrom(NSDate *from, NSDate *to)
             BOOL favourited = [self.favouritedGigs containsObject:event.identifier];
             
             CGFloat x = timeWidthFrom(self.begin, event.begin);
-            CGFloat y = kTopPadding + ((kRowPadding + kRowHeight) * (stageIdx - 1));
+            CGFloat y = kTopPadding + ((kRowPadding + kRowHeight) * stageIdx);
             CGFloat w = timeWidthFrom(event.begin, event.end) - 1;
             CGFloat h = kRowHeight - kRowPadding * 2;
             CGRect frame = CGRectMake(x, y, w, h);

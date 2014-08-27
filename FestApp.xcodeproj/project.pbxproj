@@ -111,7 +111,7 @@
 		C000224219AB3D07007CD472 /* daychooser-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C000224019AB3D07007CD472 /* daychooser-selected@2x.png */; };
 		C000224319AB3D07007CD472 /* daychooser@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C000224119AB3D07007CD472 /* daychooser@2x.png */; };
 		C000224719AB3E5D007CD472 /* schedule-hoursep@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C000224619AB3E5D007CD472 /* schedule-hoursep@2x.png */; };
-		C08E9C8419AC76350067B4E6 /* schedule-stages@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C08E9C8319AC76350067B4E6 /* schedule-stages@2x.png */; };
+		C08E9C8F19ACC12B0067B4E6 /* schedule-stages@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C08E9C8E19ACC12B0067B4E6 /* schedule-stages@2x.png */; };
 		C094537019A4DA81004268BA /* eventBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C094536F19A4DA81004268BA /* eventBackground@2x.png */; };
 		C0C9B40519A7346A00426305 /* icon58.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B40219A7346A00426305 /* icon58.png */; };
 		C0C9B40619A7346A00426305 /* icon80.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B40319A7346A00426305 /* icon80.png */; };
@@ -354,7 +354,7 @@
 		C000224019AB3D07007CD472 /* daychooser-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "daychooser-selected@2x.png"; sourceTree = "<group>"; };
 		C000224119AB3D07007CD472 /* daychooser@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "daychooser@2x.png"; sourceTree = "<group>"; };
 		C000224619AB3E5D007CD472 /* schedule-hoursep@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule-hoursep@2x.png"; sourceTree = "<group>"; };
-		C08E9C8319AC76350067B4E6 /* schedule-stages@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule-stages@2x.png"; sourceTree = "<group>"; };
+		C08E9C8E19ACC12B0067B4E6 /* schedule-stages@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule-stages@2x.png"; sourceTree = "<group>"; };
 		C094536F19A4DA81004268BA /* eventBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eventBackground@2x.png"; sourceTree = "<group>"; };
 		C0C9B40219A7346A00426305 /* icon58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon58.png; sourceTree = "<group>"; };
 		C0C9B40319A7346A00426305 /* icon80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon80.png; sourceTree = "<group>"; };
@@ -578,8 +578,8 @@
 		88C00DD61988046900AF869A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C08E9C8E19ACC12B0067B4E6 /* schedule-stages@2x.png */,
 				C000224019AB3D07007CD472 /* daychooser-selected@2x.png */,
-				C08E9C8319AC76350067B4E6 /* schedule-stages@2x.png */,
 				C000224119AB3D07007CD472 /* daychooser@2x.png */,
 				C000224619AB3E5D007CD472 /* schedule-hoursep@2x.png */,
 				C000223E19AB3C54007CD472 /* schedule-bg@2x.png */,
@@ -913,6 +913,7 @@
 				C0E8937519A72B8000C9FF9B /* icon-1-agenda@2x.png in Resources */,
 				C0C9B40919A7373B00426305 /* navigation-bar@2x.png in Resources */,
 				C094537019A4DA81004268BA /* eventBackground@2x.png in Resources */,
+				C08E9C8F19ACC12B0067B4E6 /* schedule-stages@2x.png in Resources */,
 				88C00DEB1988046900AF869A /* news in Resources */,
 				C0C9B41119A771D500426305 /* star-selected-white@2x.png in Resources */,
 				C0C9B40B19A75F4F00426305 /* timeIcon@2x.png in Resources */,
@@ -938,7 +939,6 @@
 				88C00EA11988E1F400AF869A /* tarski.jpg in Resources */,
 				499D632319A2472F00951A5A /* wifi-icon.png in Resources */,
 				88C00E6E1988047600AF869A /* FestScheduleViewController.xib in Resources */,
-				C08E9C8419AC76350067B4E6 /* schedule-stages@2x.png in Resources */,
 				88C00E5D1988047600AF869A /* FestArtistsViewController.xib in Resources */,
 				C0E8937719A72B8000C9FF9B /* icon-3-venune@2x.png in Resources */,
 				C0C9B40F19A76CAD00426305 /* favButtonSelected@2x.png in Resources */,
