@@ -18,16 +18,12 @@
             <rect key="frame" x="0.0" y="64" width="320" height="504"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="F9p-Vg-hmx">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
-                    <autoresizingMask key="autoresizingMask"/>
-                </imageView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" delaysContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veI-nH-9Oz">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
-                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="map.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="xpv-xK-ajA">
-                            <rect key="frame" x="0.0" y="0.0" width="3072" height="1059"/>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="map.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="xpv-xK-ajA">
+                            <rect key="frame" x="0.0" y="0.0" width="1365" height="1365"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </imageView>
                     </subviews>
@@ -46,9 +42,13 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="veI-nH-9Oz" secondAttribute="trailing" id="1lm-Cm-jBu"/>
+                <constraint firstAttribute="bottom" secondItem="veI-nH-9Oz" secondAttribute="bottom" id="4Ob-vU-ela"/>
                 <constraint firstItem="veI-nH-9Oz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FHH-JW-zKe"/>
+                <constraint firstItem="veI-nH-9Oz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ry6-7U-01W"/>
+                <constraint firstItem="veI-nH-9Oz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="aLM-h0-5LQ"/>
                 <constraint firstAttribute="bottom" secondItem="veI-nH-9Oz" secondAttribute="bottom" id="aZs-A3-PWi"/>
                 <constraint firstItem="veI-nH-9Oz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kct-1K-z4b"/>
+                <constraint firstAttribute="trailing" secondItem="veI-nH-9Oz" secondAttribute="trailing" id="uM4-BX-inE"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
@@ -61,7 +61,6 @@
         </tapGestureRecognizer>
     </objects>
     <resources>
-        <image name="background.png" width="320" height="568"/>
-        <image name="map.jpg" width="3072" height="1239"/>
+        <image name="map.jpg" width="1365" height="1365"/>
     </resources>
 </document>

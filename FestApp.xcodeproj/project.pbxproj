@@ -31,7 +31,6 @@
 		7449289C18F8595D00924012 /* FestApp_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7449289B18F8595D00924012 /* FestApp_Tests.m */; };
 		8894AE4018DDF7C000991593 /* libReactiveCocoa-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8894AE1918DDE68F00991593 /* libReactiveCocoa-iOS.a */; };
 		88A78C8719890CB7005F4D70 /* info in Resources */ = {isa = PBXBuildFile; fileRef = 88A78C8619890CB7005F4D70 /* info */; };
-		88A78C8F19891660005F4D70 /* map.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88A78C8E19891660005F4D70 /* map.jpg */; };
 		88BCA3CE18DEEFC800654E64 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BCA3BE18DEEFC800654E64 /* AFNetworkActivityIndicatorManager.m */; };
 		88BCA3CF18DEEFC800654E64 /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BCA3C018DEEFC800654E64 /* UIActivityIndicatorView+AFNetworking.m */; };
 		88BCA3D018DEEFC800654E64 /* UIAlertView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BCA3C218DEEFC800654E64 /* UIAlertView+AFNetworking.m */; };
@@ -111,6 +110,7 @@
 		C000224219AB3D07007CD472 /* daychooser-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C000224019AB3D07007CD472 /* daychooser-selected@2x.png */; };
 		C000224319AB3D07007CD472 /* daychooser@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C000224119AB3D07007CD472 /* daychooser@2x.png */; };
 		C000224719AB3E5D007CD472 /* schedule-hoursep@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C000224619AB3E5D007CD472 /* schedule-hoursep@2x.png */; };
+		C05ABCF319B070680058EBBF /* map.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C05ABCF219B070680058EBBF /* map.jpg */; };
 		C08E9C8F19ACC12B0067B4E6 /* schedule-stages@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C08E9C8E19ACC12B0067B4E6 /* schedule-stages@2x.png */; };
 		C094537019A4DA81004268BA /* eventBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C094536F19A4DA81004268BA /* eventBackground@2x.png */; };
 		C0C9B40519A7346A00426305 /* icon58.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B40219A7346A00426305 /* icon58.png */; };
@@ -229,7 +229,6 @@
 		7449289D18F8595D00924012 /* FestApp Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FestApp Tests-Prefix.pch"; sourceTree = "<group>"; };
 		8894AE0A18DDE68E00991593 /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
 		88A78C8619890CB7005F4D70 /* info */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = info; sourceTree = "<group>"; };
-		88A78C8E19891660005F4D70 /* map.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = map.jpg; sourceTree = "<group>"; };
 		88BCA3BD18DEEFC800654E64 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
 		88BCA3BE18DEEFC800654E64 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
 		88BCA3BF18DEEFC800654E64 /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
@@ -354,6 +353,7 @@
 		C000224019AB3D07007CD472 /* daychooser-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "daychooser-selected@2x.png"; sourceTree = "<group>"; };
 		C000224119AB3D07007CD472 /* daychooser@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "daychooser@2x.png"; sourceTree = "<group>"; };
 		C000224619AB3E5D007CD472 /* schedule-hoursep@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule-hoursep@2x.png"; sourceTree = "<group>"; };
+		C05ABCF219B070680058EBBF /* map.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = map.jpg; sourceTree = "<group>"; };
 		C08E9C8E19ACC12B0067B4E6 /* schedule-stages@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule-stages@2x.png"; sourceTree = "<group>"; };
 		C094536F19A4DA81004268BA /* eventBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eventBackground@2x.png"; sourceTree = "<group>"; };
 		C0C9B40219A7346A00426305 /* icon58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon58.png; sourceTree = "<group>"; };
@@ -551,7 +551,7 @@
 		88C00DCD1988046900AF869A /* Content */ = {
 			isa = PBXGroup;
 			children = (
-				88A78C8E19891660005F4D70 /* map.jpg */,
+				C05ABCF219B070680058EBBF /* map.jpg */,
 				88A78C8619890CB7005F4D70 /* info */,
 				88C00DCE1988046900AF869A /* festival */,
 				88C00DCF1988046900AF869A /* gigs */,
@@ -931,6 +931,7 @@
 				88C00E8F1988486300AF869A /* frontpage-label-schedule@2x.png in Resources */,
 				C0C9B40519A7346A00426305 /* icon58.png in Resources */,
 				C000224219AB3D07007CD472 /* daychooser-selected@2x.png in Resources */,
+				C05ABCF319B070680058EBBF /* map.jpg in Resources */,
 				88C00DE91988046900AF869A /* festival in Resources */,
 				88C00E701988047600AF869A /* FestWebContentViewController.xib in Resources */,
 				88C00E671988047600AF869A /* FestMainViewController.xib in Resources */,
@@ -949,7 +950,6 @@
 				88C00E6C1988047600AF869A /* FestNewsViewController.xib in Resources */,
 				C0C9B40D19A75F7A00426305 /* stageIcon@2x.png in Resources */,
 				C0C9B41319A7796000426305 /* artist-placeholder@2x.png in Resources */,
-				88A78C8F19891660005F4D70 /* map.jpg in Resources */,
 				C0C9B40719A7346A00426305 /* icon1024.png in Resources */,
 				C0E8935C19A5F8AB00C9FF9B /* Icon120.png in Resources */,
 				C0E8936419A6127400C9FF9B /* linkedinButton@2x.png in Resources */,
