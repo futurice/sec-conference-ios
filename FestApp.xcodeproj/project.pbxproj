@@ -100,7 +100,6 @@
 		C0C9B40519A7346A00426305 /* icon58.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B40219A7346A00426305 /* icon58.png */; };
 		C0C9B40619A7346A00426305 /* icon80.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B40319A7346A00426305 /* icon80.png */; };
 		C0C9B40719A7346A00426305 /* icon1024.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B40419A7346A00426305 /* icon1024.png */; };
-		C0C9B40919A7373B00426305 /* navigation-bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B40819A7373B00426305 /* navigation-bar@2x.png */; };
 		C0C9B40B19A75F4F00426305 /* timeIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B40A19A75F4F00426305 /* timeIcon@2x.png */; };
 		C0C9B40D19A75F7A00426305 /* stageIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B40C19A75F7A00426305 /* stageIcon@2x.png */; };
 		C0C9B40F19A76CAD00426305 /* favButtonSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B40E19A76CAD00426305 /* favButtonSelected@2x.png */; };
@@ -115,6 +114,7 @@
 		C0E8937619A72B8000C9FF9B /* icon-2-key-talks@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0E8937219A72B8000C9FF9B /* icon-2-key-talks@2x.png */; };
 		C0E8937719A72B8000C9FF9B /* icon-3-venune@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0E8937319A72B8000C9FF9B /* icon-3-venune@2x.png */; };
 		C0E8937819A72B8000C9FF9B /* icon-4-wifi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0E8937419A72B8000C9FF9B /* icon-4-wifi@2x.png */; };
+		C0F96CBE19B45BA900945ACC /* navigation-bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F96CBD19B45BA900945ACC /* navigation-bar@2x.png */; };
 		CD7852321378AD2500711F11 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7852311378AD2500711F11 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -327,7 +327,6 @@
 		C0C9B40219A7346A00426305 /* icon58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon58.png; sourceTree = "<group>"; };
 		C0C9B40319A7346A00426305 /* icon80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon80.png; sourceTree = "<group>"; };
 		C0C9B40419A7346A00426305 /* icon1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1024.png; sourceTree = "<group>"; };
-		C0C9B40819A7373B00426305 /* navigation-bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation-bar@2x.png"; sourceTree = "<group>"; };
 		C0C9B40A19A75F4F00426305 /* timeIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timeIcon@2x.png"; sourceTree = "<group>"; };
 		C0C9B40C19A75F7A00426305 /* stageIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stageIcon@2x.png"; sourceTree = "<group>"; };
 		C0C9B40E19A76CAD00426305 /* favButtonSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favButtonSelected@2x.png"; sourceTree = "<group>"; };
@@ -342,6 +341,7 @@
 		C0E8937219A72B8000C9FF9B /* icon-2-key-talks@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-2-key-talks@2x.png"; sourceTree = "<group>"; };
 		C0E8937319A72B8000C9FF9B /* icon-3-venune@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-3-venune@2x.png"; sourceTree = "<group>"; };
 		C0E8937419A72B8000C9FF9B /* icon-4-wifi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-4-wifi@2x.png"; sourceTree = "<group>"; };
+		C0F96CBD19B45BA900945ACC /* navigation-bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation-bar@2x.png"; sourceTree = "<group>"; };
 		CD7852311378AD2500711F11 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -554,9 +554,9 @@
 				C0E8936519A6161000C9FF9B /* favButton@2x.png */,
 				C0C9B40C19A75F7A00426305 /* stageIcon@2x.png */,
 				C0C9B40A19A75F4F00426305 /* timeIcon@2x.png */,
-				C0C9B40819A7373B00426305 /* navigation-bar@2x.png */,
 				C0E8937119A72B8000C9FF9B /* icon-1-agenda@2x.png */,
 				C0E8937219A72B8000C9FF9B /* icon-2-key-talks@2x.png */,
+				C0F96CBD19B45BA900945ACC /* navigation-bar@2x.png */,
 				C0E8937319A72B8000C9FF9B /* icon-3-venune@2x.png */,
 				C0E8937419A72B8000C9FF9B /* icon-4-wifi@2x.png */,
 				C0E8936119A6127400C9FF9B /* twitterButton@2x.png */,
@@ -853,7 +853,6 @@
 				88C00E691988047600AF869A /* FestMapViewController.xib in Resources */,
 				88C00DFF1988046900AF869A /* star-selected@2x.png in Resources */,
 				C0E8937519A72B8000C9FF9B /* icon-1-agenda@2x.png in Resources */,
-				C0C9B40919A7373B00426305 /* navigation-bar@2x.png in Resources */,
 				C08E9C8F19ACC12B0067B4E6 /* schedule-stages@2x.png in Resources */,
 				88C00DEB1988046900AF869A /* news in Resources */,
 				C0C9B41119A771D500426305 /* star-selected-white@2x.png in Resources */,
@@ -873,6 +872,7 @@
 				88C00E701988047600AF869A /* FestWebContentViewController.xib in Resources */,
 				88C00E671988047600AF869A /* FestMainViewController.xib in Resources */,
 				C000223F19AB3C54007CD472 /* schedule-bg@2x.png in Resources */,
+				C0F96CBE19B45BA900945ACC /* navigation-bar@2x.png in Resources */,
 				499D632319A2472F00951A5A /* wifi-icon.png in Resources */,
 				88C00E6E1988047600AF869A /* FestScheduleViewController.xib in Resources */,
 				88C00E5D1988047600AF869A /* FestArtistsViewController.xib in Resources */,

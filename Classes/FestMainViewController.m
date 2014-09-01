@@ -214,7 +214,8 @@
 {
     NSLog(@"show news");
     [[FestDataManager sharedFestDataManager] reload];
-    [APPDELEGATE showNews:sender];
+//    [APPDELEGATE showNews:sender];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.futurice.com"]];
 }
 
 - (IBAction)showGigs:(id)sender
