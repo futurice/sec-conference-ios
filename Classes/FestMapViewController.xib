@@ -23,7 +23,7 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="map.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="xpv-xK-ajA">
-                            <rect key="frame" x="0.0" y="0.0" width="1365" height="1365"/>
+                            <rect key="frame" x="0.0" y="0.0" width="1300" height="1300"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </imageView>
                     </subviews>
@@ -39,7 +39,7 @@
                     </connections>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="veI-nH-9Oz" secondAttribute="trailing" id="1lm-Cm-jBu"/>
                 <constraint firstAttribute="bottom" secondItem="veI-nH-9Oz" secondAttribute="bottom" id="4Ob-vU-ela"/>
@@ -61,6 +61,6 @@
         </tapGestureRecognizer>
     </objects>
     <resources>
-        <image name="map.jpg" width="1365" height="1365"/>
+        <image name="map.jpg" width="1300" height="1300"/>
     </resources>
 </document>

@@ -95,8 +95,8 @@
 		C000224219AB3D07007CD472 /* daychooser-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C000224019AB3D07007CD472 /* daychooser-selected@2x.png */; };
 		C000224319AB3D07007CD472 /* daychooser@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C000224119AB3D07007CD472 /* daychooser@2x.png */; };
 		C000224719AB3E5D007CD472 /* schedule-hoursep@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C000224619AB3E5D007CD472 /* schedule-hoursep@2x.png */; };
-		C05ABCF319B070680058EBBF /* map.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C05ABCF219B070680058EBBF /* map.jpg */; };
 		C08E9C8F19ACC12B0067B4E6 /* schedule-stages@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C08E9C8E19ACC12B0067B4E6 /* schedule-stages@2x.png */; };
+		C0B9581019BDDF8000862721 /* map.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C0B9580F19BDDF8000862721 /* map.jpg */; };
 		C0C9B40519A7346A00426305 /* icon58.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B40219A7346A00426305 /* icon58.png */; };
 		C0C9B40619A7346A00426305 /* icon80.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B40319A7346A00426305 /* icon80.png */; };
 		C0C9B40719A7346A00426305 /* icon1024.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C9B40419A7346A00426305 /* icon1024.png */; };
@@ -322,8 +322,8 @@
 		C000224019AB3D07007CD472 /* daychooser-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "daychooser-selected@2x.png"; sourceTree = "<group>"; };
 		C000224119AB3D07007CD472 /* daychooser@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "daychooser@2x.png"; sourceTree = "<group>"; };
 		C000224619AB3E5D007CD472 /* schedule-hoursep@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule-hoursep@2x.png"; sourceTree = "<group>"; };
-		C05ABCF219B070680058EBBF /* map.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = map.jpg; sourceTree = "<group>"; };
 		C08E9C8E19ACC12B0067B4E6 /* schedule-stages@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule-stages@2x.png"; sourceTree = "<group>"; };
+		C0B9580F19BDDF8000862721 /* map.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = map.jpg; sourceTree = "<group>"; };
 		C0C9B40219A7346A00426305 /* icon58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon58.png; sourceTree = "<group>"; };
 		C0C9B40319A7346A00426305 /* icon80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon80.png; sourceTree = "<group>"; };
 		C0C9B40419A7346A00426305 /* icon1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1024.png; sourceTree = "<group>"; };
@@ -518,7 +518,7 @@
 		88C00DCD1988046900AF869A /* Content */ = {
 			isa = PBXGroup;
 			children = (
-				C05ABCF219B070680058EBBF /* map.jpg */,
+				C0B9580F19BDDF8000862721 /* map.jpg */,
 				88A78C8619890CB7005F4D70 /* info */,
 				88C00DCE1988046900AF869A /* festival */,
 				88C00DCF1988046900AF869A /* gigs */,
@@ -867,7 +867,6 @@
 				490801A1199CF29700E650A5 /* futurice-orange-background.png in Resources */,
 				C0C9B40519A7346A00426305 /* icon58.png in Resources */,
 				C000224219AB3D07007CD472 /* daychooser-selected@2x.png in Resources */,
-				C05ABCF319B070680058EBBF /* map.jpg in Resources */,
 				88C00DE91988046900AF869A /* festival in Resources */,
 				88C00E701988047600AF869A /* FestWebContentViewController.xib in Resources */,
 				88C00E671988047600AF869A /* FestMainViewController.xib in Resources */,
@@ -877,6 +876,7 @@
 				88C00E6E1988047600AF869A /* FestScheduleViewController.xib in Resources */,
 				88C00E5D1988047600AF869A /* FestArtistsViewController.xib in Resources */,
 				C0E8937719A72B8000C9FF9B /* icon-3-venune@2x.png in Resources */,
+				C0B9581019BDDF8000862721 /* map.jpg in Resources */,
 				C0C9B40F19A76CAD00426305 /* favButtonSelected@2x.png in Resources */,
 				C0E8937819A72B8000C9FF9B /* icon-4-wifi@2x.png in Resources */,
 				88C00DEA1988046900AF869A /* gigs in Resources */,
