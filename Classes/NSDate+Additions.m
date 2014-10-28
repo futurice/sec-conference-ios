@@ -28,7 +28,7 @@
 	return ([self compare:other] > 0);
 }
 
-- (float)hourValueWithDayDelimiterHour:(int)dayDelimiterHour
+- (float)hourValueWithDayDelimiterHour:(NSInteger)dayDelimiterHour
 {
 	NSUInteger flags = (kCFCalendarUnitHour | kCFCalendarUnitMinute | kCFCalendarUnitSecond);
 	NSDateComponents *components = [[NSDate currentCalendar] components:flags fromDate:self];
@@ -42,13 +42,13 @@
 	return hourValue;
 }
 
-- (int)hour
+- (NSInteger)hour
 {
 	NSDateComponents *components = [[NSDate currentCalendar] components:NSHourCalendarUnit fromDate:self];
 	return (int)[components hour];
 }
 
-- (int)minute
+- (NSInteger)minute
 {
 	NSDateComponents *components = [[NSDate currentCalendar] components:NSHourCalendarUnit fromDate:self];
 	return (int)[components minute];
