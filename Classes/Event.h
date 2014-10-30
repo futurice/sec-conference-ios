@@ -6,7 +6,7 @@
 @interface Event : NSObject
 
 
-- (instancetype)initFromJSON:(NSDictionary *)json;
+- (instancetype)initWithDictionary:(NSDictionary *)json;
 
 @property (nonatomic, strong) NSDate *begin;
 @property (nonatomic, strong) NSDate *end;
