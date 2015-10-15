@@ -30,7 +30,7 @@
         _day             = [NSString cast:json[@"day"]];
         _artist          = [NSString cast:json[@"artists"]];
         _title           = [NSString cast:json[@"title"]];
-        _description     = [NSString cast:json[@"description"]];
+        _info            = [NSString cast:json[@"description"]]; // "description" is an NSObject method
         _starredCount    = [NSNumber cast:json[@"starredCount"]];
         _identifier      = [NSString cast:json[@"_id"]];
         _imageURL        = [NSString cast:json[@"image_url"]];

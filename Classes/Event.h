@@ -15,7 +15,7 @@
 
 @property (nonatomic, strong) NSString *artist;
 @property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) NSString *description;
+@property (nonatomic, strong) NSString *info;
 @property (nonatomic, strong) NSNumber *starredCount;
 @property (nonatomic, strong) NSString *identifier;
 @property (nonatomic, strong) NSString *imageURL;
