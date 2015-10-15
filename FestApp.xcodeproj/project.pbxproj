@@ -16,7 +16,6 @@
 		48EE8C41158B721200C5345E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EE8C40158B721100C5345E /* SystemConfiguration.framework */; };
 		48EE8C43158B725000C5345E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EE8C42158B724F00C5345E /* libz.dylib */; };
 		48EE8C45158B725B00C5345E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EE8C44158B725A00C5345E /* MobileCoreServices.framework */; };
-		490801A1199CF29700E650A5 /* futurice-orange-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 490801A0199CF29700E650A5 /* futurice-orange-background.png */; };
 		490801A3199CF49600E650A5 /* home-image.png in Resources */ = {isa = PBXBuildFile; fileRef = 490801A2199CF49600E650A5 /* home-image.png */; };
 		499D632319A2472F00951A5A /* wifi-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 499D631F19A2472F00951A5A /* wifi-icon.png */; };
 		499D632519A24EFB00951A5A /* futurice-logo-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 499D632419A24EFB00951A5A /* futurice-logo-black.png */; };
@@ -141,7 +140,6 @@
 		48EE8C40158B721100C5345E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		48EE8C42158B724F00C5345E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		48EE8C44158B725A00C5345E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		490801A0199CF29700E650A5 /* futurice-orange-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "futurice-orange-background.png"; sourceTree = "<group>"; };
 		490801A2199CF49600E650A5 /* home-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-image.png"; sourceTree = "<group>"; };
 		499D631F19A2472F00951A5A /* wifi-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wifi-icon.png"; sourceTree = "<group>"; };
 		499D632419A24EFB00951A5A /* futurice-logo-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "futurice-logo-black.png"; sourceTree = "<group>"; };
@@ -494,7 +492,6 @@
 				C0E8936719A723C700C9FF9B /* person_placeholder@2x.png */,
 				C0C9B41219A7796000426305 /* artist-placeholder@2x.png */,
 				490801A2199CF49600E650A5 /* home-image.png */,
-				490801A0199CF29700E650A5 /* futurice-orange-background.png */,
 				C0C9B41019A771D500426305 /* star-selected-white@2x.png */,
 				88C00DE51988046900AF869A /* star-selected-yellow@2x.png */,
 				88C00DE61988046900AF869A /* star-selected@2x.png */,
@@ -744,7 +741,6 @@
 				88C00E711988047600AF869A /* FestWindow.xib in Resources */,
 				88C00E5B1988047600AF869A /* FestArtistCell.xib in Resources */,
 				88C00E5F1988047600AF869A /* FestArtistViewController.xib in Resources */,
-				490801A1199CF29700E650A5 /* futurice-orange-background.png in Resources */,
 				C0C9B40519A7346A00426305 /* icon58.png in Resources */,
 				C000224219AB3D07007CD472 /* daychooser-selected@2x.png in Resources */,
 				88C00DE91988046900AF869A /* festival in Resources */,
