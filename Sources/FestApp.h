@@ -2,7 +2,7 @@
 #import "NSString+Additions.h"
 #import "UIView+XYWidthHeight.h"
 
-#define kResourceBaseURL           @"http://sec-conference-server.herokuapp.com"
+#define kResourceBaseURL           @"https://sec-conference-server.herokuapp.com"
 #define FEST_FESTIVAL_JSON_URL     @"/api/v1/festival"
 #define FEST_NEWS_JSON_URL         @"/api/v1/news"
 #define FEST_GIGS_JSON_URL         @"/api/v1/events"
