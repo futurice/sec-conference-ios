@@ -59,12 +59,6 @@
     [[self navigationController] setNavigationBarHidden:NO animated:animated];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark DayChooserDelegate
 
 - (void)dayChooser:(DayChooser *)dayChooser selectedDayWithIndex:(NSUInteger)dayIndex
@@ -101,7 +95,7 @@
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     [UIView animateWithDuration:0.3 animations:^{
-        self.timelineVenuesView.alpha = 0.5;
+        self.timelineVenuesView.alpha = 0.25;
     }];
 }
 

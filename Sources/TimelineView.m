@@ -110,7 +110,7 @@
 
 @end
 
-#pragma mark - TimeLineView
+#pragma mark - TimelineView
 
 @interface TimelineView ()
 @property (nonatomic, strong) NSArray *stages;
@@ -131,9 +131,7 @@
 #define kRightPadding 40
 #define kRowPadding 1
 
-CGFloat timeWidthFrom(NSDate *from, NSDate *to);
-
-CGFloat timeWidthFrom(NSDate *from, NSDate *to)
+static CGFloat timeWidthFrom(NSDate *from, NSDate *to)
 {
     NSTimeInterval interval = [to timeIntervalSinceReferenceDate] - [from timeIntervalSinceReferenceDate];
     return (CGFloat) interval / 3600 * kHourWidth;
@@ -144,18 +142,11 @@ CGFloat timeWidthFrom(NSDate *from, NSDate *to)
 - (void)awakeFromNib
 {
     self.backgroundColor = [UIColor clearColor];
-    [self performSelectorInBackground:@selector(preloadGroovyGuitarSounds) withObject:nil];
 
 //    self.innerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
     self.autoresizesSubviews = NO;
     self.innerView = [[UIView alloc] initWithFrame:self.bounds];
     self.innerView.clipsToBounds = YES;
-    [[FestFavouritesManager sharedFavouritesManager].favouritesSignal subscribeNext:^(NSArray *favourites) {
-    
-        self.favouritedGigs = [favourites copy];
-        [self recreate];
-    
-    }];
 
     [self addSubview:self.innerView];
 }
@@ -219,6 +210,8 @@ CGFloat timeWidthFrom(NSDate *from, NSDate *to)
 //            button.alpha = favourited ? 1.0f : 0.8f;
         }
     }
+
+    [self recreate];
 }
 
 - (void)setCurrentDay:(NSString *)currentDay
@@ -446,7 +439,6 @@ CGFloat timeWidthFrom(NSDate *from, NSDate *to)
     else {
         [self.delegate timeLineView:self eventSelected:sender.event];
     }
-    
 }
 
 - (void)favButtonPressed:(FavButton *)sender
@@ -460,22 +452,6 @@ CGFloat timeWidthFrom(NSDate *from, NSDate *to)
 - (CGSize)intrinsicContentSize
 {
     return CGSizeMake(timeWidthFrom(self.dayBegin, self.dayEnd) + kLeftPadding + kRightPadding, 100);
-}
-
-#pragma mark - Audio
-
-- (void)preloadGroovyGuitarSounds
-{
-    @autoreleasepool {
-        for (int i = 0; i < 2; i++) {
-            [self playGroovyGuitarSound:i volume:0];
-        }
-    }
-}
-
-- (void)playGroovyGuitarSound:(int)soundNumber volume:(float)volume
-{
-    return;
 }
 
 @end
