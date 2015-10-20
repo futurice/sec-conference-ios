@@ -19,9 +19,12 @@
 @interface TimelineView : UIView
 @property (nonatomic, strong) NSArray *gigs;
 @property (nonatomic, strong) NSString *currentDay;
+@property (nonatomic, strong, readonly) NSDate *currentDate;
 @property (nonatomic, strong) NSArray *favouritedGigs;
 
 @property (nonatomic, weak) id<TimelineViewDelegate> delegate;
 
 - (CGRect)gigRect:(Gig *)gig;
+- (CGFloat)offsetForTime:(const NSDate *)time;
+
 @end

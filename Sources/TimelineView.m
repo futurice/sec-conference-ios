@@ -11,6 +11,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "FestFavouritesManager.h"
 
+
 #pragma mark - GigButton
 
 @interface GigButton : UIButton
@@ -79,8 +80,10 @@
     return self;
 }
 
-
 @end
+
+
+#pragma mark - FavButton
 
 @interface FavButton : UIButton
 @property (nonatomic, readonly) Gig *gig;
@@ -109,6 +112,7 @@
 }
 
 @end
+
 
 #pragma mark - TimelineView
 
@@ -162,7 +166,18 @@ static CGFloat timeWidthFrom(NSDate *from, NSDate *to)
     }
 }
 
+- (CGFloat)offsetForTime:(NSDate *)time
+{
+    CGFloat distance = + kLeftPadding + timeWidthFrom(self.dayBegin, time);
+
+    distance = MAX(distance, 0);
+    distance = MIN(distance, self.intrinsicContentSize.width);
+
+    return distance;
+}
+
 #pragma mark - DataSetters
+
 - (void)setGigs:(NSArray *)gigs
 {
     _gigs = gigs;
@@ -220,6 +235,11 @@ static CGFloat timeWidthFrom(NSDate *from, NSDate *to)
 
     [self recreateDay];
     [self invalidateIntrinsicContentSize];
+}
+
+- (NSDate *)currentDate
+{
+    return self.dayBegin;
 }
 
 #pragma mark - Internals
@@ -328,6 +348,7 @@ static CGFloat timeWidthFrom(NSDate *from, NSDate *to)
     UIImage *fretImage = [UIImage imageNamed:@"schedule-hoursep.png"];
 
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"Europe/Berlin"]];
     [dateFormatter setDateFormat:@"HH:mm"];
 
     while ([fretDate compare:self.end] == NSOrderedAscending) {
