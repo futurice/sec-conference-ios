@@ -15,6 +15,8 @@
 
 #import "UIView+XYWidthHeight.h"
 
+#import "Masonry.h"
+
 @interface FestEventViewController ()
 @property (nonatomic, strong) id event;
 
@@ -28,8 +30,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *hourLabel;
 @property (weak, nonatomic) IBOutlet UIButton *twitterButton;
 @property (weak, nonatomic) IBOutlet UIButton *linkedinButton;
-@property (strong, nonatomic) IBOutlet UILabel *speakerLabel;
-@property (strong, nonatomic) IBOutlet UILabel *speakerRoleLabel;
+@property (weak, nonatomic) IBOutlet UIView *speakersView;
 
 @property (nonatomic, strong) IBOutlet UIButton *wikipediaButton;
 
@@ -76,13 +77,9 @@
     else {
         Event *eventModel = [Event cast:self.event];
         self.gigLabel.text = eventModel.title;
-//        self.gigLabel.text = [NSString stringWithFormat:@"%@ - %@",eventModel.artist,eventModel.title];
         self.stageLabel.text = eventModel.location;
         self.infoLabel.text = [eventModel.info stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
-        
-        self.speakerLabel.text = eventModel.artist;
-        self.speakerRoleLabel.text = eventModel.speakerRole;
-        
+
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"Europe/Berlin"]];
         [dateFormatter setDateFormat:@"HH:mm"];
@@ -148,6 +145,67 @@
         
         self.wikipediaButton.hidden = YES;
     }
+
+    [self buildSpeakersView];
+}
+
+- (void)buildSpeakersView
+{
+    Event *eventModel = [Event cast:self.event];
+
+    self.speakersView.translatesAutoresizingMaskIntoConstraints = NO;
+
+    UIView *row = [self buildSpeakerRowWithSpeaker:eventModel.artist role:eventModel.speakerRole afterView: self.speakersView];
+    [self.speakersView addSubview:row];
+
+    [row mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.speakersView);
+    }];
+}
+
+- (UIView *)buildSpeakerRowWithSpeaker:(NSString *)speaker role:(NSString *)role afterView:(UIView *)view
+{
+    UILabel *speakerLabel = [UILabel new];
+    speakerLabel.text = speaker;
+    speakerLabel.font = [UIFont fontWithName:@"AvenirNext-Medium" size:16];
+    speakerLabel.textColor = [UIColor whiteColor];
+    speakerLabel.numberOfLines = 0;
+
+    UILabel *roleLabel = [UILabel new];
+    roleLabel.text = role;
+    roleLabel.font = [UIFont fontWithName:@"AvenirNext-Medium" size:12];
+    roleLabel.textColor = [UIColor lightGrayColor];
+    roleLabel.numberOfLines = 0;
+
+    UIView *row = [UIView new];
+    [row addSubview:speakerLabel];
+    [row addSubview:roleLabel];
+    [row addSubview:self.linkedinButton];
+    [row addSubview:self.twitterButton];
+
+    [speakerLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.top.equalTo(row);
+        make.trailing.equalTo(self.linkedinButton.mas_leading);
+    }];
+
+    [self.twitterButton setContentHuggingPriority:751 forAxis:UILayoutConstraintAxisHorizontal];
+    [self.twitterButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.trailing.equalTo(row);
+    }];
+
+    [self.linkedinButton setContentHuggingPriority:751 forAxis:UILayoutConstraintAxisHorizontal];
+    [self.linkedinButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.twitterButton);
+        make.trailing.equalTo(self.twitterButton.mas_leading);
+    }];
+
+    [roleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.trailing.equalTo(speakerLabel);
+        make.top.equalTo(speakerLabel.mas_bottom);
+        make.bottom.equalTo(row);
+    }];
+
+    return row;
 }
 
 - (void)viewWillAppear:(BOOL)animated
