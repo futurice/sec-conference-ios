@@ -41,6 +41,7 @@
 @end
 
 @interface FestMainViewController ()
+
 @property (nonatomic, strong) NewsItem *currentNewsItem;
 @property (nonatomic, strong) id currentEvent;
 
@@ -56,6 +57,7 @@
 - (IBAction)showMap:(id)sender;
 - (IBAction)showInfo:(id)sender;
 - (IBAction)showLC:(id)sender;
+
 @end
 
 @implementation FestMainViewController
@@ -192,13 +194,9 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [[self navigationController] setNavigationBarHidden:YES animated:animated];
-}
+    [super viewWillAppear:animated];
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [[self navigationController] setNavigationBarHidden:YES animated:animated];
 }
 
 #pragma mark Actions

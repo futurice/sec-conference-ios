@@ -53,13 +53,9 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [[self navigationController] setNavigationBarHidden:NO animated:animated];
-}
+    [super viewWillAppear:animated];
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [[self navigationController] setNavigationBarHidden:NO animated:animated];
 }
 
 #pragma mark UITableViewDataSource
@@ -105,7 +101,8 @@
 	return nil;
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     return 60.0f;
 }
 

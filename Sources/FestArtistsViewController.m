@@ -59,9 +59,6 @@
                           [self.gigs filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"day contains[c] 'Sunday' AND bar_camp == NO"]]
                           ];
         }
-        
-
-        
 
         [self.tableView reloadData];
     }];
@@ -72,16 +69,11 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
+
     [[FestDataManager sharedFestDataManager] reload];
     [[self navigationController] setNavigationBarHidden:NO animated:animated];
 }
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 #pragma mark UITableViewDataSource
 
@@ -148,7 +140,6 @@
 
     return view;
 }
-
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {

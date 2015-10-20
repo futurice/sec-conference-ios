@@ -44,7 +44,6 @@
     [super viewDidLoad];
     
     self.content = [self.content stringByReplacingOccurrencesOfString:@"\\n" withString:@"<br>"];
-    
 
     NSMutableString *html = [@"<html> "
                              "<head> "
@@ -94,7 +93,7 @@
                              "</head>" mutableCopy];
 
     [html appendString:@"<body> "
-     "<div id=\"main\"> "];
+                        "<div id=\"main\"> "];
     if (self.contentTitle) {
         [html appendFormat:@"<h1>%@</h1>", self.contentTitle];
     }
@@ -120,14 +119,9 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
+
     [[self navigationController] setNavigationBarHidden:NO animated:animated];
-}
-
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - actions
@@ -140,8 +134,8 @@
 #pragma mark - UIWebViewDelegate
 
 - (BOOL)webView:(UIWebView *)theWebView
-shouldStartLoadWithRequest:(NSURLRequest *)request
- navigationType:(UIWebViewNavigationType)navigationType
+    shouldStartLoadWithRequest:(NSURLRequest *)request
+    navigationType:(UIWebViewNavigationType)navigationType
 {
     if (navigationType == UIWebViewNavigationTypeLinkClicked) {
         
@@ -154,9 +148,7 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
         }
         
         if ([link rangeOfString:@"tel:"].location == 0) {
-            
             return YES;
-            
         } else {
             [[UIApplication sharedApplication] openURL:[request URL]];
             return NO;

@@ -152,16 +152,13 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
+
     [[self navigationController] setNavigationBarHidden:NO animated:animated];
 }
 
-- (void)didReceiveMemoryWarning
+- (IBAction)openLinkedIn:(id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-- (IBAction)openLinkedIn:(id)sender {
-    
     if([self.event isKindOfClass:[Gig class]]) {
         Gig *gig = [Gig cast:self.event];
         [UIApplication.sharedApplication openURL:gig.wikipediaUrl];
@@ -172,7 +169,9 @@
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:eventModel.linkedIn]];
     }
 }
-- (IBAction)openTwitter:(id)sender {
+
+- (IBAction)openTwitter:(id)sender
+{
     Event *eventModel = [Event cast:self.event];
 
     NSURL *twitterURL = nil;
