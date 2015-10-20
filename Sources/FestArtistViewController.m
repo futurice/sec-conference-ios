@@ -84,7 +84,8 @@
         self.speakerRoleLabel.text = eventModel.speakerRole;
         
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"hh:mm"];
+        [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"Europe/Berlin"]];
+        [dateFormatter setDateFormat:@"HH:mm"];
         
         self.hourLabel.text = [NSString stringWithFormat:@"%@ - %@",[dateFormatter stringFromDate:eventModel.begin],[dateFormatter stringFromDate:eventModel.end]];
         
