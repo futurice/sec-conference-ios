@@ -879,7 +879,7 @@
 					"-Wimplicit-retain-self",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.futurice.sxc14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.futurice.sxc15;
 				PRODUCT_NAME = FestApp;
 			};
 			name = Debug;
@@ -928,7 +928,7 @@
 					"-Wimplicit-retain-self",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.futurice.sxc14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.futurice.sxc15;
 				PRODUCT_NAME = FestApp;
 				VALIDATE_PRODUCT = YES;
 			};
