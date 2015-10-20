@@ -68,10 +68,8 @@
     
     _event = event;
     self.nameLabel.text = event.title;
-    self.stageLabel.text = [NSString stringWithFormat:@"%@ - %@",event.artist,event.speakerRole];
-//    if (event.speakerImageUrl) {
-        [self.speakerImageView setImageWithURL:[NSURL URLWithString:event.speakerImageUrl] placeholderImage:[UIImage imageNamed:@"person_placeholder"]];
-//    }
+    self.stageLabel.text = [NSString stringWithFormat:@"%@ - %@", event.speaker, event.speakerRole];
+    [self.speakerImageView setImageWithURL:[NSURL URLWithString:event.speakerImageUrl] placeholderImage:[UIImage imageNamed:@"person_placeholder"]];
 }
 
 @end

@@ -28,7 +28,7 @@
         }
         
         _day             = [NSString cast:json[@"day"]];
-        _artist          = [NSString cast:json[@"artists"]];
+        _speaker         = [NSString cast:json[@"artists"]];
         _title           = [NSString cast:json[@"title"]];
         _info            = [NSString cast:json[@"description"]]; // "description" is an NSObject method
         _starredCount    = [NSNumber cast:json[@"starredCount"]];

@@ -155,7 +155,7 @@
 
     self.speakersView.translatesAutoresizingMaskIntoConstraints = NO;
 
-    UIView *row = [self buildSpeakerRowWithSpeaker:eventModel.artist role:eventModel.speakerRole afterView: self.speakersView];
+    UIView *row = [self buildSpeakerRowWithSpeaker:eventModel.speaker role:eventModel.speakerRole afterView: self.speakersView];
     [self.speakersView addSubview:row];
 
     [row mas_makeConstraints:^(MASConstraintMaker *make) {
