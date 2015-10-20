@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 Futurice Oy. All rights reserved.
 //
 
-#import "FestArtistsViewController.h"
+#import "FestEventsViewController.h"
 
 #import "FestAppDelegate.h"
 #import "FestDataManager.h"
 #import "FestImageManager.h"
-#import "FestArtistCell.h"
+#import "FestEventCell.h"
 
-@interface FestArtistsViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface FestEventsViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSArray *gigs;
 @property (nonatomic,strong) NSArray *days;
 
@@ -23,7 +23,7 @@
 #define kCellButtonTag 1000
 #define kCellHeight 86
 
-@implementation FestArtistsViewController
+@implementation FestEventsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -94,11 +94,11 @@
 {
     NSUInteger idx = indexPath.row;
 
-    static NSString *cellIdentifier = @"FestArtistCell";
-    FestArtistCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    static NSString *cellIdentifier = @"FestEventCell";
+    FestEventCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
 
     if (cell == nil) {
-        [tableView registerNib:[UINib nibWithNibName:@"FestArtistCell" bundle:nil] forCellReuseIdentifier:cellIdentifier];
+        [tableView registerNib:[UINib nibWithNibName:@"FestEventCell" bundle:nil] forCellReuseIdentifier:cellIdentifier];
         cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     }
 

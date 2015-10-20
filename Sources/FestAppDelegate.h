@@ -7,7 +7,7 @@
 
 #import "FestScheduleViewController.h"
 #import "FestNewsViewController.h"
-#import "FestArtistsViewController.h"
+#import "FestEventsViewController.h"
 #import "FestMapViewController.h"
 #import "FestInfoViewController.h"
 
@@ -24,13 +24,13 @@
 
 @property (nonatomic, strong) IBOutlet FestScheduleViewController *scheduleViewController;
 @property (nonatomic, strong) IBOutlet FestNewsViewController *newsViewController;
-@property (nonatomic, strong) IBOutlet FestArtistsViewController *gigsViewController;
+@property (nonatomic, strong) IBOutlet FestEventsViewController *eventsViewController;
 @property (nonatomic, strong) IBOutlet FestMapViewController *mapViewController;
 @property (nonatomic, strong) IBOutlet FestInfoViewController *infoViewController;
 
 - (IBAction)showSchedule:(id)sender;
 - (IBAction)showNews:(id)sender;
-- (IBAction)showGigs:(id)sender;
+- (IBAction)showKeyTalks:(id)sender;
 - (IBAction)showMap:(id)sender;
 - (IBAction)showGeneralInfo:(id)sender;
 

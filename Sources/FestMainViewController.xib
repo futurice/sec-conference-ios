@@ -63,7 +63,7 @@
                             <inset key="imageEdgeInsets" minX="15" minY="15" maxX="265" maxY="15"/>
                             <state key="normal" title="Key talks" image="icon-2-key-talks.png"/>
                             <connections>
-                                <action selector="showGigs:" destination="-1" eventType="touchUpInside" id="NV8-9C-P0J"/>
+                                <action selector="showKeyTalks:" destination="-1" eventType="touchUpInside" id="5q5-Qx-Gnt"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxt-qg-YBe" userLabel="Button - Venue">

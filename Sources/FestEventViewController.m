@@ -1,12 +1,12 @@
 //
-//  FestGigViewController.m
+//  FestEventViewController.m
 //  FestApp
 //
 //  Created by Oleg Grenrus on 10/06/14.
 //  Copyright (c) 2014 Futurice Oy. All rights reserved.
 //
 
-#import "FestArtistViewController.h"
+#import "FestEventViewController.h"
 
 #import "FestAppDelegate.h"
 #import "FestDataManager.h"
@@ -15,7 +15,7 @@
 
 #import "UIView+XYWidthHeight.h"
 
-@interface FestArtistViewController ()
+@interface FestEventViewController ()
 @property (nonatomic, strong) id event;
 
 @property (nonatomic, strong) IBOutlet UIImageView *imageView;
@@ -37,11 +37,11 @@
 - (IBAction)openWikipedia:(id)sender;
 @end
 
-@implementation FestArtistViewController
+@implementation FestEventViewController
 
 + (instancetype)newWithEvent:(id)event
 {
-    FestArtistViewController *controller = [[FestArtistViewController alloc] initWithNibName:@"FestArtistViewController" bundle:nil];
+    FestEventViewController *controller = [[FestEventViewController alloc] initWithNibName:@"FestEventViewController" bundle:nil];
 
     // TODO: implement me
 

@@ -1,5 +1,5 @@
 //
-//  FestArtistCell.h
+//  FestEventCell.h
 //  FestApp
 //
 //  Created by Oleg Grenrus on 12/06/14.
@@ -11,7 +11,7 @@
 #import "Gig.h"
 #import "Event.h"
 
-@interface FestArtistCell : UITableViewCell
+@interface FestEventCell : UITableViewCell
 @property (nonatomic, strong) Gig *gig;
 @property (nonatomic, strong) Event *event;
 @end

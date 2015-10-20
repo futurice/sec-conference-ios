@@ -53,7 +53,7 @@
 
 - (IBAction)showSchedule:(id)sender;
 - (IBAction)showNews:(id)sender;
-- (IBAction)showGigs:(id)sender;
+- (IBAction)showKeyTalks:(id)sender;
 - (IBAction)showMap:(id)sender;
 - (IBAction)showInfo:(id)sender;
 - (IBAction)showLC:(id)sender;
@@ -216,10 +216,10 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.futurice.com"]];
 }
 
-- (IBAction)showGigs:(id)sender
+- (IBAction)showKeyTalks:(id)sender
 {
     NSLog("@show gigs");
-    [APPDELEGATE showGigs:sender];
+    [APPDELEGATE showKeyTalks:sender];
 }
 
 - (IBAction)showMap:(id)sender

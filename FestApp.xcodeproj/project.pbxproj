@@ -32,12 +32,12 @@
 		88C00E541988047600AF869A /* Gig.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C00E031988047500AF869A /* Gig.m */; };
 		88C00E571988047600AF869A /* DayChooser.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C00E091988047500AF869A /* DayChooser.m */; };
 		88C00E591988047600AF869A /* FestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C00E0D1988047500AF869A /* FestAppDelegate.m */; };
-		88C00E5A1988047600AF869A /* FestArtistCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C00E0F1988047500AF869A /* FestArtistCell.m */; };
-		88C00E5B1988047600AF869A /* FestArtistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C00E101988047500AF869A /* FestArtistCell.xib */; };
-		88C00E5C1988047600AF869A /* FestArtistsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C00E121988047500AF869A /* FestArtistsViewController.m */; };
-		88C00E5D1988047600AF869A /* FestArtistsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C00E131988047500AF869A /* FestArtistsViewController.xib */; };
-		88C00E5E1988047600AF869A /* FestArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C00E151988047500AF869A /* FestArtistViewController.m */; };
-		88C00E5F1988047600AF869A /* FestArtistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C00E161988047500AF869A /* FestArtistViewController.xib */; };
+		88C00E5A1988047600AF869A /* FestEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C00E0F1988047500AF869A /* FestEventCell.m */; };
+		88C00E5B1988047600AF869A /* FestEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C00E101988047500AF869A /* FestEventCell.xib */; };
+		88C00E5C1988047600AF869A /* FestEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C00E121988047500AF869A /* FestEventsViewController.m */; };
+		88C00E5D1988047600AF869A /* FestEventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C00E131988047500AF869A /* FestEventsViewController.xib */; };
+		88C00E5E1988047600AF869A /* FestEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C00E151988047500AF869A /* FestEventViewController.m */; };
+		88C00E5F1988047600AF869A /* FestEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C00E161988047500AF869A /* FestEventViewController.xib */; };
 		88C00E601988047600AF869A /* FestDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C00E181988047500AF869A /* FestDataManager.m */; };
 		88C00E611988047600AF869A /* FestFavouritesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C00E1A1988047500AF869A /* FestFavouritesManager.m */; };
 		88C00E621988047600AF869A /* FestInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C00E1C1988047500AF869A /* FestInfoViewController.m */; };
@@ -131,15 +131,15 @@
 		88C00E091988047500AF869A /* DayChooser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayChooser.m; sourceTree = "<group>"; };
 		88C00E0C1988047500AF869A /* FestAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FestAppDelegate.h; sourceTree = "<group>"; };
 		88C00E0D1988047500AF869A /* FestAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FestAppDelegate.m; sourceTree = "<group>"; };
-		88C00E0E1988047500AF869A /* FestArtistCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FestArtistCell.h; sourceTree = "<group>"; };
-		88C00E0F1988047500AF869A /* FestArtistCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FestArtistCell.m; sourceTree = "<group>"; };
-		88C00E101988047500AF869A /* FestArtistCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FestArtistCell.xib; sourceTree = "<group>"; };
-		88C00E111988047500AF869A /* FestArtistsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FestArtistsViewController.h; sourceTree = "<group>"; };
-		88C00E121988047500AF869A /* FestArtistsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FestArtistsViewController.m; sourceTree = "<group>"; };
-		88C00E131988047500AF869A /* FestArtistsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FestArtistsViewController.xib; sourceTree = "<group>"; };
-		88C00E141988047500AF869A /* FestArtistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FestArtistViewController.h; sourceTree = "<group>"; };
-		88C00E151988047500AF869A /* FestArtistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FestArtistViewController.m; sourceTree = "<group>"; };
-		88C00E161988047500AF869A /* FestArtistViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FestArtistViewController.xib; sourceTree = "<group>"; };
+		88C00E0E1988047500AF869A /* FestEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FestEventCell.h; sourceTree = "<group>"; };
+		88C00E0F1988047500AF869A /* FestEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FestEventCell.m; sourceTree = "<group>"; };
+		88C00E101988047500AF869A /* FestEventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FestEventCell.xib; sourceTree = "<group>"; };
+		88C00E111988047500AF869A /* FestEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FestEventsViewController.h; sourceTree = "<group>"; };
+		88C00E121988047500AF869A /* FestEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FestEventsViewController.m; sourceTree = "<group>"; };
+		88C00E131988047500AF869A /* FestEventsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FestEventsViewController.xib; sourceTree = "<group>"; };
+		88C00E141988047500AF869A /* FestEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FestEventViewController.h; sourceTree = "<group>"; };
+		88C00E151988047500AF869A /* FestEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FestEventViewController.m; sourceTree = "<group>"; };
+		88C00E161988047500AF869A /* FestEventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FestEventViewController.xib; sourceTree = "<group>"; };
 		88C00E171988047500AF869A /* FestDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FestDataManager.h; sourceTree = "<group>"; };
 		88C00E181988047500AF869A /* FestDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FestDataManager.m; sourceTree = "<group>"; };
 		88C00E191988047500AF869A /* FestFavouritesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FestFavouritesManager.h; sourceTree = "<group>"; };
@@ -384,15 +384,15 @@
 			children = (
 				88C00E081988047500AF869A /* DayChooser.h */,
 				88C00E091988047500AF869A /* DayChooser.m */,
-				88C00E0E1988047500AF869A /* FestArtistCell.h */,
-				88C00E0F1988047500AF869A /* FestArtistCell.m */,
-				88C00E101988047500AF869A /* FestArtistCell.xib */,
-				88C00E111988047500AF869A /* FestArtistsViewController.h */,
-				88C00E121988047500AF869A /* FestArtistsViewController.m */,
-				88C00E131988047500AF869A /* FestArtistsViewController.xib */,
-				88C00E141988047500AF869A /* FestArtistViewController.h */,
-				88C00E151988047500AF869A /* FestArtistViewController.m */,
-				88C00E161988047500AF869A /* FestArtistViewController.xib */,
+				88C00E0E1988047500AF869A /* FestEventCell.h */,
+				88C00E0F1988047500AF869A /* FestEventCell.m */,
+				88C00E101988047500AF869A /* FestEventCell.xib */,
+				88C00E111988047500AF869A /* FestEventsViewController.h */,
+				88C00E121988047500AF869A /* FestEventsViewController.m */,
+				88C00E131988047500AF869A /* FestEventsViewController.xib */,
+				88C00E141988047500AF869A /* FestEventViewController.h */,
+				88C00E151988047500AF869A /* FestEventViewController.m */,
+				88C00E161988047500AF869A /* FestEventViewController.xib */,
 				88C00E1B1988047500AF869A /* FestInfoViewController.h */,
 				88C00E1C1988047500AF869A /* FestInfoViewController.m */,
 				88C00E1D1988047500AF869A /* FestInfoViewController.xib */,
@@ -635,13 +635,13 @@
 				88C00DEB1988046900AF869A /* news in Resources */,
 				88C00E831988056A00AF869A /* Images.xcassets in Resources */,
 				88C00E711988047600AF869A /* FestWindow.xib in Resources */,
-				88C00E5B1988047600AF869A /* FestArtistCell.xib in Resources */,
-				88C00E5F1988047600AF869A /* FestArtistViewController.xib in Resources */,
+				88C00E5B1988047600AF869A /* FestEventCell.xib in Resources */,
+				88C00E5F1988047600AF869A /* FestEventViewController.xib in Resources */,
 				88C00DE91988046900AF869A /* festival in Resources */,
 				88C00E701988047600AF869A /* FestWebContentViewController.xib in Resources */,
 				88C00E671988047600AF869A /* FestMainViewController.xib in Resources */,
 				88C00E6E1988047600AF869A /* FestScheduleViewController.xib in Resources */,
-				88C00E5D1988047600AF869A /* FestArtistsViewController.xib in Resources */,
+				88C00E5D1988047600AF869A /* FestEventsViewController.xib in Resources */,
 				C0B9581019BDDF8000862721 /* map.jpg in Resources */,
 				88C00DEA1988046900AF869A /* gigs in Resources */,
 				88C00E6C1988047600AF869A /* FestNewsViewController.xib in Resources */,
@@ -686,7 +686,7 @@
 				88C00E801988047600AF869A /* UIViewController+Additions.m in Sources */,
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				88C00E661988047600AF869A /* FestMainViewController.m in Sources */,
-				88C00E5E1988047600AF869A /* FestArtistViewController.m in Sources */,
+				88C00E5E1988047600AF869A /* FestEventViewController.m in Sources */,
 				A0D1686F1BD64D58002530FD /* UIButton+AFNetworking.m in Sources */,
 				88C00E591988047600AF869A /* FestAppDelegate.m in Sources */,
 				88C00E6B1988047600AF869A /* FestNewsViewController.m in Sources */,
@@ -694,7 +694,7 @@
 				88C00E6D1988047600AF869A /* FestScheduleViewController.m in Sources */,
 				A0D1686B1BD64D58002530FD /* AFURLSessionManager.m in Sources */,
 				88C00E611988047600AF869A /* FestFavouritesManager.m in Sources */,
-				88C00E5A1988047600AF869A /* FestArtistCell.m in Sources */,
+				88C00E5A1988047600AF869A /* FestEventCell.m in Sources */,
 				88C00E621988047600AF869A /* FestInfoViewController.m in Sources */,
 				88C00E6F1988047600AF869A /* FestWebContentViewController.m in Sources */,
 				A0D168731BD64D58002530FD /* UIWebView+AFNetworking.m in Sources */,
@@ -715,7 +715,7 @@
 				A0D168641BD64D58002530FD /* AFHTTPRequestOperationManager.m in Sources */,
 				A0D168721BD64D58002530FD /* UIRefreshControl+AFNetworking.m in Sources */,
 				88C00E681988047600AF869A /* FestMapViewController.m in Sources */,
-				88C00E5C1988047600AF869A /* FestArtistsViewController.m in Sources */,
+				88C00E5C1988047600AF869A /* FestEventsViewController.m in Sources */,
 				88C00E571988047600AF869A /* DayChooser.m in Sources */,
 				88C00E781988047600AF869A /* NewsItem.m in Sources */,
 				88C00E6A1988047600AF869A /* FestNewsItemViewController.m in Sources */,

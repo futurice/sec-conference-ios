@@ -13,7 +13,7 @@
 #import "FestDataManager.h"
 #import "AFNetworkActivityIndicatorManager.h"
 
-#import "FestArtistViewController.h"
+#import "FestEventViewController.h"
 #import "FestNewsItemViewController.h"
 #import "FestWebContentViewController.h"
 
@@ -106,9 +106,9 @@ void uncaughtExceptionHandler(NSException *exception)
     [self.navController pushViewController:self.newsViewController animated:YES];
 }
 
-- (IBAction)showGigs:(id)sender
+- (IBAction)showKeyTalks:(id)sender
 {
-    [self.navController pushViewController:self.gigsViewController animated:YES];
+    [self.navController pushViewController:self.eventsViewController animated:YES];
 }
 
 - (IBAction)showMap:(id)sender
@@ -147,13 +147,13 @@ void uncaughtExceptionHandler(NSException *exception)
 
 - (void)showEvent:(Event *)event
 {
-    UIViewController *controller = [FestArtistViewController newWithEvent:event];
+    UIViewController *controller = [FestEventViewController newWithEvent:event];
     [self.navController pushViewController:controller animated:YES];
 }
 
 - (void)showGig:(Gig *)gig
 {
-    UIViewController *controller = [FestArtistViewController newWithEvent:gig];
+    UIViewController *controller = [FestEventViewController newWithEvent:gig];
     [self.navController pushViewController:controller animated:YES];
 }
 

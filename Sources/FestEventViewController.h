@@ -1,5 +1,5 @@
 //
-//  FestGigViewController.h
+//  FestEventViewController.h
 //  FestApp
 //
 //  Created by Oleg Grenrus on 10/06/14.
@@ -11,6 +11,6 @@
 #import "Gig.h"
 #import "Event.h"
 
-@interface FestArtistViewController : UIViewController
-+ (FestArtistViewController *) newWithEvent:(id)event;
+@interface FestEventViewController : UIViewController
++ (FestEventViewController *) newWithEvent:(id)event;
 @end

@@ -1,23 +1,22 @@
 //
-//  FestArtistCell.m
+//  FestEventCell.m
 //  FestApp
 //
 //  Created by Oleg Grenrus on 12/06/14.
 //  Copyright (c) 2014 Futurice Oy. All rights reserved.
 //
 
-#import "FestArtistCell.h"
+#import "FestEventCell.h"
 #import "FestImageManager.h"
 #import "UIImageView+AFNetworking.h"
 
-@interface FestArtistCell ()
+@interface FestEventCell ()
 @property (strong, nonatomic) IBOutlet UIImageView *speakerImageView;
 @property (nonatomic, strong) IBOutlet UILabel *nameLabel;
 @property (nonatomic, strong) IBOutlet UILabel *stageLabel;
 @end
 
-@implementation FestArtistCell
-
+@implementation FestEventCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
