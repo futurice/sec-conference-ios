@@ -1,3 +1,6 @@
 [submodule "GitSubmodules/AFNetworking"]
 	path = GitSubmodules/AFNetworking
 	url = git@github.com:AFNetworking/AFNetworking.git
+[submodule "GitSubmodules/Masonry"]
+	path = GitSubmodules/Masonry
+	url = git@github.com:SnapKit/Masonry.git
