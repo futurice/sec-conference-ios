@@ -37,7 +37,6 @@
 		88C00E5C1988047600AF869A /* FestEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C00E121988047500AF869A /* FestEventsViewController.m */; };
 		88C00E5D1988047600AF869A /* FestEventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C00E131988047500AF869A /* FestEventsViewController.xib */; };
 		88C00E5E1988047600AF869A /* FestEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C00E151988047500AF869A /* FestEventViewController.m */; };
-		88C00E5F1988047600AF869A /* FestEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C00E161988047500AF869A /* FestEventViewController.xib */; };
 		88C00E601988047600AF869A /* FestDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C00E181988047500AF869A /* FestDataManager.m */; };
 		88C00E611988047600AF869A /* FestFavouritesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C00E1A1988047500AF869A /* FestFavouritesManager.m */; };
 		88C00E621988047600AF869A /* FestInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C00E1C1988047500AF869A /* FestInfoViewController.m */; };
@@ -150,7 +149,6 @@
 		88C00E131988047500AF869A /* FestEventsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FestEventsViewController.xib; sourceTree = "<group>"; };
 		88C00E141988047500AF869A /* FestEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FestEventViewController.h; sourceTree = "<group>"; };
 		88C00E151988047500AF869A /* FestEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FestEventViewController.m; sourceTree = "<group>"; };
-		88C00E161988047500AF869A /* FestEventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FestEventViewController.xib; sourceTree = "<group>"; };
 		88C00E171988047500AF869A /* FestDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FestDataManager.h; sourceTree = "<group>"; };
 		88C00E181988047500AF869A /* FestDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FestDataManager.m; sourceTree = "<group>"; };
 		88C00E191988047500AF869A /* FestFavouritesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FestFavouritesManager.h; sourceTree = "<group>"; };
@@ -430,7 +428,6 @@
 				88C00E131988047500AF869A /* FestEventsViewController.xib */,
 				88C00E141988047500AF869A /* FestEventViewController.h */,
 				88C00E151988047500AF869A /* FestEventViewController.m */,
-				88C00E161988047500AF869A /* FestEventViewController.xib */,
 				88C00E1B1988047500AF869A /* FestInfoViewController.h */,
 				88C00E1C1988047500AF869A /* FestInfoViewController.m */,
 				88C00E1D1988047500AF869A /* FestInfoViewController.xib */,
@@ -709,7 +706,6 @@
 				88C00E831988056A00AF869A /* Images.xcassets in Resources */,
 				88C00E711988047600AF869A /* FestWindow.xib in Resources */,
 				88C00E5B1988047600AF869A /* FestEventCell.xib in Resources */,
-				88C00E5F1988047600AF869A /* FestEventViewController.xib in Resources */,
 				88C00DE91988046900AF869A /* festival in Resources */,
 				88C00E701988047600AF869A /* FestWebContentViewController.xib in Resources */,
 				88C00E671988047600AF869A /* FestMainViewController.xib in Resources */,

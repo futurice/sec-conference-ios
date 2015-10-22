@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FestEventViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner">
             <connections>
                 <outlet property="favouriteButton" destination="dL7-zB-uQk" id="3pV-p5-AKX"/>
                 <outlet property="gigLabel" destination="rs5-oC-si9" id="CtF-tq-dEf"/>
@@ -28,13 +28,13 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                     <subviews>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="290" translatesAutoresizingMaskIntoConstraints="NO" id="rs5-oC-si9">
-                            <rect key="frame" x="15" y="260" width="290" height="27.5"/>
+                            <rect key="frame" x="15" y="260" width="290" height="28"/>
                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quote" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="290" translatesAutoresizingMaskIntoConstraints="NO" id="ewC-tA-wNj" userLabel="Label - info">
-                            <rect key="frame" x="15" y="419.5" width="290" height="20.5"/>
+                            <rect key="frame" x="15" y="420" width="290" height="21"/>
                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
@@ -53,7 +53,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16:00 - 17:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nyc-k8-iJg" userLabel="label - date">
-                                    <rect key="frame" x="52" y="7" width="88.5" height="30"/>
+                                    <rect key="frame" x="52" y="7" width="89" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="dEE-0Q-V8u"/>
                                     </constraints>

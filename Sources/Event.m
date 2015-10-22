@@ -8,8 +8,12 @@
 
 #import "Event.h"
 
-@implementation Event
+@implementation Speaker
 
+@end
+
+
+@implementation Event
 
 - (instancetype)initWithDictionary:(NSDictionary *)json
 {
@@ -28,18 +32,45 @@
         }
         
         _day             = [NSString cast:json[@"day"]];
-        _speaker         = [NSString cast:json[@"artists"]];
         _title           = [NSString cast:json[@"title"]];
         _info            = [NSString cast:json[@"description"]]; // "description" is an NSObject method
         _starredCount    = [NSNumber cast:json[@"starredCount"]];
         _identifier      = [NSString cast:json[@"_id"]];
-        _imageURL        = [NSString cast:json[@"image_url"]];
-        _speakerImageUrl = [NSString cast:json[@"speaker_image_url"]];
-        _speakerRole     = [NSString cast:json[@"speaker_role"]];
         _bar_camp        = (NSNumber *)json[@"bar_camp"];
-        _linkedIn        = [NSString cast:json[@"linkedin_url"]];
-        _twitter         = [NSString cast:json[@"twitter_handle"]];
-                     
+        _imageURL        = [NSString cast:json[@"image_url"]];
+
+        NSMutableArray *speakers = [NSMutableArray new];
+
+        if (json[@"artists"]) {
+            Speaker *speaker1 = [Speaker new];
+            speaker1.name = [NSString cast:json[@"artists"]];
+            speaker1.role = [NSString cast:json[@"speaker_role"]];
+            speaker1.imageURL = [NSString cast:json[@"image_url"]];
+            speaker1.linkedIn = [NSString cast:json[@"linkedin_url"]];
+            speaker1.twitter = [NSString cast:json[@"twitter_handle"]];
+            [speakers addObject:speaker1];
+        }
+        if (json[@"artists_2"]) {
+            Speaker *speaker2 = [Speaker new];
+            speaker2.name = [NSString cast:json[@"artists_2"]];
+            speaker2.role = [NSString cast:json[@"speaker_role_2"]];
+            speaker2.imageURL = [NSString cast:json[@"image_url_2"]];
+            speaker2.linkedIn = [NSString cast:json[@"linkedin_url_2"]];
+            speaker2.twitter = [NSString cast:json[@"twitter_handle_2"]];
+            [speakers addObject:speaker2];
+        }
+
+        if (json[@"artists_3"]) {
+            Speaker *speaker3 = [Speaker new];
+            speaker3.name = [NSString cast:json[@"artists_3"]];
+            speaker3.role = [NSString cast:json[@"speaker_role_3"]];
+            speaker3.imageURL = [NSString cast:json[@"image_url_3"]];
+            speaker3.linkedIn = [NSString cast:json[@"linkedin_url_3"]];
+            speaker3.twitter = [NSString cast:json[@"twitter_handle_3"]];
+            [speakers addObject:speaker3];
+        }
+
+        _speakers = speakers;
     }
     return self;
 }

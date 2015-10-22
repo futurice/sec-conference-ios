@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MrN-2v-752">
+                    <rect key="frame" x="0.0" y="72" width="320" height="496"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ur0-Js-3Nx" userLabel="SpeakerImage">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Talk Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAu-hU-Y5u" userLabel="TitleLabel">
+                            <rect key="frame" x="23" y="181" width="227" height="22"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XuA-Vk-DNe" userLabel="FaveButton">
+                            <rect key="frame" x="258" y="175" width="41" height="35"/>
+                            <state key="normal" image="star">
+                                <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wIP-W4-3rL" userLabel="Divider">
+                            <rect key="frame" x="19" y="225" width="282" height="1"/>
+                            <color key="backgroundColor" red="0.94117647059999998" green="0.5568627451" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="timeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="HdF-UX-5tE" userLabel="TimeIcon">
+                            <rect key="frame" x="19" y="234" width="19" height="19"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="aa:bb - cc:dd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owp-81-0JK" userLabel="TimeLabel">
+                            <rect key="frame" x="52" y="233" width="111" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGh-8p-bsO" userLabel="DayLabel">
+                            <rect key="frame" x="52" y="258" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Zf6-Ge-dJ9" userLabel="LocationIcon">
+                            <rect key="frame" x="182" y="235" width="19" height="19"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6q-qH-s4w" userLabel="LocationLabel">
+                            <rect key="frame" x="209" y="232" width="81" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ySY-LO-IhT" userLabel="Divider">
+                            <rect key="frame" x="19" y="290" width="282" height="1"/>
+                            <color key="backgroundColor" red="0.94117647059999998" green="0.5568627451" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fVU-m1-LRq" userLabel="SpeakersView">
+                            <rect key="frame" x="23" y="299" width="276" height="61"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I1T-ee-T6D" userLabel="Divider">
+                            <rect key="frame" x="21" y="371" width="282" height="1"/>
+                            <color key="backgroundColor" red="0.94117647059999998" green="0.5568627451" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Information about talk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJ5-jH-7Oq" userLabel="InfoLabel">
+                            <rect key="frame" x="29" y="380" width="270" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Ur0-Js-3Nx" secondAttribute="trailing" id="4CZ-ta-FhE"/>
+                        <constraint firstItem="Ur0-Js-3Nx" firstAttribute="top" secondItem="MrN-2v-752" secondAttribute="top" id="6tS-qE-FIL"/>
+                        <constraint firstItem="rAu-hU-Y5u" firstAttribute="leading" secondItem="MrN-2v-752" secondAttribute="leading" constant="15" id="9yd-v4-96n"/>
+                        <constraint firstAttribute="trailing" secondItem="XuA-Vk-DNe" secondAttribute="trailing" constant="15" id="PFn-m4-taV"/>
+                        <constraint firstItem="wIP-W4-3rL" firstAttribute="leading" secondItem="MrN-2v-752" secondAttribute="leading" constant="15" id="PwW-3N-W30"/>
+                        <constraint firstItem="XuA-Vk-DNe" firstAttribute="centerY" secondItem="rAu-hU-Y5u" secondAttribute="centerY" id="UJb-xO-yXF"/>
+                        <constraint firstItem="XuA-Vk-DNe" firstAttribute="leading" secondItem="rAu-hU-Y5u" secondAttribute="trailing" constant="5" id="cIA-r9-2A5"/>
+                        <constraint firstItem="wIP-W4-3rL" firstAttribute="top" secondItem="rAu-hU-Y5u" secondAttribute="bottom" constant="15" id="cvn-vd-Vli"/>
+                        <constraint firstItem="Ur0-Js-3Nx" firstAttribute="leading" secondItem="MrN-2v-752" secondAttribute="leading" id="kgm-3Z-j7E"/>
+                        <constraint firstAttribute="trailing" secondItem="wIP-W4-3rL" secondAttribute="trailing" constant="15" id="meu-c0-ZV3"/>
+                        <constraint firstItem="rAu-hU-Y5u" firstAttribute="top" secondItem="Ur0-Js-3Nx" secondAttribute="bottom" constant="15" id="xtb-gG-a49"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="MrN-2v-752" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Qoi-jd-HVM"/>
+                <constraint firstAttribute="bottom" secondItem="MrN-2v-752" secondAttribute="bottom" id="RuE-ar-dSM"/>
+                <constraint firstAttribute="trailing" secondItem="MrN-2v-752" secondAttribute="trailing" id="VGu-Qb-anI"/>
+                <constraint firstItem="MrN-2v-752" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bJ1-tf-exI"/>
+            </constraints>
+            <point key="canvasLocation" x="354" y="482"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="stageIcon" width="12" height="18"/>
+        <image name="star" width="34" height="34"/>
+        <image name="timeIcon" width="19" height="19"/>
+    </resources>
+</document>

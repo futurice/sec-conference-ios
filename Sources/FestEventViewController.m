@@ -14,40 +14,155 @@
 #import "FestFavouritesManager.h"
 
 #import "UIView+XYWidthHeight.h"
+#import "UIView+SubviewAdd.h"
 
 #import "Masonry.h"
 
+static UILabel *makeLabel(NSString *text, NSInteger fontSize)
+{
+    UILabel *label = [UILabel new];
+    label.text = text;
+    label.textColor = [UIColor whiteColor];
+    label.numberOfLines = 0;
+    label.font = [UIFont fontWithName:SXC_FONT_REGULAR size:fontSize];
+
+    return label;
+}
+
+static UIView *makeDivider()
+{
+    UIView *div = [UIView new];
+    div.backgroundColor = SXC_COLOR_ORANGE;
+    [div mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.equalTo(@0.5);
+    }];
+
+    return div;
+}
+
+
+@interface SpeakerRow : UIView
+
+@property (nonatomic, weak) Speaker *speaker;
+
+@property (nonatomic, weak) UILabel *nameLabel;
+@property (nonatomic, weak) UILabel *roleLabel;
+@property (nonatomic, weak) UIButton *linkedInButton;
+@property (nonatomic, weak) UIButton *twitterButton;
+
+@end
+
+@implementation SpeakerRow
+
++ (instancetype)rowWithSpeaker:(Speaker *)speaker
+{
+    SpeakerRow *row = [[SpeakerRow alloc] initWithFrame:CGRectZero];
+    row.speaker = speaker;
+    [row build];
+    [row layOut];
+    return row;
+}
+
+- (void)build
+{
+    self.nameLabel = [self addSubviewReturn:makeLabel(self.speaker.name, 16)];
+    self.nameLabel.font = [UIFont fontWithName:SXC_FONT_MEDIUM size:16];
+
+    self.roleLabel = [self addSubviewReturn:makeLabel(self.speaker.role, 12)];
+    self.roleLabel.textColor = [UIColor lightGrayColor];
+    self.roleLabel.font = [UIFont fontWithName:SXC_FONT_MEDIUM size:12];
+
+    self.linkedInButton = [self addSubviewReturn:[UIButton buttonWithType:UIButtonTypeCustom]];
+    [self.linkedInButton setImage:[UIImage imageNamed:@"linkedinButton"] forState:UIControlStateNormal];
+    self.linkedInButton.enabled = (self.speaker.linkedIn != nil);
+    [self.linkedInButton addTarget:self action:@selector(openLinkedIn:) forControlEvents:UIControlEventTouchUpInside];
+
+    self.twitterButton = [self addSubviewReturn:[UIButton buttonWithType:UIButtonTypeCustom]];
+    [self.twitterButton setImage:[UIImage imageNamed:@"twitterButton"] forState:UIControlStateNormal];
+    self.twitterButton.enabled = (self.speaker.twitter != nil);
+    [self.twitterButton addTarget:self action:@selector(openTwitter:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)layOut
+{
+    [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.top.equalTo(self);
+        make.trailing.equalTo(self.linkedInButton.mas_leading);
+    }];
+
+    [self.twitterButton setContentHuggingPriority:251 forAxis:UILayoutConstraintAxisHorizontal];
+    [self.twitterButton setContentCompressionResistancePriority:751 forAxis:UILayoutConstraintAxisHorizontal];
+    [self.twitterButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.trailing.equalTo(self);
+    }];
+
+    [self.linkedInButton setContentHuggingPriority:251 forAxis:UILayoutConstraintAxisHorizontal];
+    [self.linkedInButton setContentCompressionResistancePriority:751 forAxis:UILayoutConstraintAxisHorizontal];
+    [self.linkedInButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.twitterButton);
+        make.trailing.equalTo(self.twitterButton.mas_leading).with.offset(-10);
+    }];
+
+    [self.roleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.trailing.equalTo(self.nameLabel);
+        make.top.equalTo(self.nameLabel.mas_bottom);
+        make.bottom.equalTo(self);
+    }];
+}
+
+- (IBAction)openLinkedIn:(id)sender
+{
+    if (self.speaker.linkedIn) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.speaker.linkedIn]];
+    }
+}
+
+- (IBAction)openTwitter:(id)sender
+{
+    NSURL *twitterURL = nil;
+    
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"twitter://"]]) {
+        twitterURL = [NSURL URLWithString:[NSString stringWithFormat:@"twitter://user?screen_name=%@", self.speaker.twitter]];
+        [[UIApplication sharedApplication] openURL:twitterURL];
+    } else {
+        twitterURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://twitter.com/%@", self.speaker.twitter]];
+    }
+
+    [[UIApplication sharedApplication] openURL:twitterURL];
+}
+
+@end
+
+
 @interface FestEventViewController ()
+
 @property (nonatomic, strong) id event;
 
-@property (nonatomic, strong) IBOutlet UIImageView *imageView;
+@property (nonatomic, weak) UIScrollView *scrollView;
+@property (nonatomic, weak) UIView *contentView;
 
-@property (nonatomic, strong) IBOutlet UIButton *favouriteButton;
+@property (nonatomic, weak) UIImageView *speakerImage;
+@property (nonatomic, weak) UILabel *titleLabel;
+@property (nonatomic, weak) UIButton *favouriteButton;
+@property (nonatomic, weak) UIImageView *divider1;
+@property (nonatomic, weak) UIImageView *timeIcon;
+@property (nonatomic, weak) UILabel *timeLabel;
+@property (nonatomic, weak) UILabel *dayLabel;
+@property (nonatomic, weak) UIImageView *locationIcon;
+@property (nonatomic, weak) UILabel *locationLabel;
+@property (nonatomic, weak) UIImageView *divider2;
+@property (nonatomic, strong) NSMutableArray *speakerRows;
+@property (nonatomic, weak) UIImageView *divider3;
+@property (nonatomic, weak) UILabel *infoLabel;
 
-@property (nonatomic, strong) IBOutlet UILabel *gigLabel;
-@property (nonatomic, strong) IBOutlet UILabel *stageLabel;
-@property (nonatomic, strong) IBOutlet UILabel *infoLabel;
-@property (weak, nonatomic) IBOutlet UILabel *hourLabel;
-@property (weak, nonatomic) IBOutlet UIButton *twitterButton;
-@property (weak, nonatomic) IBOutlet UIButton *linkedinButton;
-@property (weak, nonatomic) IBOutlet UIView *speakersView;
-
-@property (nonatomic, strong) IBOutlet UIButton *wikipediaButton;
-
-- (IBAction)toggleFavourite:(id)sender;
-- (IBAction)openWikipedia:(id)sender;
 @end
 
 @implementation FestEventViewController
 
 + (instancetype)newWithEvent:(id)event
 {
-    FestEventViewController *controller = [[FestEventViewController alloc] initWithNibName:@"FestEventViewController" bundle:nil];
-
-    // TODO: implement me
-
+    FestEventViewController *controller = [[FestEventViewController alloc] initWithNibName:nil bundle:nil];
     controller.event = event;
-
     return controller;
 }
 
@@ -66,40 +181,10 @@
 
     self.navigationItem.title = @"";
 
-    if([self.event isKindOfClass:[Gig class]]) {
+    NSAssert(![self.event isKindOfClass:[Gig class]], @"Never expect to see gigs in this app.");
         
-        Gig *gig = [Gig cast:self.event];
-        
-        self.gigLabel.text = gig.gigName;
-        self.stageLabel.text = gig.stageAndTimeIntervalString;
-        self.infoLabel.text = gig.info;
-    }
-    else {
-        Event *eventModel = [Event cast:self.event];
-        self.gigLabel.text = eventModel.title;
-        self.stageLabel.text = eventModel.location;
-        self.infoLabel.text = [eventModel.info stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
-
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"Europe/Berlin"]];
-        [dateFormatter setDateFormat:@"HH:mm"];
-        
-        self.hourLabel.text = [NSString stringWithFormat:@"%@ - %@",[dateFormatter stringFromDate:eventModel.begin],[dateFormatter stringFromDate:eventModel.end]];
-        
-        if (eventModel.twitter) {
-            self.twitterButton.enabled = YES;
-        }
-        
-        if (eventModel.linkedIn) {
-            self.linkedinButton.enabled = YES;
-        }
-    }
-
-    // Favourite
-//    [self.favouriteButton setImage:[UIImage imageNamed:@"star-selected.png"] forState:UIControlStateSelected];
-
-//    [self.favouriteButton setTitle:@"Star" forState:UIControlStateNormal];
-//    [self.favouriteButton setTitle:@"Starred" forState:UIControlStateSelected];
+    [self build];
+    [self layOut];
 
     FestFavouritesManager *favouriteManager = [FestFavouritesManager sharedFavouritesManager];
     [favouriteManager.favouritesSignal subscribeNext:^(NSArray *favourites) {
@@ -118,94 +203,6 @@
             self.favouriteButton.selected = favourited;
         }
     }];
-
-    // Load image
-    
-    if([self.event isKindOfClass:[Gig class]]) {
-        
-        Gig *gig = [Gig cast:self.event];
-        
-        FestImageManager *imageManager = [FestImageManager sharedFestImageManager];
-        [[imageManager imageSignalFor:gig.imagePath] subscribeNext:^(UIImage *image) {
-            self.imageView.image = image;
-        }];
-        
-        // wikipedia button
-        if (gig.wikipediaUrl == nil) {
-            self.wikipediaButton.hidden = YES;
-        }
-    }
-    else {
-        Event *eventModel = [Event cast:self.event];
-        
-        FestImageManager *imageManager = [FestImageManager sharedFestImageManager];
-        [[imageManager imageSignalFor:eventModel.imageURL] subscribeNext:^(UIImage *image) {
-            self.imageView.image = image;
-        }];
-        
-        self.wikipediaButton.hidden = YES;
-    }
-
-    [self buildSpeakersView];
-}
-
-- (void)buildSpeakersView
-{
-    Event *eventModel = [Event cast:self.event];
-
-    self.speakersView.translatesAutoresizingMaskIntoConstraints = NO;
-
-    UIView *row = [self buildSpeakerRowWithSpeaker:eventModel.speaker role:eventModel.speakerRole afterView: self.speakersView];
-    [self.speakersView addSubview:row];
-
-    [row mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.speakersView);
-    }];
-}
-
-- (UIView *)buildSpeakerRowWithSpeaker:(NSString *)speaker role:(NSString *)role afterView:(UIView *)view
-{
-    UILabel *speakerLabel = [UILabel new];
-    speakerLabel.text = speaker;
-    speakerLabel.font = [UIFont fontWithName:@"AvenirNext-Medium" size:16];
-    speakerLabel.textColor = [UIColor whiteColor];
-    speakerLabel.numberOfLines = 0;
-
-    UILabel *roleLabel = [UILabel new];
-    roleLabel.text = role;
-    roleLabel.font = [UIFont fontWithName:@"AvenirNext-Medium" size:12];
-    roleLabel.textColor = [UIColor lightGrayColor];
-    roleLabel.numberOfLines = 0;
-
-    UIView *row = [UIView new];
-    [row addSubview:speakerLabel];
-    [row addSubview:roleLabel];
-    [row addSubview:self.linkedinButton];
-    [row addSubview:self.twitterButton];
-
-    [speakerLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.top.equalTo(row);
-        make.trailing.equalTo(self.linkedinButton.mas_leading);
-    }];
-
-    [self.twitterButton setContentHuggingPriority:751 forAxis:UILayoutConstraintAxisHorizontal];
-    [self.twitterButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.trailing.equalTo(row);
-    }];
-
-    [self.linkedinButton setContentHuggingPriority:751 forAxis:UILayoutConstraintAxisHorizontal];
-    [self.linkedinButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self.twitterButton);
-        make.trailing.equalTo(self.twitterButton.mas_leading);
-    }];
-
-    [roleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.trailing.equalTo(speakerLabel);
-        make.top.equalTo(speakerLabel.mas_bottom);
-        make.bottom.equalTo(row);
-    }];
-
-    return row;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -215,32 +212,172 @@
     [[self navigationController] setNavigationBarHidden:NO animated:animated];
 }
 
-- (IBAction)openLinkedIn:(id)sender
+- (void)build
 {
-    if([self.event isKindOfClass:[Gig class]]) {
-        Gig *gig = [Gig cast:self.event];
-        [UIApplication.sharedApplication openURL:gig.wikipediaUrl];
+    Event *event = [Event cast:self.event];
+
+    self.view.backgroundColor = [UIColor blackColor];
+
+    self.scrollView = [self.view addSubviewReturn:[UIScrollView new]];
+    self.contentView = [self.scrollView addSubviewReturn:[UIView new]];
+
+    self.speakerImage = [self.contentView addSubviewReturn:[UIImageView new]];
+    self.speakerImage.contentMode = UIViewContentModeScaleAspectFit;
+    self.speakerImage.backgroundColor = [UIColor yellowColor];
+    RAC(self.speakerImage, image) = [[FestImageManager sharedFestImageManager] imageSignalFor:event.imageURL];
+    [RACObserve(self.speakerImage, image) subscribeNext:^(id x) {
+        [self.view setNeedsLayout];
+        NSLog("");
+    }];
+
+    self.titleLabel = [self.contentView addSubviewReturn:makeLabel(event.title, 20)];
+
+    self.favouriteButton = [self.contentView addSubviewReturn:[UIButton buttonWithType:UIButtonTypeCustom]];
+    [self.favouriteButton setImage:[UIImage imageNamed:@"favButton"] forState:UIControlStateNormal];
+    [self.favouriteButton setImage:[UIImage imageNamed:@"favButtonSelected"] forState:UIControlStateSelected];
+    [self.favouriteButton addTarget:self action:@selector(toggleFavourite:) forControlEvents:UIControlEventTouchUpInside];
+
+    self.divider1 = [self.contentView addSubviewReturn:makeDivider()];
+
+    self.timeIcon = [self.contentView addSubviewReturn:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"timeIcon"]]];
+
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"Europe/Berlin"]];
+    [dateFormatter setDateFormat:@"HH:mm"];
+
+    NSString *timeString = [NSString stringWithFormat:@"%@ - %@",
+        [dateFormatter stringFromDate:event.begin],
+        [dateFormatter stringFromDate:event.end]];
+    self.timeLabel = [self.contentView addSubviewReturn:makeLabel(timeString, 14)];
+    self.timeLabel.font = [UIFont fontWithName:SXC_FONT_DEMI_BOLD size:14];
+
+    self.dayLabel = [self.contentView addSubviewReturn:makeLabel(event.day, 14)];
+    self.dayLabel.font = [UIFont fontWithName:SXC_FONT_MEDIUM size:14];
+    self.dayLabel.textColor = [UIColor lightGrayColor];
+
+    self.locationIcon = [self.contentView addSubviewReturn:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"stageIcon"]]];
+
+    self.locationLabel = [self.contentView addSubviewReturn:makeLabel(event.location, 14)];
+    self.locationLabel.font = [UIFont fontWithName:SXC_FONT_DEMI_BOLD size:14];
+
+    self.divider2 = [self.contentView addSubviewReturn:makeDivider()];
+
+    self.speakerRows = [NSMutableArray new];
+
+    for (Speaker *s in event.speakers) {
+        SpeakerRow *row = [SpeakerRow rowWithSpeaker:s];
+        [self.speakerRows addObject:row];
+        [self.contentView addSubview:row];
     }
-    
-    Event *eventModel = [Event cast:self.event];
-    if (eventModel.linkedIn) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:eventModel.linkedIn]];
+
+    if (self.speakerRows.count > 0) {
+        self.divider3 = [self.contentView addSubviewReturn:makeDivider()];
     }
+
+    NSString *infoString = [event.info stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
+    self.infoLabel = [self.contentView addSubviewReturn:makeLabel(infoString, 15)];
 }
 
-- (IBAction)openTwitter:(id)sender
+- (void)layOut
 {
-    Event *eventModel = [Event cast:self.event];
+    const CGFloat margin = 15;
+    const CGFloat spacing = 15;
 
-    NSURL *twitterURL = nil;
-    
-    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"twitter://"]]) {
-        twitterURL = [NSURL URLWithString:[NSString stringWithFormat:@"twitter://user?screen_name=%@",eventModel.twitter]];
-        [[UIApplication sharedApplication] openURL:twitterURL];
-    }else{
-        twitterURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://twitter.com/%@",eventModel.twitter]];
+    [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+
+    [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.equalTo(self.view).with.offset(margin);
+        make.trailing.equalTo(self.view).with.offset(-margin);
+        make.top.equalTo(self.scrollView).with.offset(margin);
+        make.bottom.equalTo(self.scrollView).with.offset(-margin);
+    }];
+
+    UIView *parent = self.contentView;
+
+    [self.speakerImage setContentHuggingPriority:251 forAxis:UILayoutConstraintAxisVertical];
+    [self.speakerImage mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.top.equalTo(parent).with.offset(-margin);
+        make.trailing.equalTo(parent).with.offset(margin);
+        make.height.equalTo(@180);
+    }];
+
+    [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.equalTo(parent);
+        make.trailing.equalTo(self.favouriteButton.mas_leading);
+        make.top.equalTo(self.speakerImage.mas_bottom).with.offset(spacing);
+    }];
+
+    [self.favouriteButton setContentCompressionResistancePriority:751 forAxis:UILayoutConstraintAxisHorizontal];
+    [self.favouriteButton setContentCompressionResistancePriority:751 forAxis:UILayoutConstraintAxisVertical];
+    [self.favouriteButton setContentHuggingPriority:251 forAxis:UILayoutConstraintAxisHorizontal];
+    [self.favouriteButton setContentHuggingPriority:251 forAxis:UILayoutConstraintAxisVertical];
+    [self.favouriteButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.trailing.equalTo(parent);
+        make.centerY.equalTo(self.titleLabel);
+    }];
+
+    [self.divider1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.trailing.equalTo(parent);
+        make.top.equalTo(self.titleLabel.mas_bottom).with.offset(spacing);
+    }];
+
+    [self.timeIcon setContentHuggingPriority:251 forAxis:UILayoutConstraintAxisHorizontal];
+    [self.timeIcon mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.equalTo(parent);
+        make.top.equalTo(self.divider1.mas_bottom).with.offset(spacing);
+    }];
+
+    [self.timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.equalTo(self.timeIcon.mas_trailing).with.offset(spacing / 2);
+        make.top.equalTo(self.timeIcon);
+    }];
+
+    [self.dayLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.trailing.equalTo(self.timeLabel);
+        make.top.equalTo(self.timeLabel.mas_bottom);
+    }];
+
+    [self.locationIcon setContentHuggingPriority:751 forAxis:UILayoutConstraintAxisHorizontal];
+    [self.locationIcon mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.equalTo(parent.mas_centerX);
+        make.top.equalTo(self.timeIcon);
+    }];
+
+    [self.locationLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.equalTo(self.locationIcon.mas_trailing).with.offset(spacing / 2);
+        make.trailing.equalTo(parent);
+        make.top.equalTo(self.locationIcon);
+    }];
+
+    [self.divider2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.trailing.equalTo(parent);
+        make.top.equalTo(self.dayLabel.mas_bottom).with.offset(spacing);
+    }];
+
+    UIView *previous = self.divider2;
+    for (SpeakerRow *row in self.speakerRows)
+    {
+        [row mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.leading.trailing.equalTo(parent);
+            make.top.equalTo(previous.mas_bottom).with.offset(spacing);
+        }];
+        previous = row;
     }
-    [[UIApplication sharedApplication] openURL:twitterURL];
+
+    if (self.divider3) {
+        [self.divider3 mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.leading.trailing.equalTo(parent);
+            make.top.equalTo(previous.mas_bottom).with.offset(spacing);
+        }];
+    }
+
+    [self.infoLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.trailing.bottom.equalTo(parent);
+        make.top.equalTo((self.divider3 ? self.divider3.mas_bottom : self.divider2.mas_bottom)).with.offset(spacing);
+    }];
+
 }
 
 #pragma mark - Actions

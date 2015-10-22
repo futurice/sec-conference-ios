@@ -40,9 +40,14 @@
 #define kNotificationForFailedLoadingGigImage @"failed loading gig image"
 
 // Colors
-#define RGB_COLOR(r,g,b)  [UIColor colorWithRed:r/255.0f green: g/255.0f blue: b/255.0f alpha:1]
+#define RGB_COLOR(r,g,b)  ([UIColor colorWithRed:r/255.0f green: g/255.0f blue: b/255.0f alpha:1])
+#define SXC_COLOR_ORANGE  RGB_COLOR(240, 142, 12)
 
-#define FEST_COLOR_GOLD      RGB_COLOR(204, 153, 0)
+// Fonts
+
+#define SXC_FONT_REGULAR @"AvenirNext-Regular"
+#define SXC_FONT_MEDIUM @"AvenirNext-Medium"
+#define SXC_FONT_DEMI_BOLD @"AvenirNext-DemiBold"
 
 // Delegate
 #define APPDELEGATE ((FestAppDelegate *)[[UIApplication sharedApplication] delegate])
