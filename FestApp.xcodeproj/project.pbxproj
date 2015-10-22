@@ -67,6 +67,7 @@
 		88C00E831988056A00AF869A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88C00E821988056A00AF869A /* Images.xcassets */; };
 		88C1835F18DDC89C0014495D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C1835E18DDC89C0014495D /* Security.framework */; };
 		A06DF36F1BCF9D0600333057 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06DF36E1BCF9D0600333057 /* ReactiveCocoa.framework */; };
+		A0D15AB11BD79B4800D4FA01 /* UIView+SubviewAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D15AAF1BD79B4800D4FA01 /* UIView+SubviewAdd.m */; settings = {ASSET_TAGS = (); }; };
 		A0D168631BD64D58002530FD /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1683E1BD64D58002530FD /* AFHTTPRequestOperation.m */; settings = {ASSET_TAGS = (); }; };
 		A0D168641BD64D58002530FD /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168401BD64D58002530FD /* AFHTTPRequestOperationManager.m */; settings = {ASSET_TAGS = (); }; };
 		A0D168651BD64D58002530FD /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168421BD64D58002530FD /* AFHTTPSessionManager.m */; settings = {ASSET_TAGS = (); }; };
@@ -199,6 +200,8 @@
 		88C00E8B19880E3600AF869A /* FestApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FestApp.h; sourceTree = "<group>"; };
 		88C1835E18DDC89C0014495D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A06DF36E1BCF9D0600333057 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		A0D15AAF1BD79B4800D4FA01 /* UIView+SubviewAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SubviewAdd.m"; sourceTree = "<group>"; };
+		A0D15AB01BD79B4800D4FA01 /* UIView+SubviewAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SubviewAdd.h"; sourceTree = "<group>"; };
 		A0D1683D1BD64D58002530FD /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		A0D1683E1BD64D58002530FD /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		A0D1683F1BD64D58002530FD /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -475,6 +478,8 @@
 		88C00E891988091800AF869A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A0D15AAF1BD79B4800D4FA01 /* UIView+SubviewAdd.m */,
+				A0D15AB01BD79B4800D4FA01 /* UIView+SubviewAdd.h */,
 				88C00E441988047600AF869A /* NSDate+Additions.h */,
 				88C00E451988047600AF869A /* NSDate+Additions.m */,
 				88C00E461988047600AF869A /* NSString+Additions.h */,
@@ -801,6 +806,7 @@
 				A0D1686C1BD64D58002530FD /* AFNetworkActivityIndicatorManager.m in Sources */,
 				A0D168971BD68C82002530FD /* ViewController+MASAdditions.m in Sources */,
 				A0D168651BD64D58002530FD /* AFHTTPSessionManager.m in Sources */,
+				A0D15AB11BD79B4800D4FA01 /* UIView+SubviewAdd.m in Sources */,
 				88C00E651988047600AF869A /* FestImageManager.m in Sources */,
 				88C00E601988047600AF869A /* FestDataManager.m in Sources */,
 			);
