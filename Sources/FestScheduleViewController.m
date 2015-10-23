@@ -36,7 +36,7 @@
     // Do any additional setup after loading the view from its nib.
 
     self.dayChooser.delegate = self;
-    self.dayChooser.dayNames = @[@"Saturday", @"Sunday"];
+    self.dayChooser.dayNames = @[@"Friday", @"Saturday"];
 
     self.timeLineView.delegate = self;
 
@@ -90,12 +90,12 @@
     if ([self isDate:now sameDayAsDate:self.timeLineView.currentDate]) {
         // now is same day, don't switch
     } else if ([now compare:self.timeLineView.currentDate] == NSOrderedAscending) {
-        // now is before currentDate, switch back if schedule is on Sunday
+        // now is before currentDate, switch back if schedule is on Saturday
         if (self.dayChooser.selectedDayIndex == 1) {
             self.dayChooser.selectedDayIndex = 0;
         }
     } else if ([now compare:self.timeLineView.currentDate] == NSOrderedDescending) {
-        // now is after currentDate, switch forward if schedule is on Saturday
+        // now is after currentDate, switch forward if schedule is on Firday
         if (self.dayChooser.selectedDayIndex == 0) {
             self.dayChooser.selectedDayIndex = 1;
         }
@@ -114,10 +114,10 @@
 
 - (void)dayChooser:(DayChooser *)dayChooser selectedDayWithIndex:(NSUInteger)dayIndex
 {
-    NSString *currentDay = @"Saturday";
+    NSString *currentDay = @"Friday";
     switch (dayIndex) {
-        case 0: currentDay = @"Saturday"; break;
-        case 1: currentDay = @"Sunday"; break;
+        case 0: currentDay = @"Friday"; break;
+        case 1: currentDay = @"Saturday"; break;
     }
 
     self.timeLineView.currentDay = currentDay;

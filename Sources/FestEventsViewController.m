@@ -56,9 +56,9 @@
         
         if ([[self.gigs firstObject] isKindOfClass:[Event class]]) {
             self.days = @[[self.gigs filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:
-                            @"day contains[c] 'Saturday' AND bar_camp == NO"]],
+                            @"day contains[c] 'Friday' AND bar_camp == NO"]],
                           [self.gigs filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:
-                            @"day contains[c] 'Sunday' AND bar_camp == NO"]]
+                            @"day contains[c] 'Saturday' AND bar_camp == NO"]]
                           ];
         }
 
@@ -129,7 +129,7 @@
     headerLabel.backgroundColor = RGB_COLOR(240,142,12);
     headerLabel.font = [UIFont fontWithName:@"AvenirNext-Regular" size:20];
     headerLabel.textAlignment = NSTextAlignmentCenter;
-    headerLabel.text = section ? @"Sunday" : @"Saturday";
+    headerLabel.text = section ? @"Saturday" : @"Friday";
     return headerLabel;
 }
 
