@@ -42,7 +42,6 @@
     RACSignal *gigsSignal = [FestDataManager.sharedFestDataManager gigsSignal];
     [gigsSignal subscribeNext:^(NSArray *events) {
         
-        
         if([[events firstObject] isKindOfClass:[Gig class]]) {
             NSArray *sortedGigs = [events sortedArrayUsingComparator:^NSComparisonResult(Gig* a, Gig *b) {
                 return [a.gigName compare:b.gigName];
@@ -60,6 +59,12 @@
                           [self.gigs filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:
                             @"day contains[c] 'Saturday' AND bar_camp == NO"]]
                           ];
+            self.days = @[[self.days[0] sortedArrayUsingComparator:^NSComparisonResult(Event *a, Event *b) {
+                              return [a.title compare:b.title];
+                          }],
+                          [self.days[1] sortedArrayUsingComparator:^NSComparisonResult(Event *a, Event *b) {
+                              return [a.title compare:b.title];
+                          }]];
         }
 
         [self.tableView reloadData];
@@ -126,7 +131,7 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-    headerLabel.backgroundColor = RGB_COLOR(240,142,12);
+    headerLabel.backgroundColor = SXC_COLOR_ORANGE;
     headerLabel.font = [UIFont fontWithName:@"AvenirNext-Regular" size:20];
     headerLabel.textAlignment = NSTextAlignmentCenter;
     headerLabel.text = section ? @"Saturday" : @"Friday";
