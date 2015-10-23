@@ -53,16 +53,10 @@ void uncaughtExceptionHandler(NSException *exception)
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigation-bar.png"] forBarMetrics:UIBarMetricsDefault];
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 
-    // No navbar shadow
-//    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
-
-    // Custom back bar button item
-    // [[UINavigationBar appearance] setBackIndicatorImage:[UIImage imageNamed:@"back_arrow.png"]];
-    // [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"back_arrow.png"]];
-
-
     // Navigation view controller as root
     self.window.rootViewController = self.navController;
+
+    _barCampViewController = [[FestBarCampViewController alloc] initWithNibName:@"FestEventsViewController" bundle:nil];
 
     [self.window makeKeyAndVisible];
 
@@ -109,6 +103,11 @@ void uncaughtExceptionHandler(NSException *exception)
 - (IBAction)showKeyTalks:(id)sender
 {
     [self.navController pushViewController:self.eventsViewController animated:YES];
+}
+
+- (IBAction)showBarCamps:(id)sender
+{
+    [self.navController pushViewController:self.barCampViewController animated:YES];
 }
 
 - (IBAction)showMap:(id)sender

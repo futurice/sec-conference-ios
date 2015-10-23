@@ -10,6 +10,7 @@
 #import "FestEventsViewController.h"
 #import "FestMapViewController.h"
 #import "FestInfoViewController.h"
+#import "FestBarCampViewController.h"
 
 #import "Gig.h"
 #import "NewsItem.h"
@@ -25,12 +26,14 @@
 @property (nonatomic, strong) IBOutlet FestScheduleViewController *scheduleViewController;
 @property (nonatomic, strong) IBOutlet FestNewsViewController *newsViewController;
 @property (nonatomic, strong) IBOutlet FestEventsViewController *eventsViewController;
+@property (nonatomic, strong) FestBarCampViewController *barCampViewController;
 @property (nonatomic, strong) IBOutlet FestMapViewController *mapViewController;
 @property (nonatomic, strong) IBOutlet FestInfoViewController *infoViewController;
 
 - (IBAction)showSchedule:(id)sender;
 - (IBAction)showNews:(id)sender;
 - (IBAction)showKeyTalks:(id)sender;
+- (IBAction)showBarCamps:(id)sender;
 - (IBAction)showMap:(id)sender;
 - (IBAction)showGeneralInfo:(id)sender;
 

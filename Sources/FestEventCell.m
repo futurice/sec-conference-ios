@@ -11,10 +11,12 @@
 #import "UIImageView+AFNetworking.h"
 
 @interface FestEventCell ()
+
 @property (strong, nonatomic) IBOutlet UIImageView *speakerImageView;
 @property (nonatomic, strong) IBOutlet UILabel *nameLabel;
 @property (nonatomic, strong) IBOutlet UILabel *stageLabel;
 @property (nonatomic, strong) IBOutlet UILabel *stageLabel2;
+
 @end
 
 @implementation FestEventCell

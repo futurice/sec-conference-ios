@@ -65,6 +65,7 @@
 		88C00E801988047600AF869A /* UIViewController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C00E511988047600AF869A /* UIViewController+Additions.m */; };
 		88C00E831988056A00AF869A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88C00E821988056A00AF869A /* Images.xcassets */; };
 		88C1835F18DDC89C0014495D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C1835E18DDC89C0014495D /* Security.framework */; };
+		A06B4A631BDA66FE001386CB /* FestBarCampViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A06B4A621BDA66FE001386CB /* FestBarCampViewController.m */; settings = {ASSET_TAGS = (); }; };
 		A06DF36F1BCF9D0600333057 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06DF36E1BCF9D0600333057 /* ReactiveCocoa.framework */; };
 		A0D15AB11BD79B4800D4FA01 /* UIView+SubviewAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D15AAF1BD79B4800D4FA01 /* UIView+SubviewAdd.m */; settings = {ASSET_TAGS = (); }; };
 		A0D168631BD64D58002530FD /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1683E1BD64D58002530FD /* AFHTTPRequestOperation.m */; settings = {ASSET_TAGS = (); }; };
@@ -197,6 +198,8 @@
 		88C00E821988056A00AF869A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resources/Images.xcassets; sourceTree = "<group>"; };
 		88C00E8B19880E3600AF869A /* FestApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FestApp.h; sourceTree = "<group>"; };
 		88C1835E18DDC89C0014495D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A06B4A611BDA66FE001386CB /* FestBarCampViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FestBarCampViewController.h; sourceTree = "<group>"; };
+		A06B4A621BDA66FE001386CB /* FestBarCampViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FestBarCampViewController.m; sourceTree = "<group>"; };
 		A06DF36E1BCF9D0600333057 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		A0D15AAF1BD79B4800D4FA01 /* UIView+SubviewAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SubviewAdd.m"; sourceTree = "<group>"; };
 		A0D15AB01BD79B4800D4FA01 /* UIView+SubviewAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SubviewAdd.h"; sourceTree = "<group>"; };
@@ -451,6 +454,8 @@
 				88C00E331988047500AF869A /* FestWindow.xib */,
 				88C00E4A1988047600AF869A /* TimelineView.h */,
 				88C00E4B1988047600AF869A /* TimelineView.m */,
+				A06B4A611BDA66FE001386CB /* FestBarCampViewController.h */,
+				A06B4A621BDA66FE001386CB /* FestBarCampViewController.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -803,6 +808,7 @@
 				A0D168971BD68C82002530FD /* ViewController+MASAdditions.m in Sources */,
 				A0D168651BD64D58002530FD /* AFHTTPSessionManager.m in Sources */,
 				A0D15AB11BD79B4800D4FA01 /* UIView+SubviewAdd.m in Sources */,
+				A06B4A631BDA66FE001386CB /* FestBarCampViewController.m in Sources */,
 				88C00E651988047600AF869A /* FestImageManager.m in Sources */,
 				88C00E601988047600AF869A /* FestDataManager.m in Sources */,
 			);

@@ -51,6 +51,13 @@
 
 @property (nonatomic, strong) IBOutlet UILabel *newsTitleLabel;
 
+@property (nonatomic, strong) IBOutlet UIButton *agendaButton;
+@property (nonatomic, strong) IBOutlet UIButton *keyTalksButton;
+@property (nonatomic, strong) IBOutlet UIButton *barCampsButton;
+@property (nonatomic, strong) IBOutlet UIButton *venueButton;
+@property (nonatomic, strong) IBOutlet UIButton *infoButton;
+
+
 - (IBAction)showSchedule:(id)sender;
 - (IBAction)showNews:(id)sender;
 - (IBAction)showKeyTalks:(id)sender;
@@ -74,6 +81,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    [self.agendaButton.imageView setContentMode: UIViewContentModeScaleAspectFit];
+    self.agendaButton.imageEdgeInsets = UIEdgeInsetsMake(0,16,0,0);
+
+    [self.keyTalksButton.imageView setContentMode: UIViewContentModeScaleAspectFit];
+    self.keyTalksButton.imageEdgeInsets = UIEdgeInsetsMake(0,16,0,0);
+
+    [self.barCampsButton.imageView setContentMode: UIViewContentModeScaleAspectFit];
+    self.barCampsButton.imageEdgeInsets = UIEdgeInsetsMake(0,16,0,0);
+
+    [self.venueButton.imageView setContentMode: UIViewContentModeScaleAspectFit];
+    self.venueButton.imageEdgeInsets = UIEdgeInsetsMake(0,16,0,0);
+
+    [self.infoButton.imageView setContentMode: UIViewContentModeScaleAspectFit];
+    self.infoButton.imageEdgeInsets = UIEdgeInsetsMake(0,16,0,0);
 
     // Gig
 
@@ -218,8 +240,14 @@
 
 - (IBAction)showKeyTalks:(id)sender
 {
-    NSLog("@show gigs");
+    NSLog("@show talks");
     [APPDELEGATE showKeyTalks:sender];
+}
+
+- (IBAction)showBarCamps:(id)sender
+{
+    NSLog("@show barcamps");
+    [APPDELEGATE showBarCamps:sender];
 }
 
 - (IBAction)showMap:(id)sender
