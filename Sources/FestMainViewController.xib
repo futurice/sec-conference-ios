@@ -77,7 +77,7 @@
                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
                             <inset key="titleEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
                             <inset key="imageEdgeInsets" minX="15" minY="15" maxX="265" maxY="15"/>
-                            <state key="normal" title="Barcamp sessions" image="icon-2-key-talks.png"/>
+                            <state key="normal" title="Barcamp sessions" image="icon-5-barcamps"/>
                             <connections>
                                 <action selector="showBarCamps:" destination="-1" eventType="touchUpInside" id="vog-Bt-irF"/>
                             </connections>
@@ -228,5 +228,6 @@
         <image name="icon-2-key-talks.png" width="40" height="39"/>
         <image name="icon-3-venune.png" width="40" height="41"/>
         <image name="icon-4-wifi.png" width="40" height="40"/>
+        <image name="icon-5-barcamps" width="147" height="147"/>
     </resources>
 </document>
