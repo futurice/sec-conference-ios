@@ -45,7 +45,7 @@
             Speaker *speaker1 = [Speaker new];
             speaker1.name = [NSString cast:json[@"artists"]];
             speaker1.role = [NSString cast:json[@"speaker_role"]];
-            speaker1.imageURL = [NSString cast:json[@"image_url"]];
+            speaker1.imageURL = [NSString cast:json[@"speaker_image_url"]];
             speaker1.linkedIn = [NSString cast:json[@"linkedin_url"]];
             speaker1.twitter = [NSString cast:json[@"twitter_handle"]];
             [speakers addObject:speaker1];
@@ -54,7 +54,7 @@
             Speaker *speaker2 = [Speaker new];
             speaker2.name = [NSString cast:json[@"artists_2"]];
             speaker2.role = [NSString cast:json[@"speaker_role_2"]];
-            speaker2.imageURL = [NSString cast:json[@"image_url_2"]];
+            speaker2.imageURL = [NSString cast:json[@"speaker_image_url_2"]];
             speaker2.linkedIn = [NSString cast:json[@"linkedin_url_2"]];
             speaker2.twitter = [NSString cast:json[@"twitter_handle_2"]];
             [speakers addObject:speaker2];
@@ -64,7 +64,7 @@
             Speaker *speaker3 = [Speaker new];
             speaker3.name = [NSString cast:json[@"artists_3"]];
             speaker3.role = [NSString cast:json[@"speaker_role_3"]];
-            speaker3.imageURL = [NSString cast:json[@"image_url_3"]];
+            speaker3.imageURL = [NSString cast:json[@"speaker_image_url_3"]];
             speaker3.linkedIn = [NSString cast:json[@"linkedin_url_3"]];
             speaker3.twitter = [NSString cast:json[@"twitter_handle_3"]];
             [speakers addObject:speaker3];
