@@ -55,8 +55,10 @@
         }
         
         if ([[self.gigs firstObject] isKindOfClass:[Event class]]) {
-            self.days = @[[self.gigs filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"day contains[c] 'Saturday' AND bar_camp == NO"]],
-                          [self.gigs filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"day contains[c] 'Sunday' AND bar_camp == NO"]]
+            self.days = @[[self.gigs filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:
+                            @"day contains[c] 'Saturday' AND bar_camp == NO"]],
+                          [self.gigs filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:
+                            @"day contains[c] 'Sunday' AND bar_camp == NO"]]
                           ];
         }
 
@@ -104,9 +106,7 @@
 
     NSArray *gigs = self.days[indexPath.section];
     
-//    cell.backgroundColor = [UIColor clearColor];// (idx % 2 == 0) ? PJ_COLOR_LIGHT : PJ_COLOR_DARK;
-    
-    if([gigs[idx] isKindOfClass:[Gig class]]) {
+    if ([gigs[idx] isKindOfClass:[Gig class]]) {
         cell.gig = self.gigs[idx];
     }
     else if([gigs[idx] isKindOfClass:[Event class]]) {
