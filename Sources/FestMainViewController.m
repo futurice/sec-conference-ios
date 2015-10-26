@@ -57,6 +57,8 @@
 @property (nonatomic, strong) IBOutlet UIButton *venueButton;
 @property (nonatomic, strong) IBOutlet UIButton *infoButton;
 
+@property (nonatomic, strong) IBOutlet UIView *futuLogoView;
+
 
 - (IBAction)showSchedule:(id)sender;
 - (IBAction)showNews:(id)sender;
@@ -210,6 +212,9 @@
         }
     }];
 
+    [self.futuLogoView addGestureRecognizer:
+        [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(openFuturicePage:)]];
+
     // No back text
     self.navigationItem.title = @"";
 }
@@ -230,11 +235,8 @@
     [APPDELEGATE showSchedule:sender];
 }
 
-- (IBAction)showNews:(id)sender
+- (IBAction)openFuturicePage:(id)sender
 {
-    NSLog(@"show news");
-    [[FestDataManager sharedFestDataManager] reload];
-//    [APPDELEGATE showNews:sender];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.futurice.com"]];
 }
 
