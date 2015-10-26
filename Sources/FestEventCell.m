@@ -70,7 +70,11 @@
 
     if (event.speakers.count > 0) {
         Speaker *sp = (Speaker*)event.speakers[0];
-        self.stageLabel.text = [NSString stringWithFormat:@"%@ - %@", sp.name, sp.role];
+        if (sp.name && sp.role) {
+            self.stageLabel.text = [NSString stringWithFormat:@"%@ - %@", sp.name, sp.role];
+        } else {
+            self.stageLabel.text = [NSString stringWithFormat:@"%@", sp.name];
+        }
         if (!imageFound && sp.imageURL) {
             [self.speakerImageView
                 setImageWithURL:[NSURL URLWithString:sp.imageURL]
@@ -81,8 +85,11 @@
 
     if (event.speakers.count > 1) {
         Speaker *sp = (Speaker*)event.speakers[1];
-        self.stageLabel2.text = [NSString stringWithFormat:@"%@ - %@", sp.name, sp.role];
-
+        if (sp.name && sp.role) {
+            self.stageLabel2.text = [NSString stringWithFormat:@"%@ - %@", sp.name, sp.role];
+        } else {
+            self.stageLabel2.text = [NSString stringWithFormat:@"%@", sp.name];
+        }
         if (!imageFound && sp.imageURL) {
             [self.speakerImageView
                 setImageWithURL:[NSURL URLWithString:sp.imageURL]
