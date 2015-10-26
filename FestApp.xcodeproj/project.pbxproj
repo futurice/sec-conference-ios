@@ -65,36 +65,36 @@
 		88C00E801988047600AF869A /* UIViewController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C00E511988047600AF869A /* UIViewController+Additions.m */; };
 		88C00E831988056A00AF869A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88C00E821988056A00AF869A /* Images.xcassets */; };
 		88C1835F18DDC89C0014495D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C1835E18DDC89C0014495D /* Security.framework */; };
-		A06B4A631BDA66FE001386CB /* FestBarCampViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A06B4A621BDA66FE001386CB /* FestBarCampViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A06B4A631BDA66FE001386CB /* FestBarCampViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A06B4A621BDA66FE001386CB /* FestBarCampViewController.m */; };
 		A06DF36F1BCF9D0600333057 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06DF36E1BCF9D0600333057 /* ReactiveCocoa.framework */; };
-		A0D15AB11BD79B4800D4FA01 /* UIView+SubviewAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D15AAF1BD79B4800D4FA01 /* UIView+SubviewAdd.m */; settings = {ASSET_TAGS = (); }; };
-		A0D168631BD64D58002530FD /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1683E1BD64D58002530FD /* AFHTTPRequestOperation.m */; settings = {ASSET_TAGS = (); }; };
-		A0D168641BD64D58002530FD /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168401BD64D58002530FD /* AFHTTPRequestOperationManager.m */; settings = {ASSET_TAGS = (); }; };
-		A0D168651BD64D58002530FD /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168421BD64D58002530FD /* AFHTTPSessionManager.m */; settings = {ASSET_TAGS = (); }; };
-		A0D168661BD64D58002530FD /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168451BD64D58002530FD /* AFNetworkReachabilityManager.m */; settings = {ASSET_TAGS = (); }; };
-		A0D168671BD64D58002530FD /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168471BD64D58002530FD /* AFSecurityPolicy.m */; settings = {ASSET_TAGS = (); }; };
-		A0D168681BD64D58002530FD /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168491BD64D58002530FD /* AFURLConnectionOperation.m */; settings = {ASSET_TAGS = (); }; };
-		A0D168691BD64D58002530FD /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1684B1BD64D58002530FD /* AFURLRequestSerialization.m */; settings = {ASSET_TAGS = (); COMPILER_FLAGS = "-w"; }; };
-		A0D1686A1BD64D58002530FD /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1684D1BD64D58002530FD /* AFURLResponseSerialization.m */; settings = {ASSET_TAGS = (); }; };
-		A0D1686B1BD64D58002530FD /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1684F1BD64D58002530FD /* AFURLSessionManager.m */; settings = {ASSET_TAGS = (); }; };
-		A0D1686C1BD64D58002530FD /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168521BD64D58002530FD /* AFNetworkActivityIndicatorManager.m */; settings = {ASSET_TAGS = (); }; };
-		A0D1686D1BD64D58002530FD /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168541BD64D58002530FD /* UIActivityIndicatorView+AFNetworking.m */; settings = {ASSET_TAGS = (); }; };
-		A0D1686E1BD64D58002530FD /* UIAlertView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168561BD64D58002530FD /* UIAlertView+AFNetworking.m */; settings = {ASSET_TAGS = (); }; };
-		A0D1686F1BD64D58002530FD /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168581BD64D58002530FD /* UIButton+AFNetworking.m */; settings = {ASSET_TAGS = (); }; };
-		A0D168701BD64D58002530FD /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1685B1BD64D58002530FD /* UIImageView+AFNetworking.m */; settings = {ASSET_TAGS = (); }; };
-		A0D168711BD64D58002530FD /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1685E1BD64D58002530FD /* UIProgressView+AFNetworking.m */; settings = {ASSET_TAGS = (); }; };
-		A0D168721BD64D58002530FD /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168601BD64D58002530FD /* UIRefreshControl+AFNetworking.m */; settings = {ASSET_TAGS = (); }; };
-		A0D168731BD64D58002530FD /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168621BD64D58002530FD /* UIWebView+AFNetworking.m */; settings = {ASSET_TAGS = (); }; };
-		A0D1688E1BD68C82002530FD /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168761BD68C82002530FD /* MASCompositeConstraint.m */; settings = {ASSET_TAGS = (); }; };
-		A0D1688F1BD68C82002530FD /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168781BD68C82002530FD /* MASConstraint.m */; settings = {ASSET_TAGS = (); }; };
-		A0D168901BD68C82002530FD /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1687B1BD68C82002530FD /* MASConstraintMaker.m */; settings = {ASSET_TAGS = (); COMPILER_FLAGS = "-w"; }; };
-		A0D168911BD68C82002530FD /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1687D1BD68C82002530FD /* MASLayoutConstraint.m */; settings = {ASSET_TAGS = (); }; };
-		A0D168921BD68C82002530FD /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168811BD68C82002530FD /* MASViewAttribute.m */; settings = {ASSET_TAGS = (); }; };
-		A0D168931BD68C82002530FD /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168831BD68C82002530FD /* MASViewConstraint.m */; settings = {ASSET_TAGS = (); COMPILER_FLAGS = "-w"; }; };
-		A0D168941BD68C82002530FD /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168851BD68C82002530FD /* NSArray+MASAdditions.m */; settings = {ASSET_TAGS = (); COMPILER_FLAGS = "-w"; }; };
-		A0D168951BD68C82002530FD /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168881BD68C82002530FD /* NSLayoutConstraint+MASDebugAdditions.m */; settings = {ASSET_TAGS = (); COMPILER_FLAGS = "-w"; }; };
-		A0D168961BD68C82002530FD /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1688A1BD68C82002530FD /* View+MASAdditions.m */; settings = {ASSET_TAGS = (); }; };
-		A0D168971BD68C82002530FD /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1688D1BD68C82002530FD /* ViewController+MASAdditions.m */; settings = {ASSET_TAGS = (); }; };
+		A0D15AB11BD79B4800D4FA01 /* UIView+SubviewAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D15AAF1BD79B4800D4FA01 /* UIView+SubviewAdd.m */; };
+		A0D168631BD64D58002530FD /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1683E1BD64D58002530FD /* AFHTTPRequestOperation.m */; };
+		A0D168641BD64D58002530FD /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168401BD64D58002530FD /* AFHTTPRequestOperationManager.m */; };
+		A0D168651BD64D58002530FD /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168421BD64D58002530FD /* AFHTTPSessionManager.m */; };
+		A0D168661BD64D58002530FD /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168451BD64D58002530FD /* AFNetworkReachabilityManager.m */; };
+		A0D168671BD64D58002530FD /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168471BD64D58002530FD /* AFSecurityPolicy.m */; };
+		A0D168681BD64D58002530FD /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168491BD64D58002530FD /* AFURLConnectionOperation.m */; };
+		A0D168691BD64D58002530FD /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1684B1BD64D58002530FD /* AFURLRequestSerialization.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		A0D1686A1BD64D58002530FD /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1684D1BD64D58002530FD /* AFURLResponseSerialization.m */; };
+		A0D1686B1BD64D58002530FD /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1684F1BD64D58002530FD /* AFURLSessionManager.m */; };
+		A0D1686C1BD64D58002530FD /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168521BD64D58002530FD /* AFNetworkActivityIndicatorManager.m */; };
+		A0D1686D1BD64D58002530FD /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168541BD64D58002530FD /* UIActivityIndicatorView+AFNetworking.m */; };
+		A0D1686E1BD64D58002530FD /* UIAlertView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168561BD64D58002530FD /* UIAlertView+AFNetworking.m */; };
+		A0D1686F1BD64D58002530FD /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168581BD64D58002530FD /* UIButton+AFNetworking.m */; };
+		A0D168701BD64D58002530FD /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1685B1BD64D58002530FD /* UIImageView+AFNetworking.m */; };
+		A0D168711BD64D58002530FD /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1685E1BD64D58002530FD /* UIProgressView+AFNetworking.m */; };
+		A0D168721BD64D58002530FD /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168601BD64D58002530FD /* UIRefreshControl+AFNetworking.m */; };
+		A0D168731BD64D58002530FD /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168621BD64D58002530FD /* UIWebView+AFNetworking.m */; };
+		A0D1688E1BD68C82002530FD /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168761BD68C82002530FD /* MASCompositeConstraint.m */; };
+		A0D1688F1BD68C82002530FD /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168781BD68C82002530FD /* MASConstraint.m */; };
+		A0D168901BD68C82002530FD /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1687B1BD68C82002530FD /* MASConstraintMaker.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		A0D168911BD68C82002530FD /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1687D1BD68C82002530FD /* MASLayoutConstraint.m */; };
+		A0D168921BD68C82002530FD /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168811BD68C82002530FD /* MASViewAttribute.m */; };
+		A0D168931BD68C82002530FD /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168831BD68C82002530FD /* MASViewConstraint.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		A0D168941BD68C82002530FD /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168851BD68C82002530FD /* NSArray+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		A0D168951BD68C82002530FD /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168881BD68C82002530FD /* NSLayoutConstraint+MASDebugAdditions.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		A0D168961BD68C82002530FD /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1688A1BD68C82002530FD /* View+MASAdditions.m */; };
+		A0D168971BD68C82002530FD /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1688D1BD68C82002530FD /* ViewController+MASAdditions.m */; };
 		C0B9581019BDDF8000862721 /* map.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C0B9580F19BDDF8000862721 /* map.jpg */; };
 		CD7852321378AD2500711F11 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7852311378AD2500711F11 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
@@ -853,6 +853,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Carthage/Build/iOS",
@@ -901,6 +902,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Carthage/Build/iOS",
