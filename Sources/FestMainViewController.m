@@ -59,9 +59,7 @@
 
 @property (nonatomic, strong) IBOutlet UIView *futuLogoView;
 
-
 - (IBAction)showSchedule:(id)sender;
-- (IBAction)showNews:(id)sender;
 - (IBAction)showKeyTalks:(id)sender;
 - (IBAction)showMap:(id)sender;
 - (IBAction)showInfo:(id)sender;

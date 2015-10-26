@@ -86,7 +86,7 @@
 		A0D168721BD64D58002530FD /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168601BD64D58002530FD /* UIRefreshControl+AFNetworking.m */; };
 		A0D168731BD64D58002530FD /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168621BD64D58002530FD /* UIWebView+AFNetworking.m */; };
 		A0D1688E1BD68C82002530FD /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168761BD68C82002530FD /* MASCompositeConstraint.m */; };
-		A0D1688F1BD68C82002530FD /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168781BD68C82002530FD /* MASConstraint.m */; };
+		A0D1688F1BD68C82002530FD /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168781BD68C82002530FD /* MASConstraint.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		A0D168901BD68C82002530FD /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1687B1BD68C82002530FD /* MASConstraintMaker.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		A0D168911BD68C82002530FD /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D1687D1BD68C82002530FD /* MASLayoutConstraint.m */; };
 		A0D168921BD68C82002530FD /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D168811BD68C82002530FD /* MASViewAttribute.m */; };
@@ -862,7 +862,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Sources/FestApp_Prefix.pch;
-				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -911,6 +911,7 @@
 				GCC_PREFIX_HEADER = Sources/FestApp_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"NS_BLOCK_ASSERTIONS=1",
+					"DEBUG=0",
 					NDEBUG,
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
