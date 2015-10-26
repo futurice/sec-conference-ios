@@ -228,6 +228,6 @@
         <image name="icon-2-key-talks.png" width="40" height="39"/>
         <image name="icon-3-venune.png" width="40" height="41"/>
         <image name="icon-4-wifi.png" width="40" height="40"/>
-        <image name="icon-5-barcamps" width="147" height="147"/>
+        <image name="icon-5-barcamps" width="40" height="40"/>
     </resources>
 </document>
