@@ -55,6 +55,7 @@ void uncaughtExceptionHandler(NSException *exception)
 
     // Navigation view controller as root
     self.window.rootViewController = self.navController;
+    self.window.backgroundColor = [UIColor blackColor];
 
     _barCampViewController = [[FestBarCampViewController alloc] initWithNibName:@"FestEventsViewController" bundle:nil];
 
