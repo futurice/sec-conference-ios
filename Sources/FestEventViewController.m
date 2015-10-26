@@ -305,7 +305,7 @@ static UIView *makeDivider()
 
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.equalTo(parent);
-        make.trailing.equalTo(self.favouriteButton.mas_leading);
+        make.trailing.equalTo(self.favouriteButton.mas_leading).with.offset(-spacing);
         make.top.equalTo(self.speakerImage.mas_bottom).with.offset(spacing);
     }];
 
