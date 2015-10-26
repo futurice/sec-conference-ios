@@ -17,8 +17,8 @@
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"];
 
-        _title = dict[@"title"];
-        _content = dict[@"content"]; // TODO: sanitize me
+        _title = [NSString stringOrNil:dict[@"title"]];
+        _content = [NSString stringOrNil:dict[@"content"]]; // TODO: sanitize me
         _published = [dateFormatter dateFromString:dict[@"published"]];
     }
     return self;

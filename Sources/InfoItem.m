@@ -13,8 +13,8 @@
 {
     self = [super init];
     if (self) {
-        _title = json[@"title"];
-        _content = json[@"content"];
+        _title = [NSString stringOrNil:json[@"title"]];
+        _content = [NSString stringOrNil:json[@"content"]];
     }
     return self;
 }

@@ -19,4 +19,10 @@
     return value;
 }
 
++ (NSString *)stringOrNil:(NSObject*)obj
+{
+    NSString *s = [NSString cast:obj];
+    return [s isEqualToString:@""] ? nil : s;
+}
+
 @end

@@ -9,5 +9,6 @@
 @interface NSString (Additions)
 
 - (id)JSONValue;
++ (NSString *)stringOrNil:(NSObject*)obj;
 
 @end
