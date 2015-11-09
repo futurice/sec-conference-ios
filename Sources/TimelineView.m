@@ -150,7 +150,7 @@ static CGFloat timeWidthFrom(NSDate *from, NSDate *to)
 //    self.innerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
     self.autoresizesSubviews = NO;
     self.innerView = [[UIView alloc] initWithFrame:self.bounds];
-    self.innerView.clipsToBounds = YES;
+    self.innerView.clipsToBounds = NO;
 
     [self addSubview:self.innerView];
 }
