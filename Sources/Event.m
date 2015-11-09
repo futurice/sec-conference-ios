@@ -22,7 +22,10 @@
         
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"];
-        
+        dateFormatter.calendar = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierISO8601];
+        dateFormatter.timeZone = [NSTimeZone timeZoneForSecondsFromGMT: 0];
+        dateFormatter.locale = [NSLocale localeWithLocaleIdentifier:@"en_GB"];
+
         _begin    = [NSDate cast:[dateFormatter dateFromString:json[@"start_time"]]];
         _end      = [NSDate cast:[dateFormatter dateFromString:json[@"end_time"]]];
         _location = [NSString stringOrNil:json[@"location"]];
