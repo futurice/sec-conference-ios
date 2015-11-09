@@ -60,9 +60,9 @@
         
         if ([event.bar_camp boolValue]) {
 //            [self setBackgroundImage:[UIImage imageNamed:@"eventBackground"] forState:UIControlStateNormal];
-            self.backgroundColor = RGB_COLOR(240,142,12);
-        }else{
-            self.backgroundColor = RGB_COLOR(226,14,121);
+            self.backgroundColor = RGB_COLOR(240,142,12); // orange
+        } else {
+            self.backgroundColor = RGB_COLOR(226,14,121); // pink
         }
         
         [self setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
