@@ -55,9 +55,9 @@
         
         if ([[self.gigs firstObject] isKindOfClass:[Event class]]) {
             self.days = @[[self.gigs filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:
-                            @"day contains[c] 'Friday' AND bar_camp == NO"]],
+                            @"day contains[c] 'Friday' AND key_talk == YES"]],
                           [self.gigs filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:
-                            @"day contains[c] 'Saturday' AND bar_camp == NO"]]
+                            @"day contains[c] 'Saturday' AND key_talk == YES"]]
                           ];
             self.days = @[[self.days[0] sortedArrayUsingComparator:^NSComparisonResult(Event *a, Event *b) {
                               return [a.title compare:b.title];

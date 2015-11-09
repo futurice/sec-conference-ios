@@ -40,6 +40,7 @@
         _starredCount    = [NSNumber cast:json[@"starredCount"]];
         _identifier      = [NSString stringOrNil:json[@"_id"]];
         _bar_camp        = (NSNumber *)json[@"bar_camp"];
+        _key_talk        = (NSNumber *)json[@"key_talk"];
         _imageURL        = [NSString stringOrNil:json[@"image_url"]];
 
         NSMutableArray *speakers = [NSMutableArray new];

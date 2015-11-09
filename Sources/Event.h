@@ -28,6 +28,7 @@
 @property (nonatomic, strong) NSNumber *starredCount;
 @property (nonatomic, strong) NSString *identifier;
 @property (nonatomic, strong) NSNumber *bar_camp;
+@property (nonatomic, strong) NSNumber *key_talk;
 @property (nonatomic, strong) NSString *imageURL;
 
 @property (nonatomic, strong) NSArray *speakers;
